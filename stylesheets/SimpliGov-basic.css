@@ -139,7 +139,11 @@ div#workflow-background-wrapper {
 }
 
 /* Hide section breadcrumb titles */
-/* .section-breadcrumb-item { */
-	/* width: 0px; */
-	/* height: 0px; */
-/* } */
+#section-breadcrumbs {
+	visibility: hidden;
+}
+
+#formHeaderDiv {
+	height: 0px;
+	margin: -10px 0px;
+}
