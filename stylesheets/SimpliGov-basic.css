@@ -133,7 +133,7 @@ div#workflow-background-wrapper {
 }
 
 /* Hide field value */
-#element108, #element123, #element138, #element180 {
+#element108, #element123, #element138, #form-element-wrapper_180 {
 	display: none;
 	padding: 10px!important;
 }
