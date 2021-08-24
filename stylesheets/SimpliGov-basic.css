@@ -133,7 +133,7 @@ div#workflow-background-wrapper {
 }
 
 /* Hide field value */
-#element108, #element123, #element138 {
+#element108, #element123, #element138, #element180, #element183, #element184 {
 	display: none;
 	padding: 10px!important;
 }
@@ -148,3 +148,9 @@ div#workflow-background-wrapper {
 	margin: -10px 0px;
 }
 
+/* Hide error fields */
+#form-element-wrapper_108, #form-element-wrapper_180, #form-element-wrapper_183, #form-element-wrapper_184 {
+    visibility: hidden;
+    height: 0px;
+    margin: -20px 0px;
+}
