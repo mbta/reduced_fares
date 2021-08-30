@@ -159,3 +159,29 @@ div#workflow-background-wrapper {
 .datetimepicker.datetimepicker-dropdown-bottom-right.dropdown-menu {
 	display: none !important;
 }
+
+/* Update column width */
+@media(min-width:544px) {
+	.container {
+		max-width: 100%;
+	}
+}
+
+@media(min-width:800px) {
+	.container {
+		max-width: 768px;
+	}
+}
+
+@media(min-width:1088px) {
+	.container {
+		max-width: 960px;
+	}
+}
+
+@media(min-width:1344px) {
+	.container {
+		max-width: 1200px;
+	}
+}
+  
