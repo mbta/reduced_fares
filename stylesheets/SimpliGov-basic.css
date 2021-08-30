@@ -154,3 +154,8 @@ div#workflow-background-wrapper {
     height: 0px;
     margin: -20px 0px;
 }
+
+/* Hide datepicker calendar */
+.datetimepicker.datetimepicker-dropdown-bottom-right.dropdown-menu {
+	display: none !important;
+}
