@@ -1,33 +1,30 @@
-/*Generic CSS*/
-.formFieldWrapper .radio-checkbox-label,
-.form-element-wrapper .radio-checkbox-label {
-    margin: 0px;
+/*
+Generic CSS
+*/
+.formFieldWrapper .radio-checkbox-label, .form-element-wrapper .radio-checkbox-label{
+	margin: 0px;
 }
 
-
 /* Background */
-html,
-body {
-    background-color: #223B75!important;
+html, body {
+	background-color: #223B75!important;
 }
 
 /*#workflow-background-wrapper {
 	border-radius: 4px!important;
 }*/
 
-.loadingPanel {
+.loadingPanel{
     top: 0px !important;
 }
 
 h3 {
-    border-color: #a9a9a9!important;
+	border-color: #a9a9a9!important;
 }
 
 #divWorkflowContent {
-    width: 80%;
+	width: 80%;
 }
-
-
 /*
 .radio-checkbox-label {
 	color: red!important;
@@ -41,25 +38,18 @@ h3 {
 	display: none!important;
 }*/
 
-
 /* turn off title, header/footer, info, summary/attachments/communications sections */
-.page-head,
-.page-footer,
-.infoSection,
-.workflowRightTab {
-    display: none!important;
+.page-head, .page-footer, .infoSection, .workflowRightTab {
+	display: none!important;
 }
 
-
 /* center form, get rid of line on right border, add shadow */
-
 /*#workflow-background-wrapper {
 	float: none!important;
 	margin: auto!important;
 	border-right: none!important;
 	box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.2)!important;
 }*/
-
 
 /* turn on the wizard button to toggle between wizard view and normal view */
 .wizardNormalMode {
@@ -72,121 +62,102 @@ h3 {
     margin-top: 5px!important;
 }
 
-
 /* add background color and padding so that it's visible above/below form */
 #workflow-wrapper {
-    /* go Dodgers (used to be: #3489ba) */
-    background-color: #223B75!important;
-    padding: 50px 0px!important;
+	/* go Dodgers (used to be: #3489ba) */
+	background-color: #223B75!important;
+	padding: 50px 0px!important;
 }
 
 /* put space between bottom of form fields and top of submit button */
 .submit-button-wrapper {
-    padding-top: 50px!important;
+	padding-top: 50px!important;
 }
 
 /* default space below submit button is 100px, too much */
 #formPartialDiv {
-    margin-bottom: 50px!important;
+	margin-bottom: 50px!important;
 }
 
-
 /* change color of submit button */
-
 /*.form-submit-button {
 	border-color: #0067C5!important;
 	background-color: #0067C5!important;
 }*/
 
-
 /* make form wide enough to fit 3 fields on one line */
 @media screen and (min-width: 1100px) and (max-width: 1340px) {
-    #workflow-background-wrapper {
-        min-width: 840px!important;
-    }
+	#workflow-background-wrapper {
+		min-width: 840px!important;
+	}
 }
-
 
 /* set form width to 94%, override default @media query that sets width to 100% */
 @media screen and (min-width: 700px) and (max-width: 1100px) {
-    #workflow-background-wrapper {
-        width: 94%!important;
-    }
+	#workflow-background-wrapper {
+		width: 94%!important;
+	}
 }
-
 
 /* get rid of top/bottom padding, form takes up entire screen */
 @media screen and (max-width: 700px) {
-    #workflow-wrapper {
-        padding: none!important;
-    }
+	#workflow-wrapper {
+		padding: none!important;
+	}
 }
 
 .workflowRightTab {
-    /*   width: 37%;*/
-    /*	width: 27%;*/
-    width: 10%!important;
+ /*   width: 37%;*/
+ /*	width: 27%;*/
+ 	width: 10%!important;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
 }
 
 div#workflow-background-wrapper {
-    /*    width: 54%;*/
-    /*	width: 67%!important;*/
-    /* width: 80%!important;
-	max-width: 80%!important; */
+/*    width: 54%;*/
+/*	width: 67%!important;*/
+	width: 80%!important;
+	max-width: 80%!important;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
 }
 
 @media screen and (max-width: 1340px) and (min-width: 1100px) {}
-
-#workflow-background-wrapper {
-    min-width: 2px!important;
+	#workflow-background-wrapper {
+     	min-width: 2px!important;
 }
 
 #workflow-wrapper:not(.embed):not(.registered-embed) {
-    justify-content: center;
+	justify-content: center;
 }
-
 
 /* Hide field value */
-#element108,
-#element123,
-#element138,
-#element180,
-#element183,
-#element184 {
-    display: none;
-    padding: 10px!important;
+#element108, #element123, #element138, #element180, #element183, #element184 {
+	display: none;
+	padding: 10px!important;
 }
-
 
 /* Hide section breadcrumb titles */
 #section-breadcrumbs {
-    visibility: hidden;
+	visibility: hidden;
 }
 
 #formHeaderDiv {
-    height: 0px;
-    margin: -10px 0px;
+	height: 0px;
+	margin: -10px 0px;
 }
 
-
 /* Hide error fields */
-#form-element-wrapper_108,
-#form-element-wrapper_180,
-#form-element-wrapper_183,
-#form-element-wrapper_184 {
+#form-element-wrapper_108, #form-element-wrapper_180, #form-element-wrapper_183, #form-element-wrapper_184 {
     visibility: hidden;
     height: 0px;
     margin: -20px 0px;
 }
 
-
 /* Hide datepicker calendar */
 .datetimepicker.datetimepicker-dropdown-bottom-right.dropdown-menu {
-    display: none !important;
+	display: none !important;
 }
 
 
