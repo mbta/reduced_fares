@@ -380,12 +380,15 @@ h5 {
 
 /* END Error style section */
 
-/* Submit, Next, and Back button colors */
+/* Submit, Next, Upload, and Back button colors */
 /* Submit-Next button */
 .form-submit-button,
-.form-section-next
+.form-section-next,
+/* Upload button */
+#divWorkflowContent .buttonPopup.blue
 {
 	background-color: #165C96!important;
+	border-color: #165C96!important;
 }
 
 /* Back button */
