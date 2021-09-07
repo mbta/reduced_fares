@@ -380,12 +380,11 @@ h5 {
 
 /* END Error style section */
 
-/* Submit, Next, Upload File, and Back button colors */
+/* Submit, Next, and Back button colors */
 /* Submit-Next button */
 .form-submit-button,
-.form-section-next,
-/* Upload File button */
-.fileUpload {
+.form-section-next
+{
 	background-color: #165C96!important;
 }
 
