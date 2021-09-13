@@ -1,0 +1,16 @@
+{
+  "devDependencies": {
+    "cypress": "^8.3.1"
+  },
+  "name": "reduced_fares",
+  "description": "The Reduced Fares repository houses information used within the SimpliGov platform. These documents might be style sheets, data sets, or other material that may be used for our Youth Pass program.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbta/reduced_fares.git"
+  }
+}
