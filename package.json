@@ -12,5 +12,8 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mbta/reduced_fares.git"
+  },
+  "dependencies": {
+    "faker": "^5.5.3"
   }
 }
