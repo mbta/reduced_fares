@@ -1,6 +1,5 @@
 const faker = require('faker');
 const constants = require('../../common/youth-pass-constants');
-const randomBirthdate = require('../../common/get-random-birthdate');
 
 describe('Youth Pass Successful Submission', () => {
     it('Submits a Youth Pass Application', () => {
@@ -9,7 +8,8 @@ describe('Youth Pass Successful Submission', () => {
         const applicantLlastName = faker.name.lastName();
         const applicantEmailAddress = faker.internet.email();
         const applicantPhoneNumber = faker.phone.phoneNumber();
-        const applicantBirthdate = randomBirthdate.generateRandomYouthPassBirthdate();
+        const randomBirthdate = faker.date.between('1996-11-01', '2004-10-31')
+        const applicantBirthdate = `${randomBirthdate.getMonth()}/${randomBirthdate.getDay()}/${randomBirthdate.getFullYear()}`;
         
         cy.visit(youthPassUrl);
         cy.get('#form-section-0 > .form-section-buttons > .form-section-next').click();
