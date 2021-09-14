@@ -1,9 +1,8 @@
 const faker = require('faker');
-const constants = require('../../common/youth-pass-constants');
 
 describe('Youth Pass Successful Submission', () => {
     it('Submits a Youth Pass Application', () => {
-        const youthPassUrl = constants.getYouthPassConstants().youthPassUrl;
+        const youthPassUrl = Cypress.env('youth_pass_url');
         const applicantFirstName = faker.name.firstName();
         const applicantLastName = faker.name.lastName();
         const applicantEmailAddress = `Automation_Testing_${faker.datatype.number()}@example.com`;

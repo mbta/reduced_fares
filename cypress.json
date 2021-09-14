@@ -1,4 +1,7 @@
 {
     "integrationFolder": "cypress/automated-tests",
-    "defaultCommandTimeout": 10000
+    "defaultCommandTimeout": 10000,
+    "env": {
+        "youth_pass_url": "https://mbta.preprod.simpligov.com/preprod/portal/ShowWorkFlow/AnonymousEmbed/86cadfa6-e8ea-46f1-b6e8-62498f066962"
+    }
 }
