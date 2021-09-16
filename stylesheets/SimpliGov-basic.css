@@ -379,7 +379,7 @@ h5 {
 
 /* END Error style section */
 
-/* Submit, Next, Upload, and Back button colors */
+/* Button colors */
 /* Submit-Next button */
 .form-submit-button,
 .form-section-next,
@@ -395,14 +395,15 @@ h5 {
 	background-color: #ffffff!important;
 	color: #165C96!important;
 }
+/* END Button colors */
 
-/* Primary button focus */
-/* Submit-Next button */
+/* Button focus and hover */
+/* Submit-Next button focus */
 .form-submit-button:active:focus,
 .form-submit-button:focus,
 .form-section-next:active:focus,
 .form-section-next:focus,
-/* Upload button */
+/* Upload button focus */
 #divWorkflowContent .buttonPopup.blue:active:focus, 
 #divWorkflowContent .buttonPopup.blue:focus {
     outline: thin dotted!important;
@@ -414,20 +415,38 @@ h5 {
     text-decoration: none!important;
 }
 
-/* Secondary button focus */
-/* Back button */
-.form-section-prev:focus {
-    outline: thin dotted!important;
-    outline: 5px auto -webkit-focus-ring-color!important;
-    outline-offset: -2px!important;
-    color: #165c96!important;
-    background-color: #e6e5e5!important;
+/* Submit-Next button hover */
+.form-submit-button:hover,
+.form-section-next:hover,
+/* Upload button hover */
+#divWorkflowContent .buttonPopup.blue:hover {
+    color: #fff!important;
+    background-color: #0f416a!important;
     border-color: #0e3b61!important;
     text-decoration: none!important;
 }
 
-.form-section-prev:active:focus {
-    color: #165c96!important;
-    background-color: #d4d4d4!important;
+/* Back button focus and hover */
+.form-section-prev:focus {
+    outline: thin dotted!important;
+    outline: 5px auto -webkit-focus-ring-color!important;
+    outline-offset: -2px!important;
+    background-color: #cee0f4!important;
+    color: #0b2f4c!important;
+    border-color: #0e3b61!important;
+    text-decoration: none!important;
+}
+
+.form-section-prev:active:focus,
+.form-section-prev:active:hover  {
+    background-color: #cee0f4!important;
+    color: #0b2f4c!important;
     border-color: #061827!important;
 }
+
+.form-section-prev:hover {
+    background-color: #cee0f4!important;
+    color: #0b2f4c!important;
+}
+
+/* END Button focus and hover */
