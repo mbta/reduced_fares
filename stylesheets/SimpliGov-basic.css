@@ -239,7 +239,6 @@ a:focus {
     outline-offset: -2px
 }
 
-
 /* Other Content */
 body,
 html {
@@ -395,4 +394,40 @@ h5 {
 .form-section-prev {
 	background-color: #ffffff!important;
 	color: #165C96!important;
+}
+
+/* Primary button focus */
+/* Submit-Next button */
+.form-submit-button:active:focus,
+.form-submit-button:focus,
+.form-section-next:active:focus,
+.form-section-next:focus,
+/* Upload button */
+#divWorkflowContent .buttonPopup.blue:active:focus, 
+#divWorkflowContent .buttonPopup.blue:focus {
+    outline: thin dotted!important;
+    outline: 5px auto -webkit-focus-ring-color!important;
+    outline-offset: -2px!important;
+    color: #fff!important;
+    background-color: #0f416a!important;
+    border-color: #0e3b61!important;
+    text-decoration: none!important;
+}
+
+/* Secondary button focus */
+/* Back button */
+.form-section-prev:focus {
+    outline: thin dotted!important;
+    outline: 5px auto -webkit-focus-ring-color!important;
+    outline-offset: -2px!important;
+    color: #165c96!important;
+    background-color: #e6e5e5!important;
+    border-color: #0e3b61!important;
+    text-decoration: none!important;
+}
+
+.form-section-prev:active:focus {
+    color: #165c96!important;
+    background-color: #d4d4d4!important;
+    border-color: #061827!important;
 }
