@@ -4,11 +4,16 @@
     margin: 0px;
 }
 
+
 /* Background */
 html,
 body {
     background-color: #223B75!important;
 }
+
+/*#workflow-background-wrapper {
+	border-radius: 4px!important;
+}*/
 
 .loadingPanel {
     top: 0px !important;
@@ -23,6 +28,21 @@ h3,
     width: 80%;
 }
 
+
+/*
+.radio-checkbox-label {
+	color: red!important;
+}
+*/
+
+/* below here is content of default demo template */
+
+/* turn off title, header/footer, info, summary/attachments/communications sections */
+/*.page-top, .page-footer, .infoSection, .workflowRightTab {
+	display: none!important;
+}*/
+
+
 /* turn off title, header/footer, info, summary/attachments/communications sections */
 .page-head,
 .page-footer,
@@ -30,6 +50,17 @@ h3,
 .workflowRightTab {
     display: none!important;
 }
+
+
+/* center form, get rid of line on right border, add shadow */
+
+/*#workflow-background-wrapper {
+	float: none!important;
+	margin: auto!important;
+	border-right: none!important;
+	box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.2)!important;
+}*/
+
 
 /* turn on the wizard button to toggle between wizard view and normal view */
 .wizardNormalMode {
@@ -110,6 +141,7 @@ div#workflow-background-wrapper {
     justify-content: center;
 }
 
+
 /* Hide field value */
 #element108,
 #element123,
@@ -121,6 +153,7 @@ div#workflow-background-wrapper {
     padding: 10px!important;
 }
 
+
 /* Hide section breadcrumb titles */
 #section-breadcrumbs {
     visibility: hidden;
@@ -130,6 +163,7 @@ div#workflow-background-wrapper {
     height: 0px;
     margin: -10px 0px;
 }
+
 
 /* Hide error fields */
 #form-element-wrapper_108,
@@ -141,10 +175,12 @@ div#workflow-background-wrapper {
     margin: -20px 0px;
 }
 
+
 /* Hide datepicker calendar */
 .datetimepicker.datetimepicker-dropdown-bottom-right.dropdown-menu {
     display: none !important;
 }
+
 
 /* Hide print icon */
 #print-preview {
