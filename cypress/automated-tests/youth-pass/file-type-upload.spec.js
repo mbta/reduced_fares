@@ -37,30 +37,74 @@ describe('Youth Pass Successful Submission', () => {
         cy.get('#element122_Option_1').click().blur();
         cy.get('#form-section-6 > .form-section-buttons > .form-section-next').click();
         
+        // Proof of Age testing Word, GIF, HTML, and JPEG file types
         cy.get('#element114_Option_1').click().blur();
-        cy.get('#element133').attachFile('youth-pass-test-image.png')
+        cy.get('#element133').attachFile('youth-pass-test-file.docx')
+        cy.get('.k-text-error').should('exist');
+        cy.get('#form-element-wrapper_133').within(() => {
+            cy.get('.k-upload-status > .k-button').click();
+        })
+        cy.get('.k-text-error').should('not.exist');
+
+        cy.get('#element133').attachFile('youth-pass-test-image.gif')
+        cy.get('.k-text-success').should('exist');
+        cy.get('#form-element-wrapper_133').within(() => {
+            cy.get('.k-upload-status > .k-button').click();
+            cy.get('.k-text-success').should('not.exist');
+        })
+        
+        cy.get('#element133').attachFile('youth-pass-test-file.html')
+        cy.get('.k-text-error').should('exist');
+        cy.get('#form-element-wrapper_133').within(() => {
+            cy.get('.k-upload-status > .k-button').click();
+            cy.get('.k-text-error').should('not.exist');
+        })
+
+        cy.get('#element133').attachFile('youth-pass-test-image.jpeg')
         cy.get('.k-text-success').should('exist');
         cy.get('#form-section-7 > .form-section-buttons > .form-section-next').click();
         
+        // Proof of Address testing JS, JPG, JSON, and PDF file types
         cy.get('#element135_Option_1').click().blur();
-        cy.get('#element39').attachFile('youth-pass-test-image.png')
+        cy.get('#element39').attachFile('youth-pass-test-file.js')
+        cy.get('.k-text-error').should('exist');
+        cy.get('#form-element-wrapper_39').within(() => {
+            cy.get('.k-upload-status > .k-button').click();
+            cy.get('.k-text-error').should('not.exist');
+        })
+
+        cy.get('#element39').attachFile('youth-pass-test-image.jpg')
+        cy.get('.k-text-success').should('exist');
+        cy.get('#form-element-wrapper_39').within(() => {
+            cy.get('.k-upload-status > .k-button').click();
+            cy.get('.k-text-success').should('not.exist');
+        })
+
+        cy.get('#element39').attachFile('youth-pass-test-file.json')
+        cy.get('.k-text-error').should('exist');
+        cy.get('#form-element-wrapper_39').within(() => {
+            cy.get('.k-upload-status > .k-button').click();
+            cy.get('.k-text-error').should('not.exist');
+        })
+
+        cy.get('#element39').attachFile('youth-pass-test-image.pdf')
         cy.get('.k-text-success').should('exist');
         cy.get('#form-section-8 > .form-section-buttons > .form-section-next').click();
-        
+
+        // Proof of Program Enrollment testing RTF and XLSX file types
         cy.get('#element41_Option_1').click().blur();
         cy.get('#element42').select('Child Care (DTA, EEC)', { force: true });
-        cy.get('#element136').attachFile('youth-pass-test-image.png')
-        cy.get('.k-text-success').should('exist');
-        cy.get('#form-section-9 > .form-section-buttons > .form-section-next').click();
-        
-        cy.get('#element52_Option_2').click().blur();
-        cy.get('#form-section-10 > .form-section-buttons > .form-section-next').click();
-        
-        cy.get('#element50').click().blur();
-        cy.get('#form-section-11 > .form-section-buttons > .form-submit-button').click();
+        cy.get('#element136').attachFile('youth-pass-test-file.rtf')
+        cy.get('.k-text-error').should('exist');
+        cy.get('#form-element-wrapper_136').within(() => {
+            cy.get('.k-upload-status > .k-button').click();
+            cy.get('.k-text-error').should('not.exist');
+        })
 
-        cy.get('#thank-you-text').should('contain', 'Application Submitted')
-        cy.get('#thank-you-text').should('contain', 'mbtayouthpass@boston.gov')
+        cy.get('#element136').attachFile('youth-pass-test-file.xlsx')
+        cy.get('#form-element-wrapper_136').within(() => {
+            cy.get('.k-text-error').should('exist');
+        })
     });
 });
 
