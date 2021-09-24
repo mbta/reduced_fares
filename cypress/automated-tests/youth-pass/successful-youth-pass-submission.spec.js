@@ -39,18 +39,18 @@ describe('Youth Pass Successful Submission', () => {
         
         cy.get('#element114_Option_1').click().blur();
         cy.get('#element133').attachFile('youth-pass-test-image.png')
-        cy.get('.k-file-validation-message').should('exist');
+        cy.get('.k-text-success').should('exist');
         cy.get('#form-section-7 > .form-section-buttons > .form-section-next').click();
         
         cy.get('#element135_Option_1').click().blur();
         cy.get('#element39').attachFile('youth-pass-test-image.png')
-        cy.get('.k-file-validation-message').should('exist');
+        cy.get('.k-text-success').should('exist');
         cy.get('#form-section-8 > .form-section-buttons > .form-section-next').click();
         
         cy.get('#element41_Option_1').click().blur();
         cy.get('#element42').select('Child Care (DTA, EEC)', { force: true });
         cy.get('#element136').attachFile('youth-pass-test-image.png')
-        cy.get('.k-file-validation-message').should('exist');
+        cy.get('.k-text-success').should('exist');
         cy.get('#form-section-9 > .form-section-buttons > .form-section-next').click();
         
         cy.get('#element52_Option_2').click().blur();
