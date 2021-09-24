@@ -1,7 +1,7 @@
 const faker = require('faker');
 
-describe('Youth Pass Successful Submission', () => {
-    it('Submits a Youth Pass Application', () => {
+describe('Youth Pass File Uploads', () => {
+    it('proceeds through an application and uploads various file types', () => {
         const youthPassUrl = Cypress.env('youth_pass_url');
         const applicantFirstName = faker.name.firstName();
         const applicantLastName = faker.name.lastName();
