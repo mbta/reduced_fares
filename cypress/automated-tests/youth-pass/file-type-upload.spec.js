@@ -1,7 +1,7 @@
 const faker = require('faker');
 
 describe('Youth Pass File Uploads', () => {
-    it('proceeds through an application and uploads various file types', () => {
+    it('proceeds through an application', () => {
         const youthPassUrl = Cypress.env('youth_pass_url');
         const applicantFirstName = faker.name.firstName();
         const applicantLastName = faker.name.lastName();
@@ -36,8 +36,9 @@ describe('Youth Pass File Uploads', () => {
         cy.get('#element154').type(applicantZipCode).blur();
         cy.get('#element122_Option_1').click().blur();
         cy.get('#form-section-6 > .form-section-buttons > .form-section-next').click();
-        
-        // Proof of Age testing Word, GIF, HTML, and JPEG file types
+    });
+    
+    it('uploads word, gif, html, and jpeg file types to proof of age', () => {
         cy.get('#element114_Option_1').click().blur();
         cy.get('#element133').attachFile('youth-pass-test-file.docx')
         cy.get('.k-text-error').should('exist');
@@ -63,8 +64,9 @@ describe('Youth Pass File Uploads', () => {
         cy.get('#element133').attachFile('youth-pass-test-image.jpeg')
         cy.get('.k-text-success').should('exist');
         cy.get('#form-section-7 > .form-section-buttons > .form-section-next').click();
-        
-        // Proof of Address testing JS, JPG, JSON, and PDF file types
+    });
+      
+    it('uploads js, jpg, json, and pdf file types to proof of address', () => {
         cy.get('#element135_Option_1').click().blur();
         cy.get('#element39').attachFile('youth-pass-test-file.js')
         cy.get('.k-text-error').should('exist');
@@ -90,8 +92,9 @@ describe('Youth Pass File Uploads', () => {
         cy.get('#element39').attachFile('youth-pass-test-image.pdf')
         cy.get('.k-text-success').should('exist');
         cy.get('#form-section-8 > .form-section-buttons > .form-section-next').click();
+    });
 
-        // Proof of Program Enrollment testing RTF and XLSX file types
+    it('uploads rtf and xlsx file types to proof of program enrollment', () => {
         cy.get('#element41_Option_1').click().blur();
         cy.get('#element42').select('Child Care (DTA, EEC)', { force: true });
         cy.get('#element136').attachFile('youth-pass-test-file.rtf')
@@ -107,4 +110,3 @@ describe('Youth Pass File Uploads', () => {
         })
     });
 });
-
