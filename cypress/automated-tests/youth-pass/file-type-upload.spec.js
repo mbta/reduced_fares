@@ -38,63 +38,75 @@ describe('Youth Pass File Uploads', () => {
         cy.get('#form-section-6 > .form-section-buttons > .form-section-next').click();
     });
     
-    it('uploads word, gif, html, and jpeg file types to proof of age', () => {
+    it('fails to upload a DOCX file to proof of age', () => {
         cy.get('#element114_Option_1').click().blur();
-        cy.get('#element133').attachFile('youth-pass-test-file.docx')
+        cy.get('#element133').attachFile('youth-pass-test-file.docx');
         cy.get('.k-text-error').should('exist');
         cy.get('#form-element-wrapper_133').within(() => {
             cy.get('.k-upload-status > .k-button').click();
-        })
+        });
         cy.get('.k-text-error').should('not.exist');
-
-        cy.get('#element133').attachFile('youth-pass-test-image.gif')
+    });
+    
+    it('successfully uploads a GIF file to proof of age', () => {
+        cy.get('#element133').attachFile('youth-pass-test-image.gif');
         cy.get('.k-text-success').should('exist');
         cy.get('#form-element-wrapper_133').within(() => {
             cy.get('.k-upload-status > .k-button').click();
             cy.get('.k-text-success').should('not.exist');
         })
+    });
         
-        cy.get('#element133').attachFile('youth-pass-test-file.html')
+    it('fails to upload an HTML file to proof of age', () => {
+        cy.get('#element133').attachFile('youth-pass-test-file.html');
         cy.get('.k-text-error').should('exist');
         cy.get('#form-element-wrapper_133').within(() => {
             cy.get('.k-upload-status > .k-button').click();
             cy.get('.k-text-error').should('not.exist');
         })
+    });
 
+    it('successfully uploads a JPEG file to proof of age', () => {
         cy.get('#element133').attachFile('youth-pass-test-image.jpeg')
         cy.get('.k-text-success').should('exist');
         cy.get('#form-section-7 > .form-section-buttons > .form-section-next').click();
     });
       
-    it('uploads js, jpg, json, and pdf file types to proof of address', () => {
+    it('fails to upload a DOCX file to proof of address', () => {
         cy.get('#element135_Option_1').click().blur();
-        cy.get('#element39').attachFile('youth-pass-test-file.js')
+        cy.get('#element39').attachFile('youth-pass-test-file.js');
         cy.get('.k-text-error').should('exist');
         cy.get('#form-element-wrapper_39').within(() => {
             cy.get('.k-upload-status > .k-button').click();
             cy.get('.k-text-error').should('not.exist');
-        })
+        });
+    });
 
-        cy.get('#element39').attachFile('youth-pass-test-image.jpg')
+    it('successfully uploads a JPG file to proof of address', () => {
+        cy.get('#element39').attachFile('youth-pass-test-image.jpg');
         cy.get('.k-text-success').should('exist');
         cy.get('#form-element-wrapper_39').within(() => {
             cy.get('.k-upload-status > .k-button').click();
             cy.get('.k-text-success').should('not.exist');
-        })
+        });
+    });
 
-        cy.get('#element39').attachFile('youth-pass-test-file.json')
+    it('fails to upload a JSON file to proof of address', () => {
+        cy.get('#element39').attachFile('youth-pass-test-file.json');
         cy.get('.k-text-error').should('exist');
         cy.get('#form-element-wrapper_39').within(() => {
             cy.get('.k-upload-status > .k-button').click();
             cy.get('.k-text-error').should('not.exist');
-        })
+        });
+    });
 
+    it('successfully uploads a PDF file to proof of address', () => {
         cy.get('#element39').attachFile('youth-pass-test-image.pdf')
         cy.get('.k-text-success').should('exist');
         cy.get('#form-section-8 > .form-section-buttons > .form-section-next').click();
     });
 
-    it('uploads rtf and xlsx file types to proof of program enrollment', () => {
+    it('fails to upload an RTF file to proof of program enrollment', () => {
         cy.get('#element41_Option_1').click().blur();
         cy.get('#element42').select('Child Care (DTA, EEC)', { force: true });
         cy.get('#element136').attachFile('youth-pass-test-file.rtf')
@@ -103,7 +115,9 @@ describe('Youth Pass File Uploads', () => {
             cy.get('.k-upload-status > .k-button').click();
             cy.get('.k-text-error').should('not.exist');
         })
+    });
 
+    it('fails to upload an XLSX file to proof of program enrollment', () => {
         cy.get('#element136').attachFile('youth-pass-test-file.xlsx')
         cy.get('#form-element-wrapper_136').within(() => {
             cy.get('.k-text-error').should('exist');
