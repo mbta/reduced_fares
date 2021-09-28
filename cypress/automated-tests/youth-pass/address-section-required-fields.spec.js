@@ -1,7 +1,6 @@
 const faker = require('faker');
 
 describe('Youth Pass Address Section', () => {
-    
     it('proceeds through an application', () => {
         const applicantZipCode = '02114';
         const youthPassUrl = Cypress.env('youth_pass_url');
@@ -32,7 +31,6 @@ describe('Youth Pass Address Section', () => {
         cy.get('#element17').type(applicantPhoneNumber).blur();
         cy.get('#element18').type(applicantEmailAddress).blur();
         cy.get('#form-section-5 > .form-section-buttons > .form-section-next').click();
-
     });
     
     it('does not fill any home address fields and sees required field errors', () => {              
@@ -67,7 +65,8 @@ describe('Youth Pass Address Section', () => {
         });
         cy.get('#form-element-wrapper_122').within(() => {
             cy.get('div.required-text').should('be.visible');
-        });    });
+        });    
+    });
     
     it('does not fill home zip or same address boolean and sees required field errors', () => {              
         const applicantCity = faker.address.city();
