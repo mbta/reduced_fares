@@ -1,6 +1,6 @@
 const faker = require('faker');
 
-describe('Youth Pass Address Section', () => {
+describe('Youth Pass Address Section Required Fields', () => {
     it('proceeds through an application', () => {
         const applicantZipCode = '02114';
         const youthPassUrl = Cypress.env('youth_pass_url');
