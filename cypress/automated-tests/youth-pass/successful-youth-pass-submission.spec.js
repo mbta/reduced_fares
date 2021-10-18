@@ -1,7 +1,7 @@
 const faker = require('faker');
 
 describe('Youth Pass Successful Submission', () => {
-    const applicantZipCode = '02114';
+    const applicantZipCode = '99999';
     
     it('completes the eligibility checker', () => {
         const youthPassUrl = Cypress.env('youth_pass_url');
@@ -78,7 +78,7 @@ describe('Youth Pass Successful Submission', () => {
         cy.get('#form-section-11 > .form-section-buttons > .form-submit-button').click();
 
         cy.get('#thank-you-text', { timeout: 15000 }).should('contain', 'Application Submitted')
-        cy.get('#thank-you-text', { timeout: 15000 }).should('contain', 'mbtayouthpass@boston.gov')
+        cy.get('#thank-you-text', { timeout: 15000 }).should('contain', 'ebalkam@mbta.com')
     });
 });
 
