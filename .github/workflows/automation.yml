@@ -8,4 +8,4 @@ jobs:
     name: Integration tests / Cypress
     runs-on: ubuntu-latest
     steps:
-      - run: npx run cypress:ci
+      - run: npm run cypress:ci
