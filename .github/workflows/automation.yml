@@ -7,4 +7,4 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Integration tests / Cypress
-        run: cypress:ci
+        run: npm run cypress:ci
