@@ -6,4 +6,3 @@ jobs:
     steps:
       - name: Integration tests / Cypress
         uses: cypress-io/github-action@v2
-        run: cypress:ci
