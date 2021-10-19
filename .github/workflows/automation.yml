@@ -1,10 +1,10 @@
 name: Automation
 on:
   schedule:
-    - cron: '0 16 * * *' # run at 4 AM UTC/12 AM EST
+    - cron: '0 15 * * *' # run at 4 AM UTC/12 AM EST
 jobs:
   cypress:
     runs-on: ubuntu-latest
     steps:
       - name: Integration tests / Cypress
-        run: npm run cypress:ci
+        uses: cypress-io/github-action@v2
