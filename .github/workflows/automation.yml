@@ -1,4 +1,4 @@
-name: Automation
+name: Cypress Automation Testing
 on: 
   schedule:
     - cron: '0 4 * * *' # run at 4 AM UTC/12 AM EST
