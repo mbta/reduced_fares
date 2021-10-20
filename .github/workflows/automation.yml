@@ -1,0 +1,12 @@
+name: Cypress Automation Testing
+on: 
+  schedule:
+    - cron: '0 4 * * *' # run at 4 AM UTC/12 AM EST
+jobs:
+  cypress:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Integration tests / Cypress
+        uses: cypress-io/github-action@v2
