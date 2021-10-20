@@ -9,7 +9,7 @@ describe('Youth Pass Address Section Required Fields', () => {
         const applicantSchoolName = `Automation Testing ${faker.datatype.number()} School`;
         const applicantFirstName = faker.name.firstName();
         const applicantLastName = faker.name.lastName();
-        const applicantPhoneNumber = faker.phone.phoneNumber();
+        const applicantPhoneNumber = faker.phone.phoneNumberFormat();
         const applicantEmailAddress = `Automation_Testing_${faker.datatype.number()}@example.com`;
         
         cy.visit(youthPassUrl);

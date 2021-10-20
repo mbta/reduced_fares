@@ -76,7 +76,7 @@ describe('Youth Pass Personal and Contact Info Section Required Fields', () => {
     });
     
     it('only fills phone number and sees required field errors', () => {              
-        const applicantPhoneNumber = faker.phone.phoneNumber();
+        const applicantPhoneNumber = faker.phone.phoneNumberFormat();
 
         cy.get('#element17').type(applicantPhoneNumber).blur();
         cy.get('#form-section-5 > .form-section-buttons > .form-submit-button').click();
