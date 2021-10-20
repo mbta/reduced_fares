@@ -32,7 +32,6 @@ describe('Youth Pass Successful Submission', () => {
         const applicantPhoneNumber = faker.phone.phoneNumberFormat();
         const applicantEmailAddress = `Automation_Testing_${faker.datatype.number()}@example.com`;
         
-        cy.log(applicantPhoneNumber);
         cy.get('#element17').type(applicantPhoneNumber).blur();
         cy.get('#element18').type(applicantEmailAddress).blur();
         cy.get('#form-section-5 > .form-section-buttons > .form-section-next').click();
