@@ -3,7 +3,12 @@ const faker = require('faker');
 describe('Eligibility Checker Blockers', () => {
     const youthPassUrl = Cypress.env('youth_pass_url');
     const eligibleZipCode = '02114';
-    
+    const todaysDate = new Date();
+    const twelveYearsAgo = todaysDate.getFullYear() - 12; 
+    const eighteenYearsAgo = todaysDate.getFullYear() - 18; 
+    const twentySixYearsAgo = todaysDate.getFullYear() - 26; 
+    const fiftyYearsAgo = todaysDate.getFullYear() - 50; 
+
     it('enters an ineligible zip code', () => {
         const ineligibleZipCode = '01545';
 
@@ -17,14 +22,13 @@ describe('Eligibility Checker Blockers', () => {
     });
     
     it('enters an age below 12', () => {
-        const today = new Date();
-        const currentDate = `${today.getMonth() + 1}/${today.getDate()}/${today.getFullYear()}`;
-        const randomBirthdateTooYoung = faker.date.between('2009-11-02', currentDate);
+        const currentDate = `${todaysDate.getMonth() + 1}/${todaysDate.getDate()}/${todaysDate.getFullYear()}`;
+        const randomBirthdateTooYoung = faker.date.between(`${twelveYearsAgo}-11-02`, currentDate);
         const ineligibleBirthdateTooYoung = 
             `${randomBirthdateTooYoung.getMonth() + 1}
             /${randomBirthdateTooYoung.getDate()}
             /${randomBirthdateTooYoung.getFullYear()}`;
-
+            
         cy.reload();
         cy.get('#form-section-0 > .form-section-buttons > .form-section-next').click();
         cy.get('#element105').type(eligibleZipCode).blur();
@@ -36,7 +40,7 @@ describe('Eligibility Checker Blockers', () => {
 });
 
     it('enters an age above 25', () => {
-        const randomBirthdateTooOld = faker.date.between('1970-01-01', '1995-11-01');
+        const randomBirthdateTooOld = faker.date.between(`${fiftyYearsAgo}-01-01`, `${twentySixYearsAgo}-11-01`);
         const ineligibleBirthdateTooOld = 
             `${randomBirthdateTooOld.getMonth() + 1}/
             ${randomBirthdateTooOld.getDate()}/
@@ -53,11 +57,11 @@ describe('Eligibility Checker Blockers', () => {
     });
     
     it('is able or may be able to get a student pass through school', () => {
-        const randomEligibleBirthdate12to18= faker.date.between('2003-11-02', '2009-11-01');
+        const randomEligibleBirthdate12to18 = faker.date.between(`${eighteenYearsAgo}-11-02`, `${twelveYearsAgo}-11-01`);
         const eligibleBirthdate12to18 = 
-        `${randomEligibleBirthdate12to18.getMonth() + 1}/
-        ${randomEligibleBirthdate12to18.getDate()}/
-        ${randomEligibleBirthdate12to18.getFullYear()}`;
+            `${randomEligibleBirthdate12to18.getMonth() + 1}/
+            ${randomEligibleBirthdate12to18.getDate()}/
+            ${randomEligibleBirthdate12to18.getFullYear()}`;
         
         cy.reload();
         cy.get('#form-section-0 > .form-section-buttons > .form-section-next').click();
@@ -77,7 +81,7 @@ describe('Eligibility Checker Blockers', () => {
     });
 
     it('does not participate in a partner program', () => {
-        const randomEligibleBirthdate18to25= faker.date.between('1995-11-02', '2003-11-01');
+        const randomEligibleBirthdate18to25 = faker.date.between(`${twentySixYearsAgo}-11-02`, `${eighteenYearsAgo}-11-01`);
         const eligibleBirthdate18to25 = 
             `${randomEligibleBirthdate18to25.getMonth() + 1}/
             ${randomEligibleBirthdate18to25.getDate()}/
