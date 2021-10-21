@@ -4,8 +4,14 @@ describe('Youth Pass Address Section Required Fields', () => {
     it('proceeds through an application', () => {
         const applicantZipCode = '02114';
         const youthPassUrl = Cypress.env('youth_pass_url');
-        const randomBirthdate = faker.date.between('2003-11-02', '2009-11-01');
-        const applicantBirthdate = `${randomBirthdate.getMonth() + 1}/${randomBirthdate.getDate()}/${randomBirthdate.getFullYear()}`;
+        const todaysDate = new Date();
+        const twelveYearsAgo = todaysDate.getFullYear() - 12; 
+        const eighteenYearsAgo = todaysDate.getFullYear() - 18; 
+        const randomBirthdate = faker.date.between(`${eighteenYearsAgo}-11-02`, `${twelveYearsAgo}-11-01`);
+        const applicantBirthdate = 
+            `${randomBirthdate.getMonth() + 1}/
+            ${randomBirthdate.getDate()}/
+            ${randomBirthdate.getFullYear()}`;    
         const applicantSchoolName = `Automation Testing ${faker.datatype.number()} School`;
         const applicantFirstName = faker.name.firstName();
         const applicantLastName = faker.name.lastName();
