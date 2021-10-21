@@ -4,12 +4,12 @@ describe('Youth Pass Address Section Required Fields', () => {
     it('proceeds through an application', () => {
         const applicantZipCode = '02114';
         const youthPassUrl = Cypress.env('youth_pass_url');
-        const randomBirthdate = faker.date.between('2004-11-01', '2010-10-31');
+        const randomBirthdate = faker.date.between('2003-11-02', '2009-11-01');
         const applicantBirthdate = `${randomBirthdate.getMonth() + 1}/${randomBirthdate.getDate()}/${randomBirthdate.getFullYear()}`;
         const applicantSchoolName = `Automation Testing ${faker.datatype.number()} School`;
         const applicantFirstName = faker.name.firstName();
         const applicantLastName = faker.name.lastName();
-        const applicantPhoneNumber = faker.phone.phoneNumber();
+        const applicantPhoneNumber = faker.phone.phoneNumberFormat();
         const applicantEmailAddress = `Automation_Testing_${faker.datatype.number()}@example.com`;
         
         cy.visit(youthPassUrl);

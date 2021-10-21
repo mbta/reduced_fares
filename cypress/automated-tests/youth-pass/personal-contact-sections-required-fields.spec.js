@@ -4,7 +4,7 @@ describe('Youth Pass Personal and Contact Info Section Required Fields', () => {
     it('proceeds through an application', () => {
         const applicantZipCode = '02114';
         const youthPassUrl = Cypress.env('youth_pass_url');
-        const randomBirthdate = faker.date.between('1996-11-01', '2004-10-31');
+        const randomBirthdate = faker.date.between('1995-11-02', '2003-11-01');
         const applicantBirthdate = `${randomBirthdate.getMonth() + 1}/${randomBirthdate.getDate()}/${randomBirthdate.getFullYear()}`;
         
         cy.visit(youthPassUrl);
@@ -76,7 +76,7 @@ describe('Youth Pass Personal and Contact Info Section Required Fields', () => {
     });
     
     it('only fills phone number and sees required field errors', () => {              
-        const applicantPhoneNumber = faker.phone.phoneNumber();
+        const applicantPhoneNumber = faker.phone.phoneNumberFormat();
 
         cy.get('#element17').type(applicantPhoneNumber).blur();
         cy.get('#form-section-5 > .form-section-buttons > .form-submit-button').click();

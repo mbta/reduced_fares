@@ -2,12 +2,12 @@ const faker = require('faker');
 
 describe('Youth Pass Successful Submission', () => {
     const applicantZipCode = '99999';
-    
+
     it('completes the eligibility checker', () => {
         const youthPassUrl = Cypress.env('youth_pass_url');
-        const randomBirthdate = faker.date.between('1996-11-01', '2004-10-31');
+        const randomBirthdate = faker.date.between('1995-11-02', '2003-11-01');
         const applicantBirthdate = `${randomBirthdate.getMonth() + 1}/${randomBirthdate.getDate()}/${randomBirthdate.getFullYear()}`;
-    
+
         cy.visit(youthPassUrl);
         cy.get('#form-section-0 > .form-section-buttons > .form-section-next').click();
         cy.get('#element105').type(applicantZipCode).blur();
@@ -29,18 +29,18 @@ describe('Youth Pass Successful Submission', () => {
     });
 
     it('completes the contact information section', () => {
-        const applicantPhoneNumber = faker.phone.phoneNumber();
+        const applicantPhoneNumber = faker.phone.phoneNumberFormat();
         const applicantEmailAddress = `Automation_Testing_${faker.datatype.number()}@example.com`;
-    
+        
         cy.get('#element17').type(applicantPhoneNumber).blur();
         cy.get('#element18').type(applicantEmailAddress).blur();
         cy.get('#form-section-5 > .form-section-buttons > .form-section-next').click();
     });
-    
+
     it('completes the address section', () => {
         const applicantStreetAddress = `${faker.datatype.number()} ${faker.address.streetName()} ${faker.address.streetSuffix()}`;
         const applicantCity = faker.address.city();
-    
+
         cy.get('#element101').type(applicantStreetAddress).blur();
         cy.get('#element103').type(applicantCity).blur();
         cy.get('#element154').type(applicantZipCode).blur();
@@ -72,7 +72,7 @@ describe('Youth Pass Successful Submission', () => {
         cy.get('#element52_Option_2').click().blur();
         cy.get('#form-section-10 > .form-section-buttons > .form-section-next').click();
     });
-    
+
     it('agrees to terms and conditions and submits application', () => {
         cy.get('#element50').click().blur();
         cy.get('#form-section-11 > .form-section-buttons > .form-submit-button').click();
@@ -81,4 +81,3 @@ describe('Youth Pass Successful Submission', () => {
         cy.get('#thank-you-text', { timeout: 15000 }).should('contain', 'ebalkam@mbta.com')
     });
 });
-
