@@ -107,7 +107,6 @@ describe('Youth Pass File Uploads', () => {
     });
 
     it('fails to upload an RTF file to proof of program enrollment', () => {
-        cy.get('#element41_Option_1').click().blur();
         cy.get('#element42').select('Child Care (DTA, EEC)', { force: true });
         cy.get('#element136').attachFile('youth-pass-test-file.rtf')
         cy.get('.k-text-error').should('exist');
