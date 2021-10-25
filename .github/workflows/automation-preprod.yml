@@ -1,0 +1,9 @@
+name: Cypress Automation Testing
+jobs:
+  cypress-preprod:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Integration tests / Cypress
+        uses: cypress-io/github-action@v2
