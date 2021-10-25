@@ -17,5 +17,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Integration tests / Cypress
-        run: npx cypress run --env baseUrl=https://mbta.prod.simpligov.com/prod/portal/ShowWorkFlow/AnonymousEmbed/e5e2dba6-5424-48d6-80d9-16a27e0fdd84
-
+        uses: cypress-io/github-action@v2
+        with:
+          env: baseUrl=https://mbta.prod.simpligov.com/prod/portal/ShowWorkFlow/AnonymousEmbed/e5e2dba6-5424-48d6-80d9-16a27e0fdd84
