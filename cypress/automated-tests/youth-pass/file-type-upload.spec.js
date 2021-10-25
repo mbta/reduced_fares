@@ -2,7 +2,7 @@ const faker = require('faker');
 
 describe('Youth Pass File Uploads', () => {
     it('proceeds through an application', () => {
-        const youthPassUrl = Cypress.config().baseUrl();
+        const youthPassUrl = Cypress.env('youth_pass_url');
         const applicantFirstName = faker.name.firstName();
         const applicantLastName = faker.name.lastName();
         const applicantEmailAddress = `Automation_Testing_${faker.datatype.number()}@example.com`;

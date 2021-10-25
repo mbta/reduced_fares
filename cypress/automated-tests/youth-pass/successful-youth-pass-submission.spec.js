@@ -4,7 +4,7 @@ describe('Youth Pass Successful Submission', () => {
     const applicantZipCode = '99999';
 
     it('completes the eligibility checker', () => {
-        const youthPassUrl = Cypress.config().baseUrl();
+        const youthPassUrl = Cypress.env('youth_pass_url');
         const randomBirthdate = faker.date.between('1995-11-02', '2003-11-01');
         const applicantBirthdate = `${randomBirthdate.getMonth() + 1}/${randomBirthdate.getDate()}/${randomBirthdate.getFullYear()}`;
 
