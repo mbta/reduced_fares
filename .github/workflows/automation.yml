@@ -1,15 +1,15 @@
 name: Cypress Automation Pre-Prod Testing
-on: push
-  # schedule:
-  #   - cron: '0 4 * * *' # run at 4 AM UTC/12 AM EST
+on: 
+  schedule:
+    - cron: '0 4 * * *' # run at 4 AM UTC/12 AM EST
 jobs:
-  # cypress-preprod:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Checkout
-  #       uses: actions/checkout@v2
-  #     - name: Integration tests / Cypress
-  #       uses: cypress-io/github-action@v2
+  cypress-preprod:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Integration tests / Cypress
+        uses: cypress-io/github-action@v2
 
   cypress-prod:
     runs-on: ubuntu-latest
