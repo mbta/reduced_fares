@@ -3,7 +3,7 @@ const faker = require('faker');
 describe('Youth Pass Personal and Contact Info Section Required Fields', () => {
     it('proceeds through an application', () => {
         const applicantZipCode = '02114';
-        const youthPassUrl = Cypress.env('youth_pass_url');
+        const youthPassUrl = Cypress.config().baseUrl();
         const randomBirthdate = faker.date.between('1995-11-02', '2003-11-01');
         const applicantBirthdate = `${randomBirthdate.getMonth() + 1}/${randomBirthdate.getDate()}/${randomBirthdate.getFullYear()}`;
         

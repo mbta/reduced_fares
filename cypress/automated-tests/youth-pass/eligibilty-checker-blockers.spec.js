@@ -1,7 +1,7 @@
 const faker = require('faker');
 
 describe('Eligibility Checker Blockers', () => {
-    const youthPassUrl = Cypress.env('youth_pass_url');
+    const youthPassUrl = Cypress.config().baseUrl;
     const eligibleZipCode = '02114';
     
     it('enters an ineligible zip code', () => {
