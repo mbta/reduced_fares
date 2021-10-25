@@ -1,4 +1,5 @@
-name: Cypress Automation Testing
+name: Cypress Automation Production Testing
+on: workflow_dispatch
 jobs:
   cypress-preprod:
     runs-on: ubuntu-latest
