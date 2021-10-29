@@ -11,7 +11,7 @@ describe('Youth Pass Address Section Required Fields', () => {
         const applicantBirthdate = 
             `${randomBirthdate.getMonth() + 1}/
             ${randomBirthdate.getDate()}/
-            ${randomBirthdate.getFullYear()}`;    
+            ${randomBirthdate.getFullYear()}`.replace(/\s+/g, "");    
         const applicantSchoolName = `Automation Testing ${faker.datatype.number()} School`;
         const applicantFirstName = faker.name.firstName();
         const applicantLastName = faker.name.lastName();

@@ -9,7 +9,10 @@ describe('Youth Pass Successful Submission', () => {
         const eighteenYearsAgo = todaysDate.getFullYear() - 18; 
         const twentySixYearsAgo = todaysDate.getFullYear() - 26; 
         const randomBirthdate = faker.date.between(`${twentySixYearsAgo}-11-02`, `${eighteenYearsAgo}-11-01`);
-        const applicantBirthdate = `${randomBirthdate.getMonth() + 1}/${randomBirthdate.getDate()}/${randomBirthdate.getFullYear()}`;
+        const applicantBirthdate = 
+            `${randomBirthdate.getMonth() + 1}/
+            ${randomBirthdate.getDate()}/
+            ${randomBirthdate.getFullYear()}`.replace(/\s+/g, "");  
 
         cy.visit(youthPassUrl);
         cy.get('#form-section-0 > .form-section-buttons > .form-section-next').click();

@@ -27,7 +27,7 @@ describe('Eligibility Checker Blockers', () => {
         const ineligibleBirthdateTooYoung = 
             `${randomBirthdateTooYoung.getMonth() + 1}
             /${randomBirthdateTooYoung.getDate()}
-            /${randomBirthdateTooYoung.getFullYear()}`;
+            /${randomBirthdateTooYoung.getFullYear()}`.replace(/\s+/g, "");
             
         cy.reload();
         cy.get('#form-section-0 > .form-section-buttons > .form-section-next').click();
@@ -44,7 +44,7 @@ describe('Eligibility Checker Blockers', () => {
         const ineligibleBirthdateTooOld = 
             `${randomBirthdateTooOld.getMonth() + 1}/
             ${randomBirthdateTooOld.getDate()}/
-            ${randomBirthdateTooOld.getFullYear()}`;
+            ${randomBirthdateTooOld.getFullYear()}`.replace(/\s+/g, "");
         
         cy.reload();
         cy.get('#form-section-0 > .form-section-buttons > .form-section-next').click();
@@ -61,7 +61,7 @@ describe('Eligibility Checker Blockers', () => {
         const eligibleBirthdate12to18 = 
             `${randomEligibleBirthdate12to18.getMonth() + 1}/
             ${randomEligibleBirthdate12to18.getDate()}/
-            ${randomEligibleBirthdate12to18.getFullYear()}`;
+            ${randomEligibleBirthdate12to18.getFullYear()}`.replace(/\s+/g, "");
         
         cy.reload();
         cy.get('#form-section-0 > .form-section-buttons > .form-section-next').click();
@@ -85,7 +85,7 @@ describe('Eligibility Checker Blockers', () => {
         const eligibleBirthdate18to25 = 
             `${randomEligibleBirthdate18to25.getMonth() + 1}/
             ${randomEligibleBirthdate18to25.getDate()}/
-            ${randomEligibleBirthdate18to25.getFullYear()}`;
+            ${randomEligibleBirthdate18to25.getFullYear()}`.replace(/\s+/g, "");
 
         cy.reload();
         cy.get('#form-section-0 > .form-section-buttons > .form-section-next').click();

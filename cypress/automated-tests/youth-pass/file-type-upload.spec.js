@@ -11,7 +11,10 @@ describe('Youth Pass File Uploads', () => {
         const eighteenYearsAgo = todaysDate.getFullYear() - 18; 
         const twentySixYearsAgo = todaysDate.getFullYear() - 26; 
         const randomBirthdate = faker.date.between(`${twentySixYearsAgo}-11-02`, `${eighteenYearsAgo}-11-01`);
-        const applicantBirthdate = `${randomBirthdate.getMonth() + 1}/${randomBirthdate.getDate()}/${randomBirthdate.getFullYear()}`;
+        const applicantBirthdate = 
+            `${randomBirthdate.getMonth() + 1}/
+            ${randomBirthdate.getDate()}/
+            ${randomBirthdate.getFullYear()}`.replace(/\s+/g, "");          
         const applicantStreetAddress = `${faker.datatype.number()} ${faker.address.streetName()} ${faker.address.streetSuffix()}`;
         const applicantCity = faker.address.city();
         const applicantZipCode = '02114';
