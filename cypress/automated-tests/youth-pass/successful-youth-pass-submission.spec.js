@@ -66,7 +66,6 @@ describe('Youth Pass Successful Submission', () => {
     });
 
     it('completes the proof of program eligiblity section', () => {
-        cy.get('#element41_Option_1').click().blur();
         cy.get('#element42').select('Child Care (DTA, EEC)', { force: true });
         cy.get('#element136').attachFile('youth-pass-test-image.png')
         cy.get('.k-text-success').should('exist');
