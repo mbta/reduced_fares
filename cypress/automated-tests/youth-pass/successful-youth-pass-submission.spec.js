@@ -1,12 +1,12 @@
-const faker = require('faker');
+import { getRandomApplicantAge } from '../../common/birthdate-constants';
 
 describe('Youth Pass Successful Submission', () => {
+    const faker = require('faker');
     const applicantZipCode = '99999';
 
     it('completes the eligibility checker', () => {
         const youthPassUrl = Cypress.env('youth_pass_url');
-        const randomBirthdate = faker.date.between('1995-11-02', '2003-11-01');
-        const applicantBirthdate = `${randomBirthdate.getMonth() + 1}/${randomBirthdate.getDate()}/${randomBirthdate.getFullYear()}`;
+        const applicantBirthdate = getRandomApplicantAge().applicantBirthdate18to25;
 
         cy.visit(youthPassUrl);
         cy.get('#form-section-0 > .form-section-buttons > .form-section-next').click();
