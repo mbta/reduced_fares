@@ -1,14 +1,15 @@
-const faker = require('faker');
+import { getRandomApplicantAge } from '../../common/birthdate-constants';
 
 describe('Youth Pass File Uploads', () => {
+    const faker = require('faker');
+    
     it('proceeds through an application', () => {
         const youthPassUrl = Cypress.env('youth_pass_url');
         const applicantFirstName = faker.name.firstName();
         const applicantLastName = faker.name.lastName();
         const applicantEmailAddress = `Automation_Testing_${faker.datatype.number()}@example.com`;
         const applicantPhoneNumber = faker.phone.phoneNumberFormat();
-        const randomBirthdate = faker.date.between('1995-11-02', '2003-11-01');
-        const applicantBirthdate = `${randomBirthdate.getMonth() + 1}/${randomBirthdate.getDate()}/${randomBirthdate.getFullYear()}`;
+        const applicantBirthdate = getRandomApplicantAge().applicantBirthdate18to25;
         const applicantStreetAddress = `${faker.datatype.number()} ${faker.address.streetName()} ${faker.address.streetSuffix()}`;
         const applicantCity = faker.address.city();
         const applicantZipCode = '02114';
