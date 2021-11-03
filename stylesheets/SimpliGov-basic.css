@@ -460,3 +460,7 @@ h5 {
 
 /* END Button focus and hover */
 
+/* Hide asterisks */
+.form-label-required span[role='presentation'], .form-label-required span[style="color: red;"] {
+    display: none;
+}
