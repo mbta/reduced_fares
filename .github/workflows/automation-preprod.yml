@@ -1,9 +1,7 @@
-name: Cypress Automation Testing
-on: 
-  schedule:
-    - cron: '0 4 * * *' # run at 4 AM UTC/12 AM EST
+name: Cypress Automation Production Testing
+on: workflow_dispatch
 jobs:
-  cypress:
+  cypress-preprod:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
