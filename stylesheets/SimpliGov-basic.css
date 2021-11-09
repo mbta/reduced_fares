@@ -462,5 +462,5 @@ h5 {
 
 /* Hide asterisks */
 .form-label-required span[role='presentation'], .form-label-required span[style="color: red;"] {
-    display: none;
+    color: #B3000F !important;
 }
