@@ -460,3 +460,9 @@ h5 {
 
 /* END Button focus and hover */
 
+/* Color for asterisks */
+.form-label-required span[role='presentation'], .form-label-required span[style="color: red;"] {
+    color: #B3000F !important;
+}
+
+/* END Color for asterisks */
