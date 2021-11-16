@@ -41,6 +41,7 @@ describe('Youth Pass Successful Submission', () => {
         const applicantStreetAddress = `${faker.datatype.number()} ${faker.address.streetName()} ${faker.address.streetSuffix()}`;
         const applicantCity = faker.address.city();
 
+        cy.get('#element242_Option_1').click().blur();
         cy.get('#element101').type(applicantStreetAddress).blur();
         cy.get('#element103').type(applicantCity).blur();
         cy.get('#element154').type(applicantZipCode).blur();
