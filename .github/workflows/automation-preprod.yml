@@ -1,4 +1,4 @@
-name: Cypress Automation Production Testing
+name: Cypress Automation PreProd Testing
 on: workflow_dispatch
 jobs:
   cypress-preprod:
