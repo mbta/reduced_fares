@@ -3,6 +3,7 @@ import { getRandomApplicantAge } from '../../common/birthdate-constants';
 describe('Youth Pass File Uploads', () => {
     const faker = require('faker');
     
+    // this test follows the in-person false flow
     it('proceeds through an application', () => {
         const youthPassUrl = Cypress.env('youth_pass_url');
         const applicantFirstName = faker.name.firstName();
@@ -12,7 +13,7 @@ describe('Youth Pass File Uploads', () => {
         const applicantBirthdate = getRandomApplicantAge().applicantBirthdate18to25;
         const applicantStreetAddress = `${faker.datatype.number()} ${faker.address.streetName()} ${faker.address.streetSuffix()}`;
         const applicantCity = faker.address.city();
-        const applicantZipCode = '02114';
+        const applicantZipCode = '02149';
         
         cy.visit(youthPassUrl);
         cy.get('#form-section-0 > .form-section-buttons > .form-section-next').click();
