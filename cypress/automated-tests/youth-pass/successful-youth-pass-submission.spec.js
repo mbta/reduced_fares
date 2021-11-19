@@ -46,7 +46,6 @@ describe('Youth Pass Successful Submission', () => {
         cy.get('#element101').type(applicantStreetAddress).blur();
         cy.get('#element103').type(applicantCity).blur();
         cy.get('#element154').type(applicantZipCode).blur();
-        cy.get('#element122_Option_1').click().blur();
         cy.get('#form-section-6 > .form-section-buttons > .form-section-next').click();
     });
 
