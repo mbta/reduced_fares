@@ -3,6 +3,7 @@ import { getRandomApplicantAge } from '../../common/birthdate-constants';
 describe('Youth Pass Address Section Required Fields', () => {
     const faker = require('faker');
     
+    // this test follows the by mail flow
     it('proceeds through an application', () => {
         const applicantZipCode = '02114';
         const youthPassUrl = Cypress.env('youth_pass_url');
@@ -36,6 +37,29 @@ describe('Youth Pass Address Section Required Fields', () => {
     
     it('does not fill any home address fields and sees required field errors', () => {              
         cy.get('#form-section-6 > .form-section-buttons > .form-submit-button').click();
+        cy.get('#form-element-wrapper_242').within(() => {
+            cy.get('div.required-text').should('be.visible');
+        });
+        cy.get('#form-element-wrapper_101').within(() => {
+            cy.get('div.required-text').should('be.visible');
+        });
+        cy.get('#form-element-wrapper_101').within(() => {
+            cy.get('div.required-text').should('be.visible');
+        });
+        cy.get('#form-element-wrapper_103').within(() => {
+            cy.get('div.required-text').should('be.visible');
+        });
+        cy.get('#form-element-wrapper_154').within(() => {
+            cy.get('div.required-text').should('be.visible');
+        });
+    });
+    
+    it('only selects card delivery method and sees required field errors', () => {              
+        cy.get('#element242_Option_1').click().blur();
+        cy.get('#form-section-6 > .form-section-buttons > .form-submit-button').click();
+        cy.get('#form-element-wrapper_242').within(() => {
+            cy.get('div.required-text').should('not.be.visible');
+        });
         cy.get('#form-element-wrapper_101').within(() => {
             cy.get('div.required-text').should('be.visible');
         });

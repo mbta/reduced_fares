@@ -4,6 +4,7 @@ describe('Youth Pass Successful Submission', () => {
     const faker = require('faker');
     const applicantZipCode = '99999';
 
+    // this test follows the by-mail flow
     it('completes the eligibility checker', () => {
         const youthPassUrl = Cypress.env('youth_pass_url');
         const applicantBirthdate = getRandomApplicantAge().applicantBirthdate18to25;
