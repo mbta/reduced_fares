@@ -1,5 +1,6 @@
 name: Cypress Automation Production Testing
 on: 
+  workflow_dispatch:
   schedule:
     - cron: '0 5 * * *' # run at 5 AM UTC
 jobs:
@@ -12,3 +13,4 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           env: youth_pass_url=https://mbta.prod.simpligov.com/prod/portal/ShowWorkFlow/AnonymousEmbed/e5e2dba6-5424-48d6-80d9-16a27e0fdd84
+          spec: "cypress/automated-tests/youth-pass/address-section-required-fields.spec,cypress/automated-tests/youth-pass/file-type-upload.spec.js"
