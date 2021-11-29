@@ -1,7 +1,7 @@
 name: Cypress Automation Production Testing
-on: push
-  # schedule:
-  #   - cron: '0 5 * * *' # run at 5 AM UTC
+on: 
+  schedule:
+    - cron: '0 5 * * *' # run at 5 AM UTC
 jobs:
   cypress-prod:
     runs-on: ubuntu-latest
