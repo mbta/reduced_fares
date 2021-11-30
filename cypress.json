@@ -3,6 +3,9 @@
     "defaultCommandTimeout": 10000,
     "video": false,
     "env": {
-        "youth_pass_url": "https://mbta.preprod.simpligov.com/preprod/portal/ShowWorkFlow/AnonymousEmbed/86cadfa6-e8ea-46f1-b6e8-62498f066962"
+        "youth_pass_url": "https://mbta.preprod.simpligov.com/preprod/portal/ShowWorkFlow/AnonymousEmbed/86cadfa6-e8ea-46f1-b6e8-62498f066962",
+        "youth_pass_dashboard_url": "https://mbta.preprod.simpligov.com/preprod/portal/Dashboard",
+        "malden_test_username": "maldentestuser@mbta.com",
+        "malden_test_credentials": "MaldenTest1!"
     }
 }
