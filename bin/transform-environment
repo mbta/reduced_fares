@@ -1,0 +1,20 @@
+#!/usr/bin/env python3
+"""
+Transform environment for Document Viewer uploads.
+
+Usage:
+    transform-environment
+
+Options:
+    -h --help           Show this helpful output
+"""
+
+from docopt import docopt
+
+def main(args):
+
+
+
+if __name__ == "__main__":
+    args = docopt(__doc__)
+    main(args)
