@@ -17,15 +17,18 @@ Options:
 from docopt import docopt
 
 def main(args):
-    f = open(args["--input"], 'r')
-    filedata = f.read()
-    f.close()
+    input_file = open(args["--input"], 'r')
+    input_data = input_file.read()
+    input_file.close()
 
-    newdata = filedata.replace("preprod", args["--environment"])
+    preprod_input_string = f'\"preprod\\'
+    environment_output_string = f'\{args["--environment"]}\\'
 
-    f = open(args["--output"], 'w')
-    f.write(newdata)
-    f.close()
+    transformed_data = input_data.replace(preprod_input_string, environment_output_string)
+
+    output_file = open(args["--output"], 'w')
+    output_file.write(transformed_data)
+    output_file.close()
     
     print(f"wrote output to {args['--output']}")
 
