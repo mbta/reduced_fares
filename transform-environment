@@ -1,0 +1,34 @@
+#!/usr/bin/env python3
+
+"""
+Transform environment for Document Viewer uploads.
+
+Usage:
+    transform-environment --input=<input> --output=<output> --environment=<environment>
+
+  
+Options:
+    -h --help           Show this helpful output
+    --input=<input> file to read from
+    --output=<output> file to write to
+    --environment=<environment> environment to write
+"""
+
+from docopt import docopt
+
+def main(args):
+    f = open(args["--input"], 'r')
+    filedata = f.read()
+    f.close()
+
+    newdata = filedata.replace("preprod", args["--environment"])
+
+    f = open(args["--output"], 'w')
+    f.write(newdata)
+    f.close()
+    
+    print(f"wrote output to {args['--output']}")
+
+if __name__ == "__main__":
+    args = docopt(__doc__)
+    main(args)
