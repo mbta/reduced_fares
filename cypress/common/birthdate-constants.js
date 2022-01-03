@@ -17,7 +17,7 @@ export function getRandomApplicantAge() {
     const applicantBirthdate12to17 = `${randomDate12to17.getMonth() + 1}/${randomDate12to17.getDate()}/${randomDate12to17.getFullYear()}`;    
     const applicantBirthdate18to25 = `${randomDate18to25.getMonth() + 1}/${randomDate18to25.getDate()}/${randomDate18to25.getFullYear()}`;    
     
-    // returns the year in which a Youth Pass program year begins (e.g., 2021-22 year begins in 2021)
+    // returns the year in which a Youth Pass program year begins (e.g., 2021-22 program year begins in 2021)
     // Youth Pass eligibility and age groupings are based off a static date (e.g., 2021-22 based on Nov 1, 2021)
     // baseline year constant is necessary to prevent false failures across Youth Pass automation caused by calendar year changeover
     function getBaselineYear() {
