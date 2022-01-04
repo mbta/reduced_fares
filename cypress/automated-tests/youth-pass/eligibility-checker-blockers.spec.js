@@ -6,6 +6,7 @@ describe('Eligibility Checker Blockers', () => {
     const eligibleZipCode = '02114'; 
 
     it('enters a random ineligible zip code', () => {
+        // all eligible zip codes currently start with "0", so starting any random 5-digit number with "1" should guarantee an ineligible zip without hardcoding 
         const ineligibleZipCode = Math.floor(Math.random() * 90000) + 10000;
 
         cy.visit(youthPassUrl);
