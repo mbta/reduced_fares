@@ -5,9 +5,8 @@ describe('Eligibility Checker Blockers', () => {
     const youthPassUrl = Cypress.env('youth_pass_url');
     const eligibleZipCode = '02114'; 
 
-    it('enters an ineligible zip code', () => {
+    it('enters a random ineligible zip code', () => {
         const ineligibleZipCode = Math.floor(Math.random() * 90000) + 10000;
-        cy.log(ineligibleZipCode);
 
         cy.visit(youthPassUrl);
         cy.get('#form-section-0 > .form-section-buttons > .form-section-next').click();
