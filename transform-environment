@@ -22,7 +22,7 @@ def main(args):
     input_file.close()
 
     preprod_input_string = f'\"preprod\\'
-    environment_output_string = f'\{args["--environment"]}\\'
+    environment_output_string = f'\"{args["--environment"]}\\'
 
     transformed_data = input_data.replace(preprod_input_string, environment_output_string)
 
