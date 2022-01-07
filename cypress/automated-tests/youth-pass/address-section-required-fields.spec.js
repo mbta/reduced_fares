@@ -16,27 +16,28 @@ describe('Youth Pass Address Section Required Fields', () => {
         
         cy.visit(youthPassUrl);
         cy.get('#form-section-0 > .form-section-buttons > .form-section-next').click();
+        cy.get('#form-section-1 > .form-section-buttons > .form-section-next').click();
         cy.get('#element105').type(applicantZipCode).blur();
         cy.get('#element15').type(applicantBirthdate).blur();
-        cy.get('#form-section-1 > .form-section-buttons > .form-section-next').click();
-        
-        cy.get('#element159_Option_1').click().blur();
-        cy.get('#element160_Option_2').click().blur();
-        cy.get('#element163').type(applicantSchoolName).blur();
         cy.get('#form-section-2 > .form-section-buttons > .form-section-next').click();
         
-        cy.get('#element116_Option_1').click().blur();
+        cy.get('#element159_Yes').click().blur();
+        cy.get('#element160_No').click().blur();
+        cy.get('#element163').type(applicantSchoolName).blur();
+        cy.get('#form-section-3 > .form-section-buttons > .form-section-next').click();
+        
+        cy.get('#element116_Apply').click().blur();
         cy.get('#element11').type(applicantFirstName).blur();
         cy.get('#element13').type(applicantLastName).blur();
-        cy.get('#form-section-4 > .form-section-buttons > .form-section-next').click();
+        cy.get('#form-section-5 > .form-section-buttons > .form-section-next').click();
         
         cy.get('#element17').type(applicantPhoneNumber).blur();
         cy.get('#element18').type(applicantEmailAddress).blur();
-        cy.get('#form-section-5 > .form-section-buttons > .form-section-next').click();
+        cy.get('#form-section-6 > .form-section-buttons > .form-section-next').click();
     });
     
     it('does not fill any home address fields and sees required field errors', () => {              
-        cy.get('#form-section-6 > .form-section-buttons > .form-submit-button').click();
+        cy.get('#form-section-7 > .form-section-buttons > .form-submit-button').click();
         cy.get('#form-element-wrapper_242').within(() => {
             cy.get('div.required-text').should('be.visible');
         });
@@ -55,8 +56,8 @@ describe('Youth Pass Address Section Required Fields', () => {
     });
     
     it('only selects card delivery method and sees required field errors', () => {              
-        cy.get('#element242_Option_1').click().blur();
-        cy.get('#form-section-6 > .form-section-buttons > .form-submit-button').click();
+        cy.get('#element242_Mail').click().blur();
+        cy.get('#form-section-7 > .form-section-buttons > .form-submit-button').click();
         cy.get('#form-element-wrapper_242').within(() => {
             cy.get('div.required-text').should('not.be.visible');
         });
@@ -78,7 +79,7 @@ describe('Youth Pass Address Section Required Fields', () => {
         const applicantStreetAddress = `${faker.datatype.number()} ${faker.address.streetName()} ${faker.address.streetSuffix()}`;
 
         cy.get('#element101').type(applicantStreetAddress).blur();
-        cy.get('#form-section-6 > .form-section-buttons > .form-submit-button').click();
+        cy.get('#form-section-7 > .form-section-buttons > .form-submit-button').click();
         cy.get('#form-element-wrapper_101').within(() => {
             cy.get('div.required-text').should('not.be.visible');
         });
@@ -97,7 +98,7 @@ describe('Youth Pass Address Section Required Fields', () => {
         const applicantCity = faker.address.city();
 
         cy.get('#element103').type(applicantCity).blur();
-        cy.get('#form-section-6 > .form-section-buttons > .form-submit-button').click();
+        cy.get('#form-section-7 > .form-section-buttons > .form-submit-button').click();
         cy.get('#form-element-wrapper_103').within(() => {
             cy.get('div.required-text').should('not.be.visible');
         });
@@ -113,7 +114,7 @@ describe('Youth Pass Address Section Required Fields', () => {
         const applicantZipCode = '02114';
 
         cy.get('#element154').type(applicantZipCode).blur();
-        cy.get('#form-section-6 > .form-section-buttons > .form-submit-button').click();
+        cy.get('#form-section-7 > .form-section-buttons > .form-submit-button').click();
         cy.get('#form-element-wrapper_154').within(() => {
             cy.get('div.required-text').should('not.be.visible');
         });
@@ -123,8 +124,8 @@ describe('Youth Pass Address Section Required Fields', () => {
     });
     
     it('does not fill any mailing address fields and sees required field errors', () => {              
-        cy.get('#element122_Option_2').click().blur();
-        cy.get('#form-section-6 > .form-section-buttons > .form-submit-button').click();
+        cy.get('#element122_No').click().blur();
+        cy.get('#form-section-7 > .form-section-buttons > .form-submit-button').click();
         cy.get('#form-element-wrapper_117').within(() => {
             cy.get('div.required-text').should('be.visible');
         });  
@@ -140,7 +141,7 @@ describe('Youth Pass Address Section Required Fields', () => {
         const applicantMailingAddress = `${faker.datatype.number()} ${faker.address.streetName()} ${faker.address.streetSuffix()}`;
 
         cy.get('#element117').type(applicantMailingAddress).blur();
-        cy.get('#form-section-6 > .form-section-buttons > .form-submit-button').click();
+        cy.get('#form-section-7 > .form-section-buttons > .form-submit-button').click();
         cy.get('#form-element-wrapper_117').within(() => {
             cy.get('div.required-text').should('not.be.visible');
         });  
@@ -156,7 +157,7 @@ describe('Youth Pass Address Section Required Fields', () => {
         const applicantMailingCity = faker.address.city();
 
         cy.get('#element119').type(applicantMailingCity).blur();
-        cy.get('#form-section-6 > .form-section-buttons > .form-submit-button').click();
+        cy.get('#form-section-7 > .form-section-buttons > .form-submit-button').click();
         cy.get('#form-element-wrapper_119').within(() => {
             cy.get('div.required-text').should('not.be.visible');
         });  
