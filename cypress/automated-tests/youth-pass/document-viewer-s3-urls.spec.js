@@ -12,7 +12,7 @@ describe('Youth Pass Document Viewer S3 URL Visibility', () => {
 
     it('sees three document viewer URLs when logged in as a group admin', () => {
         const youthPassDashboard = Cypress.env('youth_pass_dashboard_url');
-        const applicationActionButton = '.dx-datagrid-content-fixed > .dx-datagrid-table > tbody > [aria-rowindex="1"] > .actions-column > .select2 > .selection > .select2-selection';
+        const applicationActionButton = '#dataGridContainer > .dx-gridbase-container > .dx-datagrid-rowsview > .dx-datagrid-content-fixed > .dx-datagrid-table > tbody > [aria-rowindex="1"] > .actions-column > .select2 > .selection > .select2-selection';
         cy.visit(youthPassDashboard);
         cy.get('#username').type(Cypress.env('malden_test_username'));
         cy.get('#password').type(Cypress.env('malden_test_credentials'));
