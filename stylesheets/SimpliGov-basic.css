@@ -142,17 +142,32 @@ div#workflow-background-wrapper {
 }
 
 
-/* Hide field value */
+/* Hide error fields and values */
+/* HomeZipError field */
 #element108,
-#element123,
-#element138,
+/* BirthdayError field */
 #element180,
+/* EnrollmentEligibilityError field */
 #element183,
+/* SchoolEligibilityError field */
 #element184 {
     display: none;
     padding: 10px!important;
 }
 
+/* HomeZipError field */
+#form-element-wrapper_108,
+/* BirthdayError field */
+#form-element-wrapper_180,
+/* EnrollmentEligibilityError field */
+#form-element-wrapper_183,
+/* SchoolEligibilityError field */
+#form-element-wrapper_184 {
+    visibility: hidden;
+    height: 0px;
+    margin: -20px 0px;
+}
+/* END Hide error fields and values */
 
 /* Hide section breadcrumb titles */
 #section-breadcrumbs {
@@ -164,29 +179,15 @@ div#workflow-background-wrapper {
     margin: -10px 0px;
 }
 
-
-/* Hide error fields */
-#form-element-wrapper_108,
-#form-element-wrapper_180,
-#form-element-wrapper_183,
-#form-element-wrapper_184 {
-    visibility: hidden;
-    height: 0px;
-    margin: -20px 0px;
-}
-
-
 /* Hide datepicker calendar */
 .datetimepicker.datetimepicker-dropdown-bottom-right.dropdown-menu {
     display: none !important;
 }
 
-
 /* Hide print icon */
 #print-preview {
     display: none !important;
 }
-
 
 /* Update column width */
 @media(min-width:250px) {
@@ -464,5 +465,3 @@ h5 {
 .form-label-required span[role='presentation'], .form-label-required span[style="color: red;"] {
     color: #B3000F !important;
 }
-
-/* END Color for asterisks */
