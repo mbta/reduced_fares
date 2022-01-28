@@ -382,7 +382,8 @@ h5 {
 
 /* Required text and regex error color */
 .required-text,
-.regexErrorLabel {
+.regexErrorLabel,
+.requiredLabelEmail {
     color: #B3000F!important;
     font-style: normal;
 }
