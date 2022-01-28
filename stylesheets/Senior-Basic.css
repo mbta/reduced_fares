@@ -1,0 +1,239 @@
+/* Background color and font size */
+body,
+html {
+  background-color: #f2f3f5 !important;
+  font-size: 16px !important;
+}
+
+/* SimpliGov header */
+#formHeaderDiv {
+  height: 0px;
+  margin: -10px 0px;
+}
+
+/* Links */
+a {
+  color: #165c96;
+  text-decoration: underline;
+}
+
+a:focus,
+a:hover {
+  color: #0b2f4c;
+  text-decoration: underline;
+}
+
+a:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+/* zeroheight text style */
+p,
+li {
+  font-family: Inter UI, Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  font-size: 1rem !important;
+}
+
+@media (max-width: 799px) {
+  p,
+  li {
+    font-size: 0.85rem !important;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  font-weight: 700 !important;
+}
+
+h1 {
+  font-size: 2.5rem !important;
+}
+
+@media (max-width: 799px) {
+  h1 {
+    font-size: 1.75rem !important;
+  }
+}
+
+h2 {
+  font-size: 1.75rem !important;
+}
+
+@media (max-width: 799px) {
+  h2 {
+    font-size: 1.4219rem !important;
+  }
+}
+
+h3 {
+  font-size: 1.3125rem !important;
+}
+
+@media (max-width: 799px) {
+  h3 {
+    font-size: 1.1487rem !important;
+  }
+}
+
+/* Errors */
+.error-alert-item {
+  background-color: #f2dede;
+  border-left-width: 0.25rem;
+  border-left-color: #b3000f;
+  border-left-style: solid;
+  overflow: hidden;
+  position: relative;
+}
+
+.error-alert-item__top {
+  display: flex;
+  padding-left: 3rem;
+}
+
+.error-alert-item__top-text-container {
+  flex: 1 1 auto;
+  padding: 1rem;
+}
+
+.error-alert-item__icon {
+  align-content: center;
+  left: 1.25rem;
+  pointer-events: none;
+  position: absolute;
+  top: 1.2rem;
+  height: 2rem;
+  width: 2rem;
+}
+
+.error-alert-item__effect {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 0.375em;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  line-height: 1.275em;
+  color: inherit;
+}
+
+/* Required text and regex error color */
+.required-text,
+.requiredLabelEmail,
+.regexErrorLabel,
+.form-label-required span[role="presentation"],
+.form-label-required span[style="color: red;"] {
+  color: #b3000f !important;
+  font-style: normal;
+}
+
+/* Button size and font */
+.form-submit-button,
+.form-section-next,
+.form-section-prev,
+#divWorkflowContent .buttonPopup.blue {
+  font-family: Inter UI, Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  font-weight: 500 !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  vertical-align: middle !important;
+  cursor: pointer !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  padding: 0.6rem 1.6rem !important;
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+  border: 1px;
+  -webkit-border-radius: 0.25rem !important;
+  border-radius: 0.25rem !important;
+}
+
+/* Primary button color */
+.form-submit-button,
+.form-section-next,
+#divWorkflowContent .buttonPopup.blue {
+  background-color: #165c96 !important;
+  border-color: #165c96 !important;
+}
+
+/* Secondary button color */
+.form-section-prev {
+  background-color: #ffffff !important;
+  color: #165c96 !important;
+}
+
+/* Primary button focus and hover */
+.form-submit-button:active:focus,
+.form-submit-button:focus,
+.form-section-next:active:focus,
+.form-section-next:focus,
+#divWorkflowContent .buttonPopup.blue:active:focus,
+#divWorkflowContent .buttonPopup.blue:focus {
+  outline: thin dotted !important;
+  outline: 5px auto -webkit-focus-ring-color !important;
+  outline-offset: -2px !important;
+  color: #fff !important;
+  background-color: #0f416a !important;
+  border-color: #0e3b61 !important;
+  text-decoration: none !important;
+}
+
+.form-submit-button:hover,
+.form-section-next:hover,
+#divWorkflowContent .buttonPopup.blue:hover {
+  color: #fff !important;
+  background-color: #0f416a !important;
+  border-color: #0e3b61 !important;
+  text-decoration: none !important;
+}
+
+/* Secondary button focus and hover */
+.form-section-prev:focus {
+  outline: thin dotted !important;
+  outline: 5px auto -webkit-focus-ring-color !important;
+  outline-offset: -2px !important;
+  background-color: #cee0f4 !important;
+  color: #0b2f4c !important;
+  border-color: #0e3b61 !important;
+  text-decoration: none !important;
+}
+
+.form-section-prev:active:focus,
+.form-section-prev:active:hover {
+  background-color: #cee0f4 !important;
+  color: #0b2f4c !important;
+  border-color: #061827 !important;
+}
+
+.form-section-prev:hover {
+  background-color: #cee0f4 !important;
+  color: #0b2f4c !important;
+}
+
+/* Hide section breadcrumb titles */
+#section-breadcrumbs {
+  visibility: hidden;
+}
+
+/* Hide calendar */
+.datetimepicker.datetimepicker-dropdown-bottom-right.dropdown-menu {
+  display: none !important;
+}
+
+/* Hide print icon */
+#print-preview {
+  display: none !important;
+}
+
+/* Hide birthdate error field */
+#form-element-wrapper_56 {
+  visibility: hidden;
+  height: 0px;
+  margin: -20px 0px;
+}
