@@ -1,6 +1,6 @@
 import { getRandomApplicantAge } from '../../common/birthdate-constants';
 
-describe('youth pass successful submission - with an email address', () => {
+describe('youth pass successful new submission - with an email address', () => {
   const faker = require('faker');
   const applicantZipCode = '99999';
 
@@ -118,7 +118,7 @@ describe('youth pass successful submission - with an email address', () => {
   });
 });
 
-describe('youth pass successful submission - without an email address', () => {
+describe('youth pass successful renewal submission - without an email address', () => {
   const faker = require('faker');
   const applicantZipCode = '99999';
 
@@ -137,19 +137,13 @@ describe('youth pass successful submission - without an email address', () => {
       .click();
   });
 
-  it("selects apply for a new card", function() {
+  it("selects renew my card", function() {
     cy
-      .contains('Apply for a Senior CharlieCard')
       .get('[data-field-code="ApplicantStatus"]')
+      .contains('Renew')
       .click();
     cy
       .get('#form-section-1 > .form-section-buttons > .form-section-next')
-      .click();
-  });
-
-  it("clicks through instructions", function() {
-    cy
-      .get('#form-section-2 > .form-section-buttons > .form-section-next')
       .click();
   });
 
@@ -172,21 +166,7 @@ describe('youth pass successful submission - without an email address', () => {
       .click();
   });
 
-  it("uploads a photo ID", function() {
-    cy
-      .get('#element36')
-      .attachFile('youth-pass-test-image.png');
-    cy.get('.k-text-success').should('exist');
-    cy
-      .get('#form-section-5 > .form-section-buttons > .form-section-next')
-      .click();
-  });
-
-  it("uploads a headshot", function() {
-    cy
-      .get('#element39')
-      .attachFile('youth-pass-test-image.png');
-    cy.get('.k-text-success').should('exist');
+  it("skips uploading a headshot", function() {
     cy
       .get('#form-section-6 > .form-section-buttons > .form-section-next')
       .click();
