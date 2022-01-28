@@ -21,7 +21,7 @@ describe('youth pass successful submission - with an email address', () => {
 
   it("selects apply for a new card", function() {
     cy
-      .get('[data-field-code="ApplyOrRenewRadio"]')
+      .get('[data-field-code="ApplicantStatus"]')
       .contains('Apply for a Senior CharlieCard')
       .click();
     cy
@@ -85,14 +85,14 @@ describe('youth pass successful submission - with an email address', () => {
     const applicantZipCode = '99999';
 
     cy
-      .get('[data-field-code="CardDeliveryMethod"]')
+      .get('[data-field-code="CardDeliveryPreference"]')
       .contains('Mail to my address')
       .click();
     cy.get('#element22').type(applicantStreetAddress).blur();
     cy.get('#element24').type(applicantCity).blur();
     cy.get('#element26').type(applicantZipCode).blur();
     cy
-      .get('[data-field-code="MailingAddressBoolean"]')
+      .get('[data-field-code="MailingAddressSameAsHome"]')
       .contains('Yes')
       .click();
     cy
@@ -139,8 +139,8 @@ describe('youth pass successful submission - without an email address', () => {
 
   it("selects apply for a new card", function() {
     cy
-      .get('[data-field-code="ApplyOrRenewRadio"]')
       .contains('Apply for a Senior CharlieCard')
+      .get('[data-field-code="ApplicantStatus"]')
       .click();
     cy
       .get('#form-section-1 > .form-section-buttons > .form-section-next')
@@ -198,14 +198,14 @@ describe('youth pass successful submission - without an email address', () => {
     const applicantZipCode = '99999';
 
     cy
-      .get('[data-field-code="CardDeliveryMethod"]')
+      .get('[data-field-code="CardDeliveryPreference"]')
       .contains('Mail to my address')
       .click();
     cy.get('#element22').type(applicantStreetAddress).blur();
     cy.get('#element24').type(applicantCity).blur();
     cy.get('#element26').type(applicantZipCode).blur();
     cy
-      .get('[data-field-code="MailingAddressBoolean"]')
+      .get('[data-field-code="MailingAddressSameAsHome"]')
       .contains('Yes')
       .click();
     cy
