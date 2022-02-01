@@ -1,6 +1,6 @@
 import { getRandomApplicantAge } from '../../common/birthdate-constants';
 
-describe('youth pass birth date validation', () => {
+describe('senior birth date validation', () => {
   it("loads the form and gets to the personal information section", function() {
     // Load the form
     const seniorUrl = Cypress.env('senior_url');
