@@ -1,9 +1,9 @@
 import { getRandomApplicantAge } from '../../common/birthdate-constants';
 
-describe('senior successful new submission - with an email address', () => {
-  const faker = require('faker');
-  const applicantZipCode = '99999';
+const faker = require('faker');
+const applicantZipCode = '99999';
 
+describe('senior successful new submission - with an email address', () => {
   it("loads the senior form", function() {
     const seniorUrl = Cypress.env('senior_url');
     cy.visit(seniorUrl);
@@ -82,7 +82,6 @@ describe('senior successful new submission - with an email address', () => {
   it("enters a home address", function() {
     const applicantStreetAddress = `${faker.datatype.number()} ${faker.address.streetName()} ${faker.address.streetSuffix()}`;
     const applicantCity = faker.address.city();
-    const applicantZipCode = '99999';
 
     cy
       .get('[data-field-code="CardDeliveryPreference"]')
@@ -119,9 +118,6 @@ describe('senior successful new submission - with an email address', () => {
 });
 
 describe('senior successful renewal submission - without an email address', () => {
-  const faker = require('faker');
-  const applicantZipCode = '99999';
-
   it("loads the senior form", function() {
     const seniorUrl = Cypress.env('senior_url');
     cy.visit(seniorUrl);
@@ -175,7 +171,6 @@ describe('senior successful renewal submission - without an email address', () =
   it("enters a home address", function() {
     const applicantStreetAddress = `${faker.datatype.number()} ${faker.address.streetName()} ${faker.address.streetSuffix()}`;
     const applicantCity = faker.address.city();
-    const applicantZipCode = '99999';
 
     cy
       .get('[data-field-code="CardDeliveryPreference"]')
