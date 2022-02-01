@@ -6,21 +6,25 @@ export function getRandomApplicantAge() {
     const todaysDate = new Date();
     const baselineYear = getBaselineYear();
     const twelveYearsAgo = baselineYear - 12;
-    const eighteenYearsAgo = baselineYear - 18; 
-    const twentySixYearsAgo = baselineYear - 26; 
+    const eighteenYearsAgo = baselineYear - 18;
+    const twentySixYearsAgo = baselineYear - 26;
     const fiftyYearsAgo = baselineYear - 50;
+    const sixtyFourYearsAgo = baselineYear - 64;
     const sixtyFiveYearsAgo = baselineYear - 65;
     const ninetyYearsAgo = baselineYear - 90;
-    const currentDate = `${todaysDate.getMonth() + 1}/${todaysDate.getDate()}/${todaysDate.getFullYear()}`;
+    
+    const currentDate = formatDate(todaysDate);
     const randomDateTooYoung = faker.date.between(`${twelveYearsAgo}-11-02`, currentDate);
     const randomDateTooOld = faker.date.between(`${fiftyYearsAgo}-01-01`, `${twentySixYearsAgo}-11-01`);
     const randomDate12to17 = faker.date.between(`${eighteenYearsAgo}-11-02`, `${twelveYearsAgo}-11-01`);
     const randomDate18to25 = faker.date.between(`${twentySixYearsAgo}-11-02`, `${eighteenYearsAgo}-11-01`);
     const randomDate65to90 = faker.date.between(`${ninetyYearsAgo}-11-02`, `${sixtyFiveYearsAgo}-11-01`);
-    const applicantBirthdateTooYoung = `${randomDateTooYoung.getMonth() + 1}/${randomDateTooYoung.getDate()}/${randomDateTooYoung.getFullYear()}`;    
+
+    const applicantBirthdateTooYoung = formatDate(randomDateTooYoung);
     const applicantBirthdateTooOld = formatDate(randomDateTooOld);
     const applicantBirthdate12to17 = formatDate(randomDate12to17);
     const applicantBirthdate18to25 = formatDate(randomDate18to25);
+    const applicantBirthday64 = `11/01/${sixtyFourYearsAgo}`;
     const applicantBirthdate65to90 = formatDate(randomDate65to90);
     
     
@@ -51,6 +55,7 @@ export function getRandomApplicantAge() {
         applicantBirthdateTooOld,
         applicantBirthdate12to17,
         applicantBirthdate18to25,
+        applicantBirthday64,
         applicantBirthdate65to90
     };
 };

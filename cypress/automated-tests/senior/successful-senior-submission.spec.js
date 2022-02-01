@@ -1,6 +1,6 @@
 import { getRandomApplicantAge } from '../../common/birthdate-constants';
 
-describe('youth pass successful new submission - with an email address', () => {
+describe('senior successful new submission - with an email address', () => {
   const faker = require('faker');
   const applicantZipCode = '99999';
 
@@ -118,7 +118,7 @@ describe('youth pass successful new submission - with an email address', () => {
   });
 });
 
-describe('youth pass successful renewal submission - without an email address', () => {
+describe('senior successful renewal submission - without an email address', () => {
   const faker = require('faker');
   const applicantZipCode = '99999';
 
