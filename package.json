@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "cypress:local": "cypress open",
-    "cypress:ci": "cypress run"
+    "cypress:ci": "cypress run",
+    "prettier": "prettier --write \"**/*.css\"",
+    "prettier:check": "prettier --check \"**/*.css\""
   },
   "repository": {
     "type": "git",
@@ -14,6 +16,7 @@
   "devDependencies": {
     "cypress": "^9.3.1",
     "cypress-file-upload": "^5.0.8",
-    "faker": "^5.5.3"
+    "faker": "^5.5.3",
+    "prettier": "^2.5.1"
   }
 }
