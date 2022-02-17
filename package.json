@@ -15,7 +15,7 @@
     "url": "git+https://github.com/mbta/reduced_fares.git"
   },
   "devDependencies": {
-    "cypress": "^9.3.1",
+    "cypress": "^9.5.0",
     "cypress-file-upload": "^5.0.8",
     "faker": "^5.5.3",
     "prettier": "^2.5.1"
