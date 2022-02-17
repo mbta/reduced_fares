@@ -108,7 +108,7 @@ describe('senior successful new submission - with an email address', () => {
       .contains('I agree')
       .click();
     cy
-      .get('#form-element-wrapper_2 > div > .form-submit-button')
+      .get('#form-section-9 > .form-section-buttons > .form-submit-button')
       .click();
 
     cy
@@ -197,7 +197,7 @@ describe('senior successful renewal submission - without an email address', () =
       .contains('I agree')
       .click();
     cy
-      .get('#form-element-wrapper_2 > div > .form-submit-button')
+      .get('#form-section-9 > .form-section-buttons > .form-submit-button')
       .click();
 
     cy

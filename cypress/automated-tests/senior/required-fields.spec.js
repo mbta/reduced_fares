@@ -203,7 +203,7 @@ describe('senior required fields', () => {
       .click();
 
     cy
-      .get('#form-element-wrapper_2 > div > .form-submit-button')
+      .get('#form-section-9 > .form-section-buttons > .form-submit-button')
       .click();
     cy.get('.required-text').should('be.visible');
   });
