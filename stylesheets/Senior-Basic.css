@@ -220,27 +220,27 @@ h3 {
 .k-icon,
 .k-file-name,
 .k-dropzone .k-upload-status {
-  color: #494F5C !important;
+  color: #494f5c !important;
 }
 
 /* Make upload light gray border darker */
 .k-upload-files {
-  border-color: #494F5C !important;
+  border-color: #494f5c !important;
 }
 
 /* Make upload success message darker */
 .k-file-success .k-file-validation-message {
-  color: #145A06 !important;
+  color: #145a06 !important;
 }
 
 /* Make upload error message darker */
-.k-file-invalid .k-file-validation-message{
-  color: #B3000F !important;
+.k-file-invalid .k-file-validation-message {
+  color: #b3000f !important;
 }
 
 /* Make upload "invalid files" error message darker */
 .validation-text.fileUploadErrorLabel.truncateWithEllipsis {
-  color: #B3000F !important;
+  color: #b3000f !important;
 }
 
 /* Hide section breadcrumb titles */
