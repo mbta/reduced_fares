@@ -243,6 +243,18 @@ h3 {
   color: #b3000f !important;
 }
 
+/* set photo guide image width and add border*/
+.picture-guide {
+  width: 60% !important;
+  border: 1px solid #e9eaed !important;
+}
+
+@media (max-width: 799px) {
+  .picture-guide {
+    width: 98% !important;
+  }
+}
+
 /* Hide section breadcrumb titles */
 #section-breadcrumbs {
   visibility: hidden;
