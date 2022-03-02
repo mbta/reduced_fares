@@ -218,7 +218,7 @@ h3 {
 
 /* Make upload light gray color darker */
 .k-icon.k-i-check,
-.k-icon.k-i-file-image,
+.k-file-group.k-icon,
 .k-dropzone .k-upload-status,
 .k-file-name {
   color: #494f5c !important;
@@ -250,13 +250,19 @@ h3 {
   opacity: 1 !important;
 }
 
+/* removes default dark hover effect */
+.k-button.k-state-hover::before,
+.k-button:hover::before {
+  opacity: 0 !important;
+}
+
 /* remove ease transition */
 .k-button.k-flat {
   transition: none !important;
 }
 
 /* k-button */
-.k-button.k-button-icon.k-upload-action {
+.k-button.k-button-icon {
   text-align: center !important;
   white-space: wrap !important;
   vertical-align: middle !important;
@@ -271,22 +277,22 @@ h3 {
 }
 
 /* k-button settings */
-.k-button.k-upload-action:hover,
-.k-button.k-upload-action:focus,
-.k-button.k-upload-action:active {
+.k-button.k-button-icon:hover,
+.k-button.k-button-icon:focus,
+.k-button.k-button-icon:active {
   color: #0e3b61 !important;
   background-color: #cee0f4 !important;
 }
 
-/* k-button outline settings */
-.k-button.k-upload-action:active:focus,
-.k-button.k-upload-action:focus {
+/* k-button focus settings */
+.k-button.k-button-icon:active:focus,
+.k-button.k-button-icon:focus {
   outline: thin dotted !important;
   outline: 5px auto -webkit-focus-ring-color !important;
   outline-offset: -2px !important;
 }
 
-/* set photo guide image width and add border*/
+/* set photo guide image width and add border */
 .picture-guide {
   width: 60% !important;
   border: 1px solid #e9eaed !important;
