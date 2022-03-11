@@ -18,8 +18,7 @@ body {
   top: 0px !important;
 }
 
-h3,
-.h3 {
+h3 {
   border-color: #a9a9a9 !important;
 }
 
@@ -365,7 +364,7 @@ h5 {
   line-height: 1.275em;
   color: inherit;
 }
-*/ .error-alert-item__icon {
+.error-alert-item__icon {
   height: 2rem;
   width: 2rem;
 }
