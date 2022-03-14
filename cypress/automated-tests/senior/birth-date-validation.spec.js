@@ -7,13 +7,15 @@ describe('senior birth date validation', () => {
     cy.visit(seniorUrl);
 
     // Language Selection
-    cy
-      .get('[data-field-code="LanguageSelection"]')
-      .contains('English')
-      .click();
-    cy
-      .get('#form-section-0 > .form-section-buttons > .form-section-next')
-      .click();
+    // Temporarily commented out while the language selection is hidden,
+    // per https://app.asana.com/0/1200240595613188/1201957412884505
+    // cy
+    //   .get('[data-field-code="LanguageSelection"]')
+    //   .contains('English')
+    //   .click();
+    // cy
+    //   .get('#form-section-0 > .form-section-buttons > .form-section-next')
+    //   .click();
 
     // Application Type
     cy
@@ -21,12 +23,12 @@ describe('senior birth date validation', () => {
       .contains('Apply for a Senior CharlieCard')
       .click();
     cy
-      .get('#form-section-1 > .form-section-buttons > .form-section-next')
+      .get('#form-section-0 > .form-section-buttons > .form-section-next')
       .click();
   
     // Instructions
     cy
-      .get('#form-section-2 > .form-section-buttons > .form-section-next')
+      .get('#form-section-1 > .form-section-buttons > .form-section-next')
       .click();
   });
 
@@ -37,7 +39,7 @@ describe('senior birth date validation', () => {
 
     cy.get('.error-alert-item').should('be.visible');
     cy
-      .get('#form-section-3 > .form-section-buttons > .form-section-next')
+      .get('#form-section-2 > .form-section-buttons > .form-section-next')
       .should('not.be.visible');
   });
 });
