@@ -16,18 +16,20 @@ describe('senior required fields', () => {
     cy.visit(seniorUrl);
 
     // Language Selection
-    cy
-      .get('[data-field-code="LanguageSelection"]')
-      .contains('English')
-      .click();
-    cy
-      .get('#form-section-0 > .form-section-buttons > .form-section-next')
-      .click();
+    // Temporarily commented out while the language selection is hidden,
+    // per https://app.asana.com/0/1200240595613188/1201957412884505
+    // cy
+    //   .get('[data-field-code="LanguageSelection"]')
+    //   .contains('English')
+    //   .click();
+    // cy
+    //   .get('#form-section-0 > .form-section-buttons > .form-section-next')
+    //   .click();
   });
 
   it("does not fill in the application type and sees an error", function() {
     cy
-      .get('#form-section-1 > .form-section-buttons > .form-submit-button')
+      .get('#form-section-0 > .form-section-buttons > .form-submit-button')
       .click()
 
     cy.get('.required-text').should('be.visible');
@@ -39,10 +41,10 @@ describe('senior required fields', () => {
       .contains('Apply for a Senior CharlieCard')
       .click();
     cy
-      .get('#form-section-1 > .form-section-buttons > .form-section-next')
+      .get('#form-section-0 > .form-section-buttons > .form-section-next')
       .click();
     cy
-      .get('#form-section-2 > .form-section-buttons > .form-section-next')
+      .get('#form-section-1 > .form-section-buttons > .form-section-next')
       .click();
 
 
@@ -50,7 +52,7 @@ describe('senior required fields', () => {
     cy.get('#element13').type(applicantLastName).blur();
 
     cy
-      .get('#form-section-3 > .form-section-buttons > .form-submit-button')
+      .get('#form-section-2 > .form-section-buttons > .form-submit-button')
       .click();
     
     cy.get('.required-text').should('be.visible');
@@ -61,7 +63,7 @@ describe('senior required fields', () => {
     cy.get('#element12').clear().blur();
 
     cy
-      .get('#form-section-3 > .form-section-buttons > .form-submit-button')
+      .get('#form-section-2 > .form-section-buttons > .form-submit-button')
       .click();
     
     cy.get('.required-text').should('be.visible');
@@ -72,7 +74,7 @@ describe('senior required fields', () => {
     cy.get('#element13').clear().blur();
 
     cy
-      .get('#form-section-3 > .form-section-buttons > .form-submit-button')
+      .get('#form-section-2 > .form-section-buttons > .form-submit-button')
       .click();
     
     cy.get('.required-text').should('be.visible');
@@ -81,14 +83,14 @@ describe('senior required fields', () => {
   it("does not upload a photo ID and sees an error", function() {
     cy.get('#element13').type(applicantLastName).blur();
     cy
-      .get('#form-section-3 > .form-section-buttons > .form-section-next')
+      .get('#form-section-2 > .form-section-buttons > .form-section-next')
       .click();
     cy
-      .get('#form-section-4 > .form-section-buttons > .form-section-next')
+      .get('#form-section-3 > .form-section-buttons > .form-section-next')
       .click();
 
     cy
-      .get('#form-section-5 > .form-section-buttons > .form-submit-button')
+      .get('#form-section-4 > .form-section-buttons > .form-submit-button')
       .click();
 
     cy.get('.required-text').should('be.visible');
@@ -100,11 +102,11 @@ describe('senior required fields', () => {
       .attachFile('youth-pass-test-image.png');
     cy.get('.k-text-success').should('exist');
     cy
-      .get('#form-section-5 > .form-section-buttons > .form-section-next')
+      .get('#form-section-4 > .form-section-buttons > .form-section-next')
       .click();
 
     cy
-      .get('#form-section-6 > .form-section-buttons > .form-submit-button')
+      .get('#form-section-5 > .form-section-buttons > .form-submit-button')
       .click();
 
     cy.get('.required-text').should('be.visible');
@@ -116,7 +118,7 @@ describe('senior required fields', () => {
       .attachFile('youth-pass-test-image.png');
     cy.get('.k-text-success').should('exist');
     cy
-      .get('#form-section-6 > .form-section-buttons > .form-section-next')
+      .get('#form-section-5 > .form-section-buttons > .form-section-next')
       .click();
 
     cy.get('#element22').type(applicantStreetAddress).blur();
@@ -124,7 +126,7 @@ describe('senior required fields', () => {
     cy.get('#element26').type(applicantZipCode).blur();
 
     cy
-      .get('#form-section-7 > .form-section-buttons > .form-submit-button')
+      .get('#form-section-6 > .form-section-buttons > .form-submit-button')
       .click();
 
     cy.get('.required-text').should('be.visible');
@@ -142,7 +144,7 @@ describe('senior required fields', () => {
     cy.get('#element22').clear().blur();
 
     cy
-      .get('#form-section-7 > .form-section-buttons > .form-submit-button')
+      .get('#form-section-6 > .form-section-buttons > .form-submit-button')
       .click();
     cy.get('.required-text').should('be.visible');
 
@@ -150,7 +152,7 @@ describe('senior required fields', () => {
     cy.get('#element24').clear().blur();
 
     cy
-      .get('#form-section-7 > .form-section-buttons > .form-submit-button')
+      .get('#form-section-6 > .form-section-buttons > .form-submit-button')
       .click();
     cy.get('.required-text').should('be.visible');
 
@@ -158,7 +160,7 @@ describe('senior required fields', () => {
     cy.get('#element26').clear().blur();
 
     cy
-      .get('#form-section-7 > .form-section-buttons > .form-submit-button')
+      .get('#form-section-6 > .form-section-buttons > .form-submit-button')
       .click();
     cy.get('.required-text').should('be.visible');
 
@@ -172,7 +174,7 @@ describe('senior required fields', () => {
     cy.get('#element33').type(applicantZipCode).blur();
 
     cy
-      .get('#form-section-7 > .form-section-buttons > .form-submit-button')
+      .get('#form-section-6 > .form-section-buttons > .form-submit-button')
       .click();
     cy.get('.required-text').should('be.visible');
 
@@ -180,7 +182,7 @@ describe('senior required fields', () => {
     cy.get('#element31').clear().blur();
 
     cy
-      .get('#form-section-7 > .form-section-buttons > .form-submit-button')
+      .get('#form-section-6 > .form-section-buttons > .form-submit-button')
       .click();
     cy.get('.required-text').should('be.visible');
 
@@ -188,7 +190,7 @@ describe('senior required fields', () => {
     cy.get('#element33').clear().blur();
 
     cy
-      .get('#form-section-7 > .form-section-buttons > .form-submit-button')
+      .get('#form-section-6 > .form-section-buttons > .form-submit-button')
       .click();
     cy.get('.required-text').should('be.visible');
   });
@@ -196,14 +198,14 @@ describe('senior required fields', () => {
   it("does not agree to the rules and sees an error", function() {
     cy.get('#element33').type(applicantZipCode).blur();
     cy
-      .get('#form-section-7 > .form-section-buttons > .form-section-next')
+      .get('#form-section-6 > .form-section-buttons > .form-section-next')
       .click();
     cy
-      .get('#form-section-8 > .form-section-buttons > .form-section-next')
+      .get('#form-section-7 > .form-section-buttons > .form-section-next')
       .click();
 
     cy
-      .get('#form-section-9 > .form-section-buttons > .form-submit-button')
+      .get('#form-section-8 > .form-section-buttons > .form-submit-button')
       .click();
     cy.get('.required-text').should('be.visible');
   });

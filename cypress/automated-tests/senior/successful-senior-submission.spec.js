@@ -9,15 +9,17 @@ describe('senior successful new submission - with an email address', () => {
     cy.visit(seniorUrl);
   });
 
-  it('completes the language selection', () => {
-    cy
-      .get('[data-field-code="LanguageSelection"]')
-      .contains('English')
-      .click();
-    cy
-      .get('#form-section-0 > .form-section-buttons > .form-section-next')
-      .click();
-  });
+  // Temporarily commented out while the language selection is hidden,
+  // per https://app.asana.com/0/1200240595613188/1201957412884505
+  // it('completes the language selection', () => {
+  //   cy
+  //     .get('[data-field-code="LanguageSelection"]')
+  //     .contains('English')
+  //     .click();
+  //   cy
+  //     .get('#form-section-0 > .form-section-buttons > .form-section-next')
+  //     .click();
+  // });
 
   it("selects apply for a new card", function() {
     cy
@@ -25,13 +27,13 @@ describe('senior successful new submission - with an email address', () => {
       .contains('Apply for a Senior CharlieCard')
       .click();
     cy
-      .get('#form-section-1 > .form-section-buttons > .form-section-next')
+      .get('#form-section-0 > .form-section-buttons > .form-section-next')
       .click();
   });
 
   it("clicks through instructions", function() {
     cy
-      .get('#form-section-2 > .form-section-buttons > .form-section-next')
+      .get('#form-section-1 > .form-section-buttons > .form-section-next')
       .click();
   });
 
@@ -44,7 +46,7 @@ describe('senior successful new submission - with an email address', () => {
     cy.get('#element12').type(applicantFirstName).blur();
     cy.get('#element13').type(applicantLastName).blur();
     cy
-      .get('#form-section-3 > .form-section-buttons > .form-section-next')
+      .get('#form-section-2 > .form-section-buttons > .form-section-next')
       .click();
   });
 
@@ -55,7 +57,7 @@ describe('senior successful new submission - with an email address', () => {
     cy.get('#element15').type(applicantPhoneNumber).blur();
     cy.get('#element16').type(applicantEmailAddress).blur();
     cy
-      .get('#form-section-4 > .form-section-buttons > .form-section-next')
+      .get('#form-section-3 > .form-section-buttons > .form-section-next')
       .click();
   });
 
@@ -65,7 +67,7 @@ describe('senior successful new submission - with an email address', () => {
       .attachFile('youth-pass-test-image.png');
     cy.get('.k-text-success').should('exist');
     cy
-      .get('#form-section-5 > .form-section-buttons > .form-section-next')
+      .get('#form-section-4 > .form-section-buttons > .form-section-next')
       .click();
   });
 
@@ -75,7 +77,7 @@ describe('senior successful new submission - with an email address', () => {
       .attachFile('youth-pass-test-image.png');
     cy.get('.k-text-success').should('exist');
     cy
-      .get('#form-section-6 > .form-section-buttons > .form-section-next')
+      .get('#form-section-5 > .form-section-buttons > .form-section-next')
       .click();
   });
 
@@ -95,20 +97,20 @@ describe('senior successful new submission - with an email address', () => {
       .contains('Yes')
       .click();
     cy
-      .get('#form-section-7 > .form-section-buttons > .form-section-next')
+      .get('#form-section-6 > .form-section-buttons > .form-section-next')
       .click();
   });
 
   it("skips the demographic section and agrees to the rules", function() {
     cy
-      .get('#form-section-8 > .form-section-buttons > .form-section-next')
+      .get('#form-section-7 > .form-section-buttons > .form-section-next')
       .click();
     cy
       .get('[data-field-code="RulesAndConditionsCheckbox"]')
       .contains('I agree')
       .click();
     cy
-      .get('#form-section-9 > .form-section-buttons > .form-submit-button')
+      .get('#form-section-8 > .form-section-buttons > .form-submit-button')
       .click();
 
     cy
@@ -123,15 +125,17 @@ describe('senior successful renewal submission - without an email address', () =
     cy.visit(seniorUrl);
   });
 
-  it('completes the language selection', () => {
-    cy
-      .get('[data-field-code="LanguageSelection"]')
-      .contains('English')
-      .click();
-    cy
-      .get('#form-section-0 > .form-section-buttons > .form-section-next')
-      .click();
-  });
+  // Temporarily commented out while the language selection is hidden,
+  // per https://app.asana.com/0/1200240595613188/1201957412884505
+  // it('completes the language selection', () => {
+  //   cy
+  //     .get('[data-field-code="LanguageSelection"]')
+  //     .contains('English')
+  //     .click();
+  //   cy
+  //     .get('#form-section-0 > .form-section-buttons > .form-section-next')
+  //     .click();
+  // });
 
   it("selects renew my card", function() {
     cy
@@ -139,7 +143,7 @@ describe('senior successful renewal submission - without an email address', () =
       .contains('Renew')
       .click();
     cy
-      .get('#form-section-1 > .form-section-buttons > .form-section-next')
+      .get('#form-section-0 > .form-section-buttons > .form-section-next')
       .click();
   });
 
@@ -152,19 +156,19 @@ describe('senior successful renewal submission - without an email address', () =
     cy.get('#element12').type(applicantFirstName).blur();
     cy.get('#element13').type(applicantLastName).blur();
     cy
-      .get('#form-section-3 > .form-section-buttons > .form-section-next')
+      .get('#form-section-2 > .form-section-buttons > .form-section-next')
       .click();
   });
 
   it("does not enter an email address or phone number for contact info", function() {
     cy
-      .get('#form-section-4 > .form-section-buttons > .form-section-next')
+      .get('#form-section-3 > .form-section-buttons > .form-section-next')
       .click();
   });
 
   it("skips uploading a headshot", function() {
     cy
-      .get('#form-section-6 > .form-section-buttons > .form-section-next')
+      .get('#form-section-5 > .form-section-buttons > .form-section-next')
       .click();
   });
 
@@ -184,20 +188,20 @@ describe('senior successful renewal submission - without an email address', () =
       .contains('Yes')
       .click();
     cy
-      .get('#form-section-7 > .form-section-buttons > .form-section-next')
+      .get('#form-section-6 > .form-section-buttons > .form-section-next')
       .click();
   });
 
   it("skips the demographic section and agrees to the rules", function() {
     cy
-      .get('#form-section-8 > .form-section-buttons > .form-section-next')
+      .get('#form-section-7 > .form-section-buttons > .form-section-next')
       .click();
     cy
       .get('[data-field-code="RulesAndConditionsCheckbox"]')
       .contains('I agree')
       .click();
     cy
-      .get('#form-section-9 > .form-section-buttons > .form-submit-button')
+      .get('#form-section-8 > .form-section-buttons > .form-submit-button')
       .click();
 
     cy
