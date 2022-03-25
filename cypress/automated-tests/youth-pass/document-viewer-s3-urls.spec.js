@@ -21,6 +21,7 @@ describe('Youth Pass Document Viewer S3 URL Visibility', () => {
         // find and approve application
         cy.get('[aria-rowindex="1"]').should('contain', applicantFirstName)
         cy.get(applicationActionButton).click();
+        cy.wait(2000);
         cy.get(':nth-child(2) > .dashboard-actions').should('be.visible').click();
         cy.get('#element189_Option_1').click();
         cy.get('.form-submit-button').click();
@@ -28,6 +29,9 @@ describe('Youth Pass Document Viewer S3 URL Visibility', () => {
         
         // view audit trail and assert
         cy.visit(youthPassDashboard);
+        cy.wait(3000);
+        cy.get('.dashboard > .records').click();
+        cy.get('[aria-rowindex="1"]').should('contain', 'Approved (pick up later)')
         cy.get('.fa-list').click();
         cy.get(applicationActionButton).click();
         cy.get(':nth-child(3) > .dashboard-actions').should('be.visible').click();
