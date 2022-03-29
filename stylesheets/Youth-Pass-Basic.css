@@ -8,6 +8,7 @@
 html,
 body {
   background-color: #223b75 !important;
+  font-size: 16px;
 }
 
 .loadingPanel {
@@ -199,11 +200,6 @@ a:focus {
 }
 
 /* Other Content */
-body,
-html {
-  font-size: 16px;
-}
-
 body {
   font-family: "Inter UI", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
@@ -314,10 +310,12 @@ h5 {
 
 .error-alert-item__icon {
   align-content: center;
+  height: 2rem;
   left: 1.25rem;
   pointer-events: none;
   position: absolute;
   top: 1.2rem;
+  width: 2rem;
 }
 
 .error-alert-item__effect {
@@ -327,10 +325,6 @@ h5 {
   font-weight: 700;
   line-height: 1.275em;
   color: inherit;
-}
-.error-alert-item__icon {
-  height: 2rem;
-  width: 2rem;
 }
 
 /* Required text and regex error color */
