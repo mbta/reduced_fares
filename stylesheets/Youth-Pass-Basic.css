@@ -358,28 +358,28 @@ h5 {
 
 /* Button focus and hover */
 
-/* Submit-Next button focus */
-.form-submit-button:active:focus,
-.form-submit-button:focus,
-.form-section-next:active:focus,
-.form-section-next:focus,
-/* Upload button focus */
-#divWorkflowContent .buttonPopup.blue:active:focus, 
-#divWorkflowContent .buttonPopup.blue:focus {
-  outline: thin dotted !important;
-  outline: 5px auto -webkit-focus-ring-color !important;
-  outline-offset: -2px !important;
+/* Submit-Next button hover */
+.form-submit-button:hover,
+.form-section-next:hover,
+/* Upload button hover */
+#divWorkflowContent .buttonPopup.blue:hover {
   color: #fff !important;
   background-color: #0f416a !important;
   border-color: #0e3b61 !important;
   text-decoration: none !important;
 }
 
-/* Submit-Next button hover */
-.form-submit-button:hover,
-.form-section-next:hover,
-/* Upload button hover */
-#divWorkflowContent .buttonPopup.blue:hover {
+/* Submit-Next button focus */
+.form-submit-button:focus,
+.form-submit-button:active:focus,
+.form-section-next:focus,
+.form-section-next:active:focus,
+/* Upload button focus */
+#divWorkflowContent .buttonPopup.blue:focus,
+#divWorkflowContent .buttonPopup.blue:active:focus {
+  outline: thin dotted !important;
+  outline: 5px auto -webkit-focus-ring-color !important;
+  outline-offset: -2px !important;
   color: #fff !important;
   background-color: #0f416a !important;
   border-color: #0e3b61 !important;
@@ -397,16 +397,16 @@ h5 {
   text-decoration: none !important;
 }
 
+.form-section-prev:hover {
+  background-color: #cee0f4 !important;
+  color: #0b2f4c !important;
+}
+
 .form-section-prev:active:focus,
 .form-section-prev:active:hover {
   background-color: #cee0f4 !important;
   color: #0b2f4c !important;
   border-color: #061827 !important;
-}
-
-.form-section-prev:hover {
-  background-color: #cee0f4 !important;
-  color: #0b2f4c !important;
 }
 
 /* END Button focus and hover */

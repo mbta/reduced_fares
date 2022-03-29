@@ -153,29 +153,6 @@ h3 {
   border-radius: 0.25rem !important;
 }
 
-/* Button focus effects */
-.form-submit-button:active:focus,
-.form-submit-button:focus,
-.form-section-next:active:focus,
-.form-section-next:focus,
-#divWorkflowContent .buttonPopup.blue:active:focus,
-#divWorkflowContent .buttonPopup.blue:focus,
-.buttonPopup.blue.big:active:focus,
-.buttonPopup.blue.big:focus,
-.form-section-prev:active:focus,
-.form-section-prev:focus {
-  outline: thin dotted !important;
-  outline: 5px auto -webkit-focus-ring-color !important;
-  outline-offset: -2px !important;
-}
-
-/* Back and next button placement */
-.form-section-buttons {
-  text-align: left !important;
-  margin-left: 10px !important;
-  margin-top: 24px !important;
-}
-
 /* Primary button colors */
 .form-submit-button,
 .form-section-next,
@@ -183,6 +160,13 @@ h3 {
 .buttonPopup.blue.big {
   color: #fff !important;
   background-color: #165c96 !important;
+  border-color: #165c96 !important;
+}
+
+/* Secondary button colors */
+.form-section-prev {
+  color: #165c96 !important;
+  background-color: #fff !important;
   border-color: #165c96 !important;
 }
 
@@ -207,6 +191,31 @@ h3 {
   border-color: #0e3b61 !important;
 }
 
+/* Secondary button active, focus, and hover */
+.form-section-prev:active,
+.form-section-prev:focus,
+.form-section-prev:hover {
+  color: #0b2f4c !important;
+  background-color: #cee0f4 !important;
+  border-color: #0e3b61 !important;
+}
+
+/* Button focus effects */
+.form-submit-button:focus,
+.form-submit-button:active:focus,
+.form-section-next:focus,
+.form-section-next:active:focus,
+#divWorkflowContent .buttonPopup.blue:focus,
+#divWorkflowContent .buttonPopup.blue:active:focus,
+.buttonPopup.blue.big:focus,
+.buttonPopup.blue.big:active:focus,
+.form-section-prev:focus,
+.form-section-prev:active:focus {
+  outline: thin dotted !important;
+  outline: 5px auto -webkit-focus-ring-color !important;
+  outline-offset: -2px !important;
+}
+
 /* Primary button active focus and hover effects */
 .form-submit-button:active:focus,
 .form-submit-button:active:hover,
@@ -222,20 +231,11 @@ h3 {
   outline: none !important;
 }
 
-/* Secondary button colors */
-.form-section-prev {
-  color: #165c96 !important;
-  background-color: #fff !important;
-  border-color: #165c96 !important;
-}
-
-/* Secondary button active, focus, and hover */
-.form-section-prev:active,
-.form-section-prev:focus,
-.form-section-prev:hover {
-  color: #0b2f4c !important;
-  background-color: #cee0f4 !important;
-  border-color: #0e3b61 !important;
+/* Back and next button placement */
+.form-section-buttons {
+  text-align: left !important;
+  margin-left: 10px !important;
+  margin-top: 24px !important;
 }
 
 /* Secondary button active focus and hover effects */
@@ -327,16 +327,6 @@ button.close {
   font-size: 1.5rem !important;
 }
 
-/* k-button and close button focus settings */
-.k-button.k-button-icon:active:focus,
-.k-button.k-button-icon:focus,
-button.close:active:focus,
-button.close:focus {
-  outline: thin dotted !important;
-  outline: 5px auto -webkit-focus-ring-color !important;
-  outline-offset: -2px !important;
-}
-
 /* k-button and close button active, focus, and hover */
 .k-button.k-button-icon:active,
 .k-button.k-button-icon:focus,
@@ -346,6 +336,16 @@ button.close:focus,
 button.close:hover {
   color: #0e3b61 !important;
   background-color: #cee0f4 !important;
+}
+
+/* k-button and close button focus settings */
+.k-button.k-button-icon:focus,
+.k-button.k-button-icon:active:focus,
+button.close:focus,
+button.close:active:focus {
+  outline: thin dotted !important;
+  outline: 5px auto -webkit-focus-ring-color !important;
+  outline-offset: -2px !important;
 }
 
 /* k-button and close button active focus and hover effects */
