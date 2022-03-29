@@ -90,9 +90,6 @@ div#workflow-background-wrapper {
   border-bottom-left-radius: 4px;
 }
 
-@media screen and (max-width: 1340px) and (min-width: 1100px) {
-}
-
 #workflow-background-wrapper {
   min-width: 2px !important;
 }
