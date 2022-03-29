@@ -1,4 +1,4 @@
-/*Generic CSS*/
+/* Generic CSS */
 .formFieldWrapper .radio-checkbox-label,
 .form-element-wrapper .radio-checkbox-label {
   margin: 0px;
@@ -9,10 +9,6 @@ html,
 body {
   background-color: #223b75 !important;
 }
-
-/*#workflow-background-wrapper {
-	border-radius: 4px!important;
-}*/
 
 .loadingPanel {
   top: 0px !important;
@@ -26,19 +22,6 @@ h3 {
   width: 80%;
 }
 
-/*
-.radio-checkbox-label {
-	color: red!important;
-}
-*/
-
-/* below here is content of default demo template */
-
-/* turn off title, header/footer, info, summary/attachments/communications sections */
-/*.page-top, .page-footer, .infoSection, .workflowRightTab {
-	display: none!important;
-}*/
-
 /* turn off title, header/footer, info, summary/attachments/communications sections */
 .page-head,
 .page-footer,
@@ -46,15 +29,6 @@ h3 {
 .workflowRightTab {
   display: none !important;
 }
-
-/* center form, get rid of line on right border, add shadow */
-
-/*#workflow-background-wrapper {
-	float: none!important;
-	margin: auto!important;
-	border-right: none!important;
-	box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.2)!important;
-}*/
 
 /* turn on the wizard button to toggle between wizard view and normal view */
 .wizardNormalMode {
@@ -106,18 +80,12 @@ h3 {
 }
 
 .workflowRightTab {
-  /*   width: 37%;*/
-  /*	width: 27%;*/
   width: 10% !important;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
 }
 
 div#workflow-background-wrapper {
-  /*    width: 54%;*/
-  /*	width: 67%!important;*/
-  /* width: 80%!important;
-	max-width: 80%!important; */
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
 }
