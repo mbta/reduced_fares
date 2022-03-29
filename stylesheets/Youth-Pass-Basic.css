@@ -102,6 +102,7 @@ div#workflow-background-wrapper {
 }
 
 /* Hide error fields and values */
+
 /* HomeZipError field */
 #element108,
 /* BirthdayError field */
@@ -126,6 +127,7 @@ div#workflow-background-wrapper {
   height: 0;
   margin: -20px 0;
 }
+
 /* END Hide error fields and values */
 
 /* Hide section breadcrumb titles */
@@ -348,6 +350,7 @@ h5 {
 /* END Error style section */
 
 /* Button colors */
+
 /* Submit-Next button */
 .form-submit-button,
 .form-section-next,
@@ -362,9 +365,11 @@ h5 {
   background-color: #fff !important;
   color: #165c96 !important;
 }
+
 /* END Button colors */
 
 /* Button focus and hover */
+
 /* Submit-Next button focus */
 .form-submit-button:active:focus,
 .form-submit-button:focus,
