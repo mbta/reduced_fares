@@ -1,7 +1,7 @@
 /* Generic CSS */
 .formFieldWrapper .radio-checkbox-label,
 .form-element-wrapper .radio-checkbox-label {
-  margin: 0px;
+  margin: 0;
 }
 
 /* Background */
@@ -11,7 +11,7 @@ body {
 }
 
 .loadingPanel {
-  top: 0px !important;
+  top: 0 !important;
 }
 
 h3 {
@@ -45,7 +45,7 @@ h3 {
 #workflow-wrapper {
   /* go Dodgers (used to be: #3489ba) */
   background-color: #223b75 !important;
-  padding: 50px 0px !important;
+  padding: 50px 0 !important;
 }
 
 /* put space between bottom of form fields and top of submit button */
@@ -123,8 +123,8 @@ div#workflow-background-wrapper {
 /* SchoolEligibilityError field */
 #form-element-wrapper_184 {
   visibility: hidden;
-  height: 0px;
-  margin: -20px 0px;
+  height: 0;
+  margin: -20px 0;
 }
 /* END Hide error fields and values */
 
@@ -134,8 +134,8 @@ div#workflow-background-wrapper {
 }
 
 #formHeaderDiv {
-  height: 0px;
-  margin: -10px 0px;
+  height: 0;
+  margin: -10px 0;
 }
 
 /* Hide datepicker calendar */
@@ -231,7 +231,7 @@ h5,
 }
 
 .h3 {
-  margin-top: 0px !important;
+  margin-top: 0 !important;
 }
 
 h1 {

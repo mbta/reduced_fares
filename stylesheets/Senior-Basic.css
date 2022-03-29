@@ -7,8 +7,8 @@ html {
 
 /* SimpliGov header */
 #formHeaderDiv {
-  height: 0px;
-  margin: -10px 0px;
+  height: 0;
+  margin: -10px 0;
 }
 
 /* Links */
@@ -322,7 +322,7 @@ button.close {
   color: #165c96 !important;
   background-color: #fff !important;
   text-shadow: none !important;
-  padding: 0em 0.451em !important;
+  padding: 0 0.451em !important;
   line-height: 1.5 !important;
   -webkit-border-radius: 50% !important;
   border-radius: 50% !important;
@@ -390,6 +390,6 @@ button.close:active:hover {
 /* Hide birthdate error field */
 #form-element-wrapper_56 {
   visibility: hidden;
-  height: 0px;
-  margin: -20px 0px;
+  height: 0;
+  margin: -20px 0;
 }
