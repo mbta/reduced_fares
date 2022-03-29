@@ -290,9 +290,7 @@ h5 {
 /* Error style section */
 .error-alert-item {
   background-color: #f2dede;
-  border-left-width: 0.25rem;
-  border-left-color: #b3000f;
-  border-left-style: solid;
+  border-left: 0.25rem solid #b3000f;
   overflow: hidden;
   position: relative;
 }
