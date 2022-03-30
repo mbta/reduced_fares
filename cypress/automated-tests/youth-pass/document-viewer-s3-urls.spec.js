@@ -12,7 +12,6 @@ describe('Youth Pass Document Viewer S3 URL Visibility', () => {
 
     it('sees three document viewer URLs when logged in as a group admin', () => {
         const youthPassDashboard = Cypress.env('youth_pass_dashboard_url');
-        const applicationActionButton = '#dataGridContainer > .dx-gridbase-container > .dx-datagrid-rowsview > .dx-datagrid-content-fixed > .dx-datagrid-table > tbody > [aria-rowindex="1"] > .actions-column > .select2 > .selection > .select2-selection';
         cy.visit(youthPassDashboard);
         cy.get('#username').type(Cypress.env('malden_test_username'));
         cy.get('#password').type(Cypress.env('malden_test_credentials'));
@@ -20,24 +19,30 @@ describe('Youth Pass Document Viewer S3 URL Visibility', () => {
         
         // find and approve application
         cy.get('[aria-rowindex="1"]').should('contain', applicantFirstName)
-        cy.get(applicationActionButton).click();
+        cy.get('.mytasksboard > .records').click();
+        cy.get('#dx-col-87').click();
         cy.wait(2000);
-        cy.get(':nth-child(2) > .dashboard-actions').should('be.visible').click();
+        cy.get('.dx-datagrid-content-fixed > .dx-datagrid-table > tbody > [aria-rowindex="1"] > .actions-column > .edit-task > span').click();
         cy.get('#element189_Option_1').click();
         cy.get('.form-submit-button').click();
         cy.get('#thank-you-text').should('be.visible');
+        cy.wait(2000);
+        cy.get('.exit-workflow-text').click();
+        cy.wait(2000);
+        cy.get('#yesBtn').click();
+        cy.wait(2000);
         
         // view audit trail and assert
-        cy.visit(youthPassDashboard);
-        cy.wait(3000);
         cy.get('.dashboard > .records').click();
         cy.get('[aria-rowindex="1"]').should('contain', 'Approved (pick up later)')
-        cy.get('.fa-list').click();
-        cy.get(applicationActionButton).click();
-        cy.get(':nth-child(3) > .dashboard-actions').should('be.visible').click();
-        cy.get(':nth-child(4) > .wrapper-switcher').click();
-        cy.get('#AuditLogDiv > :nth-child(4)').should('contain', 'ProofOfAgeS3URL')
-        cy.get('#AuditLogDiv > :nth-child(4)').should('contain', 'ProofOfResidencyS3URL')
-        cy.get('#AuditLogDiv > :nth-child(4)').should('contain', 'ProofOfEligibilityS3URL')
+        cy.get('.mytasksboard > .records').click();
+        cy.get('#dx-col-87').click();
+        cy.wait(2000);
+        cy.get('.dx-datagrid-content-fixed > .dx-datagrid-table > tbody > [aria-rowindex="1"] > .actions-column > .edit-task > span').click();
+        cy.get('#show-info-btn').click();
+        cy.get(':nth-child(5) > .wrapper-switcher').click();
+        cy.get('#AuditLogDiv > :nth-child(5)').should('contain', 'ProofOfAgeS3URL')
+        cy.get('#AuditLogDiv > :nth-child(5)').should('contain', 'ProofOfResidencyS3URL')
+        cy.get('#AuditLogDiv > :nth-child(5)').should('contain', 'ProofOfEligibilityS3URL')
     });
 });
