@@ -79,6 +79,6 @@ describe('Youth Pass Successful Submission', () => {
         cy.get('#form-section-12 > .form-section-buttons > .form-submit-button').click();
 
         cy.get('#thank-you-text', { timeout: 15000 }).should('contain', 'Application Submitted')
-        cy.get('#thank-you-text', { timeout: 15000 }).should('contain', 'ebalkam@mbta.com')
+        cy.get('#thank-you-text', { timeout: 15000 }).should('contain', 'krisjohnson@mbta.com')
     });
 });
