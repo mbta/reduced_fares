@@ -1,21 +1,18 @@
-/*Generic CSS*/
+/* Generic CSS */
 .formFieldWrapper .radio-checkbox-label,
 .form-element-wrapper .radio-checkbox-label {
-  margin: 0px;
+  margin: 0;
 }
 
 /* Background */
 html,
 body {
   background-color: #223b75 !important;
+  font-size: 16px;
 }
 
-/*#workflow-background-wrapper {
-	border-radius: 4px!important;
-}*/
-
 .loadingPanel {
-  top: 0px !important;
+  top: 0 !important;
 }
 
 h3 {
@@ -26,19 +23,6 @@ h3 {
   width: 80%;
 }
 
-/*
-.radio-checkbox-label {
-	color: red!important;
-}
-*/
-
-/* below here is content of default demo template */
-
-/* turn off title, header/footer, info, summary/attachments/communications sections */
-/*.page-top, .page-footer, .infoSection, .workflowRightTab {
-	display: none!important;
-}*/
-
 /* turn off title, header/footer, info, summary/attachments/communications sections */
 .page-head,
 .page-footer,
@@ -46,15 +30,6 @@ h3 {
 .workflowRightTab {
   display: none !important;
 }
-
-/* center form, get rid of line on right border, add shadow */
-
-/*#workflow-background-wrapper {
-	float: none!important;
-	margin: auto!important;
-	border-right: none!important;
-	box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.2)!important;
-}*/
 
 /* turn on the wizard button to toggle between wizard view and normal view */
 .wizardNormalMode {
@@ -71,7 +46,7 @@ h3 {
 #workflow-wrapper {
   /* go Dodgers (used to be: #3489ba) */
   background-color: #223b75 !important;
-  padding: 50px 0px !important;
+  padding: 50px 0 !important;
 }
 
 /* put space between bottom of form fields and top of submit button */
@@ -106,23 +81,14 @@ h3 {
 }
 
 .workflowRightTab {
-  /*   width: 37%;*/
-  /*	width: 27%;*/
   width: 10% !important;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
 }
 
 div#workflow-background-wrapper {
-  /*    width: 54%;*/
-  /*	width: 67%!important;*/
-  /* width: 80%!important;
-	max-width: 80%!important; */
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
-}
-
-@media screen and (max-width: 1340px) and (min-width: 1100px) {
 }
 
 #workflow-background-wrapper {
@@ -134,6 +100,7 @@ div#workflow-background-wrapper {
 }
 
 /* Hide error fields and values */
+
 /* HomeZipError field */
 #element108,
 /* BirthdayError field */
@@ -155,9 +122,10 @@ div#workflow-background-wrapper {
 /* SchoolEligibilityError field */
 #form-element-wrapper_184 {
   visibility: hidden;
-  height: 0px;
-  margin: -20px 0px;
+  height: 0;
+  margin: -20px 0;
 }
+
 /* END Hide error fields and values */
 
 /* Hide section breadcrumb titles */
@@ -166,8 +134,8 @@ div#workflow-background-wrapper {
 }
 
 #formHeaderDiv {
-  height: 0px;
-  margin: -10px 0px;
+  height: 0;
+  margin: -10px 0;
 }
 
 /* Hide datepicker calendar */
@@ -232,13 +200,8 @@ a:focus {
 }
 
 /* Other Content */
-body,
-html {
-  font-size: 16px;
-}
-
 body {
-  font-family: Inter UI, Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  font-family: "Inter UI", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 
 @media (max-width: 799px) {
@@ -248,7 +211,7 @@ body {
 }
 
 p {
-  font-family: Inter UI, Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  font-family: "Inter UI", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-size: inherit !important;
 }
 
@@ -258,12 +221,12 @@ h3,
 h4,
 h5,
 .h3 {
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-weight: 700 !important;
 }
 
 .h3 {
-  margin-top: 0px !important;
+  margin-top: 0 !important;
 }
 
 h1 {
@@ -323,9 +286,7 @@ h5 {
 /* Error style section */
 .error-alert-item {
   background-color: #f2dede;
-  border-left-width: 0.25rem;
-  border-left-color: #b3000f;
-  border-left-style: solid;
+  border-left: 0.25rem solid #b3000f;
   overflow: hidden;
   position: relative;
 }
@@ -349,24 +310,21 @@ h5 {
 
 .error-alert-item__icon {
   align-content: center;
+  height: 2rem;
   left: 1.25rem;
   pointer-events: none;
   position: absolute;
   top: 1.2rem;
+  width: 2rem;
 }
 
 .error-alert-item__effect {
   font-size: 1.125rem;
-  font-weight: 700;
   margin-bottom: 0.375em;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   line-height: 1.275em;
   color: inherit;
-}
-.error-alert-item__icon {
-  height: 2rem;
-  width: 2rem;
 }
 
 /* Required text and regex error color */
@@ -380,6 +338,7 @@ h5 {
 /* END Error style section */
 
 /* Button colors */
+
 /* Submit-Next button */
 .form-submit-button,
 .form-section-next,
@@ -391,34 +350,36 @@ h5 {
 
 /* Back button */
 .form-section-prev {
-  background-color: #ffffff !important;
+  background-color: #fff !important;
   color: #165c96 !important;
 }
+
 /* END Button colors */
 
 /* Button focus and hover */
-/* Submit-Next button focus */
-.form-submit-button:active:focus,
-.form-submit-button:focus,
-.form-section-next:active:focus,
-.form-section-next:focus,
-/* Upload button focus */
-#divWorkflowContent .buttonPopup.blue:active:focus, 
-#divWorkflowContent .buttonPopup.blue:focus {
-  outline: thin dotted !important;
-  outline: 5px auto -webkit-focus-ring-color !important;
-  outline-offset: -2px !important;
-  color: #fff !important;
-  background-color: #0f416a !important;
-  border-color: #0e3b61 !important;
-  text-decoration: none !important;
-}
 
 /* Submit-Next button hover */
 .form-submit-button:hover,
 .form-section-next:hover,
 /* Upload button hover */
 #divWorkflowContent .buttonPopup.blue:hover {
+  color: #fff !important;
+  background-color: #0f416a !important;
+  border-color: #0e3b61 !important;
+  text-decoration: none !important;
+}
+
+/* Submit-Next button focus */
+.form-submit-button:focus,
+.form-submit-button:active:focus,
+.form-section-next:focus,
+.form-section-next:active:focus,
+/* Upload button focus */
+#divWorkflowContent .buttonPopup.blue:focus,
+#divWorkflowContent .buttonPopup.blue:active:focus {
+  outline: thin dotted !important;
+  outline: 5px auto -webkit-focus-ring-color !important;
+  outline-offset: -2px !important;
   color: #fff !important;
   background-color: #0f416a !important;
   border-color: #0e3b61 !important;
@@ -436,16 +397,16 @@ h5 {
   text-decoration: none !important;
 }
 
+.form-section-prev:hover {
+  background-color: #cee0f4 !important;
+  color: #0b2f4c !important;
+}
+
 .form-section-prev:active:focus,
 .form-section-prev:active:hover {
   background-color: #cee0f4 !important;
   color: #0b2f4c !important;
   border-color: #061827 !important;
-}
-
-.form-section-prev:hover {
-  background-color: #cee0f4 !important;
-  color: #0b2f4c !important;
 }
 
 /* END Button focus and hover */
