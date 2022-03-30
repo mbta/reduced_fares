@@ -1,3 +1,8 @@
+body,
+html {
+  font-size: 16px;
+}
+
 /* Generic CSS */
 .formFieldWrapper .radio-checkbox-label,
 .form-element-wrapper .radio-checkbox-label {
@@ -8,7 +13,6 @@
 html,
 body {
   background-color: #223b75 !important;
-  font-size: 16px;
 }
 
 .loadingPanel {
@@ -65,21 +69,18 @@ h3 {
     min-width: 840px !important;
   }
 }
-
 /* set form width to 94%, override default @media query that sets width to 100% */
 @media screen and (min-width: 700px) and (max-width: 1100px) {
   #workflow-background-wrapper {
     width: 94% !important;
   }
 }
-
 /* get rid of top/bottom padding, form takes up entire screen */
 @media screen and (max-width: 700px) {
   #workflow-wrapper {
     padding: none !important;
   }
 }
-
 .workflowRightTab {
   width: 10% !important;
   border-top-right-radius: 4px;
@@ -100,14 +101,10 @@ div#workflow-background-wrapper {
 }
 
 /* Hide error fields and values */
-
 /* HomeZipError field */
 #element108,
-/* BirthdayError field */
 #element180,
-/* EnrollmentEligibilityError field */
 #element183,
-/* SchoolEligibilityError field */
 #element184 {
   display: none;
   padding: 10px !important;
@@ -115,11 +112,8 @@ div#workflow-background-wrapper {
 
 /* HomeZipError field */
 #form-element-wrapper_108,
-/* BirthdayError field */
 #form-element-wrapper_180,
-/* EnrollmentEligibilityError field */
 #form-element-wrapper_183,
-/* SchoolEligibilityError field */
 #form-element-wrapper_184 {
   visibility: hidden;
   height: 0;
@@ -127,7 +121,6 @@ div#workflow-background-wrapper {
 }
 
 /* END Hide error fields and values */
-
 /* Hide section breadcrumb titles */
 #section-breadcrumbs {
   visibility: hidden;
@@ -154,33 +147,27 @@ div#workflow-background-wrapper {
     max-width: 80%;
   }
 }
-
 @media (min-width: 544px) {
   .container {
     max-width: 100%;
   }
 }
-
 @media (min-width: 800px) {
   .container {
     max-width: 768px;
   }
 }
-
 @media (min-width: 1088px) {
   .container {
     max-width: 960px;
   }
 }
-
 @media (min-width: 1344px) {
   .container {
     max-width: 1200px;
   }
 }
-
 /* Zeroheight Style Section */
-
 /* Links */
 a {
   color: #165c96;
@@ -209,7 +196,6 @@ body {
     font-size: 0.875rem !important;
   }
 }
-
 p {
   font-family: "Inter UI", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-size: inherit !important;
@@ -238,7 +224,6 @@ h1 {
     font-size: 1.75rem !important;
   }
 }
-
 h2 {
   font-size: 1.75rem !important;
 }
@@ -248,7 +233,6 @@ h2 {
     font-size: 1.4219rem !important;
   }
 }
-
 h3,
 .h3 {
   font-size: 1.3125rem !important;
@@ -256,11 +240,10 @@ h3,
 
 @media (max-width: 799px) {
   h3,
-  .h3 {
+.h3 {
     font-size: 1.1487rem !important;
   }
 }
-
 h4 {
   font-size: 0.9844rem;
 }
@@ -270,7 +253,6 @@ h4 {
     font-size: 2rem !important;
   }
 }
-
 h5 {
   font-size: 1rem;
 }
@@ -280,9 +262,7 @@ h5 {
     font-size: 0.875rem !important;
   }
 }
-
 /* END Zeroheight style section */
-
 /* Error style section */
 .error-alert-item {
   background-color: #f2dede;
@@ -297,7 +277,6 @@ h5 {
     border-right: 0;
   }
 }
-
 .error-alert-item__top {
   display: flex;
   padding-left: 3rem;
@@ -336,13 +315,10 @@ h5 {
 }
 
 /* END Error style section */
-
 /* Button colors */
-
 /* Submit-Next button */
 .form-submit-button,
 .form-section-next,
-/* Upload button */
 #divWorkflowContent .buttonPopup.blue {
   background-color: #165c96 !important;
   border-color: #165c96 !important;
@@ -355,13 +331,10 @@ h5 {
 }
 
 /* END Button colors */
-
 /* Button focus and hover */
-
 /* Submit-Next button hover */
 .form-submit-button:hover,
 .form-section-next:hover,
-/* Upload button hover */
 #divWorkflowContent .buttonPopup.blue:hover {
   color: #fff !important;
   background-color: #0f416a !important;
@@ -374,7 +347,6 @@ h5 {
 .form-submit-button:active:focus,
 .form-section-next:focus,
 .form-section-next:active:focus,
-/* Upload button focus */
 #divWorkflowContent .buttonPopup.blue:focus,
 #divWorkflowContent .buttonPopup.blue:active:focus {
   outline: thin dotted !important;
@@ -410,9 +382,10 @@ h5 {
 }
 
 /* END Button focus and hover */
-
 /* Color for asterisks */
-.form-label-required span[role="presentation"],
+.form-label-required span[role=presentation],
 .form-label-required span[style="color: red;"] {
   color: #b3000f !important;
 }
+
+/*# sourceMappingURL=Youth-Pass-Basic.css.map */
