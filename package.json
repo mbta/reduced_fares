@@ -4,12 +4,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "build": "npm run sass:build",
     "cypress:local": "cypress open",
     "cypress:ci": "cypress run",
     "ci:lint": "npm run prettier:check && npm run stylelint:check",
-    "prettier": "prettier --write \"**/*.css\"",
-    "prettier:check": "prettier --check \"**/*.css\"",
-    "stylelint:check": "stylelint '**/*.css'"
+    "prettier": "prettier --write \"stylesheets/**/*.{css,scss}\"",
+    "prettier:check": "prettier --check \"stylesheets/**/*.{css,scss}\"",
+    "sass:build": "sass stylesheets:build/stylesheets",
+    "sass:watch": "sass --watch stylesheets:build/stylesheets",
+    "start": "npm run sass:watch",
+    "stylelint:check": "stylelint 'stylesheets/**/*.{css,scss}'"
   },
   "repository": {
     "type": "git",
@@ -20,8 +24,10 @@
     "cypress-file-upload": "^5.0.8",
     "faker": "^5.5.3",
     "prettier": "^2.5.1",
+    "sass": "^1.49.9",
     "stylelint": "^14.3.0",
     "stylelint-config-prettier": "^9.0.3",
-    "stylelint-config-standard": "^24.0.0"
+    "stylelint-config-standard": "^24.0.0",
+    "stylelint-config-standard-scss": "^3.0.0"
   }
 }
