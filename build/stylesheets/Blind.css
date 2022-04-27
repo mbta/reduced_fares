@@ -1,4 +1,9 @@
 @charset "UTF-8";
+body,
+html {
+  font-size: 16px;
+}
+
 /* Background color */
 body,
 html {

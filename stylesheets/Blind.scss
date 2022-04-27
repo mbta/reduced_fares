@@ -1,3 +1,5 @@
+@use "common";
+
 /* Background color */
 body,
 html {
@@ -37,7 +39,7 @@ li {
 
 @media (max-width: 799px) {
   p,
-li {
+  li {
     font-size: 0.85rem !important;
   }
 }
@@ -91,7 +93,7 @@ h2 {
 .required-text,
 .requiredLabelEmail,
 .regexErrorLabel,
-.form-label-required span[role=presentation],
+.form-label-required span[role="presentation"],
 .form-label-required span[style="color: red;"] {
   color: #b3000f !important;
   font-style: normal;
@@ -358,7 +360,7 @@ button.close:active:hover {
   }
 }
 
-@media (min-width: 800px){
+@media (min-width: 800px) {
   .picture-guide {
     border: 1px solid #e9eaed !important;
     padding: 0 24px 29px;
