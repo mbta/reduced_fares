@@ -1,0 +1,418 @@
+body,
+html {
+  font-size: 16px;
+}
+
+/* Background color */
+body,
+html {
+  background-color: #f2f3f5 !important;
+}
+
+/* SimpliGov header */
+#formHeaderDiv {
+  height: 0;
+  margin: -10px 0;
+}
+
+/* Links */
+a {
+  color: #165c96;
+  text-decoration: underline;
+}
+
+a:focus,
+a:hover {
+  color: #0b2f4c;
+  text-decoration: underline;
+}
+
+a:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+/* zeroheight text style */
+p,
+li {
+  font-family: "Inter UI", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 1rem !important;
+}
+
+@media (max-width: 799px) {
+  p,
+li {
+    font-size: 0.85rem !important;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-weight: 700 !important;
+}
+
+h1 {
+  font-size: 2.5rem !important;
+}
+
+@media (max-width: 799px) {
+  h1 {
+    font-size: 1.75rem !important;
+  }
+}
+h2 {
+  font-size: 1.75rem !important;
+}
+
+@media (max-width: 799px) {
+  h2 {
+    font-size: 1.4219rem !important;
+  }
+}
+/* Photo grid h2 */
+.h2-graphic {
+  font-size: 1.75rem !important;
+  line-height: 2.2313rem !important;
+  margin-top: 1.8813rem !important;
+  margin-bottom: 0.6563rem !important;
+}
+
+@media (max-width: 799px) {
+  .h2-graphic {
+    font-size: 1.4219rem !important;
+    line-height: 1.8129rem !important;
+    margin-top: 1.5285rem !important;
+    margin-bottom: 0.5332rem !important;
+  }
+}
+/* Required text and regex error color */
+.required-text,
+.requiredLabelEmail,
+.regexErrorLabel,
+.form-label-required span[role=presentation],
+.form-label-required span[style="color: red;"] {
+  color: #b3000f !important;
+  font-style: normal;
+}
+
+/* Button size and font */
+.form-submit-button,
+.form-section-next,
+.form-section-prev,
+#divWorkflowContent .buttonPopup.blue,
+.buttonPopup.blue.big {
+  font-family: "Inter UI", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-weight: 500 !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  vertical-align: middle !important;
+  cursor: pointer !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  padding: 0.6rem 1.6rem !important;
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+  border: 1px solid transparent !important;
+  -webkit-border-radius: 0.25rem !important;
+  border-radius: 0.25rem !important;
+}
+
+/* Primary button colors */
+.form-submit-button,
+.form-section-next,
+#divWorkflowContent .buttonPopup.blue,
+.buttonPopup.blue.big {
+  color: #fff !important;
+  background-color: #165c96 !important;
+  border-color: #165c96 !important;
+}
+
+/* Secondary button colors */
+.form-section-prev {
+  color: #165c96 !important;
+  background-color: #fff !important;
+  border-color: #165c96 !important;
+}
+
+/* Primary button active, focus, and hover */
+.form-submit-button:active,
+.form-submit-button:focus,
+.form-submit-button:hover,
+.form-section-next:active,
+.form-section-next:focus,
+.form-section-next:hover,
+#divWorkflowContent .buttonPopup.blue:active,
+#divWorkflowContent .buttonPopup.blue:focus,
+#divWorkflowContent .buttonPopup.blue:hover,
+.buttonPopup.blue.big:active,
+.buttonPopup.blue.big:focus,
+.buttonPopup.blue.big:hover,
+.form-section-prev:active,
+.form-section-prev:focus,
+.form-section-prev:hover {
+  color: #fff !important;
+  background-color: #0f416a !important;
+  border-color: #0e3b61 !important;
+}
+
+/* Secondary button active, focus, and hover */
+.form-section-prev:active,
+.form-section-prev:focus,
+.form-section-prev:hover {
+  color: #0b2f4c !important;
+  background-color: #cee0f4 !important;
+  border-color: #0e3b61 !important;
+}
+
+/* Button focus effects */
+.form-submit-button:focus,
+.form-submit-button:active:focus,
+.form-section-next:focus,
+.form-section-next:active:focus,
+#divWorkflowContent .buttonPopup.blue:focus,
+#divWorkflowContent .buttonPopup.blue:active:focus,
+.buttonPopup.blue.big:focus,
+.buttonPopup.blue.big:active:focus,
+.form-section-prev:focus,
+.form-section-prev:active:focus {
+  outline: thin dotted !important;
+  outline: 5px auto -webkit-focus-ring-color !important;
+  outline-offset: -2px !important;
+}
+
+/* Primary button active focus and hover effects */
+.form-submit-button:active:focus,
+.form-submit-button:active:hover,
+.form-section-next:active:focus,
+.form-section-next:active:hover,
+#divWorkflowContent .buttonPopup.blue:active:focus,
+#divWorkflowContent .buttonPopup.blue:active:hover,
+.buttonPopup.blue.big:active:focus,
+.buttonPopup.blue.big:active:hover {
+  color: #fff !important;
+  background-color: #0b2e4a !important;
+  border-color: #061827 !important;
+  outline: none !important;
+}
+
+/* Back and next button placement */
+.form-section-buttons {
+  text-align: left !important;
+  margin-left: 10px !important;
+  margin-top: 24px !important;
+}
+
+/* Secondary button active focus and hover effects */
+.form-section-prev:active:focus,
+.form-section-prev:active:hover {
+  background-color: #cee0f4;
+  border-color: #061827;
+  outline: none !important;
+}
+
+/* Make upload light gray color darker */
+.k-icon.k-i-check,
+.k-file-group.k-icon,
+.k-dropzone .k-upload-status,
+.k-file-name {
+  color: #494f5c !important;
+}
+
+/* Make upload light gray border darker */
+.k-upload-files {
+  border-color: #494f5c !important;
+}
+
+/* Make upload success message darker */
+.k-file-success .k-file-validation-message {
+  color: #145a06 !important;
+}
+
+/* Make upload error message darker */
+.k-file-invalid .k-file-validation-message {
+  color: #b3000f !important;
+}
+
+/* Make upload "invalid files" error message darker */
+.validation-text.fileUploadErrorLabel.truncateWithEllipsis {
+  color: #b3000f !important;
+}
+
+/* Set k-button opacity */
+.k-upload-files .k-upload-status,
+.k-button.k-flat,
+button.close {
+  opacity: 1 !important;
+}
+
+/* Remove default dark hover effect */
+.k-button.k-state-hover::before,
+.k-button:hover::before {
+  opacity: 0 !important;
+}
+
+/* Remove ease transition */
+.k-button.k-flat {
+  transition: none !important;
+}
+
+/* k-button */
+.k-button.k-button-icon {
+  text-align: center !important;
+  white-space: wrap !important;
+  vertical-align: middle !important;
+  cursor: pointer !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  font-size: 14px !important;
+  color: #165c96 !important;
+  background-color: #fff !important;
+}
+
+/* Modal close button */
+button.close {
+  text-align: center !important;
+  white-space: wrap !important;
+  vertical-align: middle !important;
+  cursor: pointer !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  color: #165c96 !important;
+  background-color: #fff !important;
+  text-shadow: none !important;
+  padding: 0 0.451em !important;
+  line-height: 1.5 !important;
+  -webkit-border-radius: 50% !important;
+  border-radius: 50% !important;
+  font-size: 1.5rem !important;
+}
+
+/* k-button and close button active, focus, and hover */
+.k-button.k-button-icon:active,
+.k-button.k-button-icon:focus,
+.k-button.k-button-icon:hover,
+button.close:active,
+button.close:focus,
+button.close:hover {
+  color: #0e3b61 !important;
+  background-color: #cee0f4 !important;
+}
+
+/* k-button and close button focus settings */
+.k-button.k-button-icon:focus,
+.k-button.k-button-icon:active:focus,
+button.close:focus,
+button.close:active:focus {
+  outline: thin dotted !important;
+  outline: 5px auto -webkit-focus-ring-color !important;
+  outline-offset: -2px !important;
+}
+
+/* k-button and close button active focus and hover effects */
+.k-button.k-button-icon:active:focus,
+.k-button.k-button-icon:active:hover,
+button.close:active:focus,
+button.close:active:hover {
+  color: #0e3b61 !important;
+  background-color: #cee0f4 !important;
+  outline: none !important;
+}
+
+/* Hide section breadcrumb titles */
+#section-breadcrumbs {
+  visibility: hidden;
+}
+
+/* Hide calendar */
+.datetimepicker.datetimepicker-dropdown-bottom-right.dropdown-menu {
+  display: none !important;
+}
+
+/* Hide print icon */
+#print-preview {
+  display: none !important;
+}
+
+/* Add border to photo guide */
+@media (max-width: 799px) {
+  .picture-guide {
+    border: 1px solid #e9eaed !important;
+    padding: 0 19px 29px;
+    max-width: 515px;
+  }
+}
+@media (max-width: 629px) {
+  .picture-guide {
+    border: 1px solid #e9eaed !important;
+    padding: 0 19px 29px;
+    max-width: 337px;
+  }
+}
+@media (min-width: 800px) {
+  .picture-guide {
+    border: 1px solid #e9eaed !important;
+    padding: 0 24px 29px;
+    max-width: 591px;
+  }
+}
+/* Container for example pictures */
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 21px;
+}
+
+@media (max-width: 799px) {
+  .flex-container {
+    gap: 19px;
+  }
+}
+/* Container for individual pictures and list */
+.outer-box {
+  flex-basis: 183px;
+  margin: 0;
+}
+
+@media (max-width: 799px) {
+  .outer-box {
+    flex-basis: 147px;
+  }
+}
+/* Example pictures */
+.example-picture {
+  width: 183px;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 799px) {
+  .example-picture {
+    width: auto;
+  }
+}
+/* Example photos list styling */
+.caption {
+  list-style: none;
+  margin-left: 0;
+  padding: 11px 0 0;
+}
+
+.accepted {
+  color: #145a06;
+}
+
+.denied {
+  color: #b3000f;
+}
+
+/*# sourceMappingURL=Blind.css.map */
