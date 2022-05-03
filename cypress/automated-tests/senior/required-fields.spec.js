@@ -145,7 +145,7 @@ describe('senior required fields', () => {
     cy.get('#element22').clear().blur();
 
     cy
-      .get('#form-section-7 > .form-section-buttons > .form-section-next')
+      .get('#form-section-7 > .form-section-buttons > .form-submit-button')
       .click();
     cy.get('.required-text').should('be.visible');
 
@@ -153,7 +153,7 @@ describe('senior required fields', () => {
     cy.get('#element24').clear().blur();
 
     cy
-      .get('#form-section-7 > .form-section-buttons > .form-section-next')
+      .get('#form-section-7 > .form-section-buttons > .form-submit-button')
       .click();
     cy.get('.required-text').should('be.visible');
 
@@ -161,7 +161,7 @@ describe('senior required fields', () => {
     cy.get('#element26').clear().blur();
 
     cy
-      .get('#form-section-7 > .form-section-buttons > .form-section-next')
+      .get('#form-section-7 > .form-section-buttons > .form-submit-button')
       .click();
     cy.get('.required-text').should('be.visible');
 
@@ -175,7 +175,7 @@ describe('senior required fields', () => {
     cy.get('#element33').type(applicantZipCode).blur();
 
     cy
-      .get('#form-section-7 > .form-section-buttons > .form-section-next')
+      .get('#form-section-7 > .form-section-buttons > .form-submit-button')
       .click();
     cy.get('.required-text').should('be.visible');
 
@@ -183,7 +183,7 @@ describe('senior required fields', () => {
     cy.get('#element31').clear().blur();
 
     cy
-      .get('#form-section-7 > .form-section-buttons > .form-section-next')
+      .get('#form-section-7 > .form-section-buttons > .form-submit-button')
       .click();
     cy.get('.required-text').should('be.visible');
 
@@ -191,7 +191,7 @@ describe('senior required fields', () => {
     cy.get('#element33').clear().blur();
 
     cy
-      .get('#form-section-7 > .form-section-buttons > .form-section-next')
+      .get('#form-section-7 > .form-section-buttons > .form-submit-button')
       .click();
     cy.get('.required-text').should('be.visible');
   });
