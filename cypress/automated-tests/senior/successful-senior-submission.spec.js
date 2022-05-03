@@ -168,7 +168,21 @@ describe('senior successful renewal submission - without an email address', () =
       .click();
   });
 
-  it("skips uploading a headshot", function() {
+  it("uploads a photo ID", function() {
+    cy
+      .get('#element36')
+      .attachFile('youth-pass-test-image.png');
+    cy.get('.k-text-success').should('exist');
+    cy
+      .get('#form-section-5 > .form-section-buttons > .form-section-next')
+      .click();
+  });
+
+  it("uploads a headshot", function() {
+    cy
+      .get('#element39')
+      .attachFile('youth-pass-test-image.png');
+    cy.get('.k-text-success').should('exist');
     cy
       .get('#form-section-6 > .form-section-buttons > .form-section-next')
       .click();
