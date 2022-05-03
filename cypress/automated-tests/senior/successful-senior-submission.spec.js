@@ -19,17 +19,17 @@ describe('senior successful new submission - with an email address', () => {
       .click();
   });
 
-  it("selects apply for a new card", function() {
-    cy
-      .get('[data-field-code="ApplicantStatus"]')
-      .contains('Apply for a Senior CharlieCard')
-      .click();
+  it("clicks through instructions", function() {
     cy
       .get('#form-section-1 > .form-section-buttons > .form-section-next')
       .click();
   });
 
-  it("clicks through instructions", function() {
+  it("selects apply for a new card", function() {
+    cy
+      .get('[data-field-code="ApplicantStatus"]')
+      .contains('Apply for a Senior CharlieCard')
+      .click();
     cy
       .get('#form-section-2 > .form-section-buttons > .form-section-next')
       .click();
@@ -133,13 +133,19 @@ describe('senior successful renewal submission - without an email address', () =
       .click();
   });
 
+  it("clicks through instructions", function() {
+    cy
+      .get('#form-section-1 > .form-section-buttons > .form-section-next')
+      .click();
+  });
+
   it("selects renew my card", function() {
     cy
       .get('[data-field-code="ApplicantStatus"]')
       .contains('Renew')
       .click();
     cy
-      .get('#form-section-1 > .form-section-buttons > .form-section-next')
+      .get('#form-section-2 > .form-section-buttons > .form-section-next')
       .click();
   });
 

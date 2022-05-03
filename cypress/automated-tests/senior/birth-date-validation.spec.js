@@ -15,16 +15,16 @@ describe('senior birth date validation', () => {
       .get('#form-section-0 > .form-section-buttons > .form-section-next')
       .click();
 
+      // Instructions
+    cy
+      .get('#form-section-1 > .form-section-buttons > .form-section-next')
+      .click();
+
     // Application Type
     cy
       .get('[data-field-code="ApplicantStatus"]')
       .contains('Apply for a Senior CharlieCard')
       .click();
-    cy
-      .get('#form-section-1 > .form-section-buttons > .form-section-next')
-      .click();
-  
-    // Instructions
     cy
       .get('#form-section-2 > .form-section-buttons > .form-section-next')
       .click();
