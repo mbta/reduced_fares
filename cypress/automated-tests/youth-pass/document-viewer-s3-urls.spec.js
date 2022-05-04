@@ -1,6 +1,6 @@
 import { submitApplication } from '../../common/submit-application';
 
-describe('Youth Pass Document Viewer S3 URL Visibility', () => {
+describe.skip('Youth Pass Document Viewer S3 URL Visibility', () => {
     const faker = require('faker');
     const applicantFirstName = faker.name.firstName();
     const applicantLastName = faker.name.lastName();

@@ -1,6 +1,6 @@
 import { submitApplication } from '../../common/submit-application';
 
-describe('Youth Pass Admin Application Visibility', () => {
+describe.skip('Youth Pass Admin Application Visibility', () => {
     const faker = require('faker');
     const maldenApplicantFirstName = faker.name.firstName();
     const maldenApplicantLastName = faker.name.lastName();
