@@ -395,7 +395,7 @@ button.close:active:hover {
 
 
 /* Reduce size for XS screens */
-@media screen and (max-width: 375px) {
+@media (max-width: 375px) {
   #thank-you-text, #workflow-background-wrapper {
     width: 85% !important;
   }
