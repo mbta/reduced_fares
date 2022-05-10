@@ -421,3 +421,10 @@ button.close:active:hover {
 .denied {
   color: #b3000f;
 }
+
+/* Reduce size for XS screens */
+@media screen and (min-width: 250px) and (max-width: 375px) {
+  #thank-you-text, #workflow-background-wrapper {
+    width: 85% !important;
+  }
+}
