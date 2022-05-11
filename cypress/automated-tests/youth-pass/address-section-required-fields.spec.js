@@ -6,7 +6,7 @@ describe('Youth Pass Address Section Required Fields', () => {
     // this test follows the by mail flow
     it('proceeds through an application', () => {
         const applicantZipCode = '02114';
-        const youthPassUrl = 'https://mbta.prod.simpligov.com/prod/portal/ShowWorkFlow/AnonymousEmbed/e5e2dba6-5424-48d6-80d9-16a27e0fdd84';
+        const youthPassUrl = Cypress.env('youth_pass_url');
         const applicantBirthdate = getRandomApplicantAge().applicantBirthdate12to17;
         const applicantSchoolName = `Automation Testing ${faker.datatype.number()} School`;
         const applicantFirstName = faker.name.firstName();
