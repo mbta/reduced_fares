@@ -391,4 +391,12 @@ button.close:active:hover {
   margin: -20px 0;
 }
 
+/* Reduce size for XS screens */
+@media (max-width: 375px) {
+  #thank-you-text, 
+  #workflow-background-wrapper {
+    width: 85% !important;
+  }
+}
+
 /*# sourceMappingURL=Senior-Basic.css.map */
