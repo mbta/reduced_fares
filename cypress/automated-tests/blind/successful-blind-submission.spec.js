@@ -9,19 +9,19 @@ describe('blind successful new submission - with an email address', () => {
     cy.visit(blindUrl);
   });
 
-  it('completes the language selection', () => {
-    cy
-      .get('[data-field-code="LanguageSelection"]')
-      .contains('English')
-      .click();
-    cy
-      .get('#form-section-0 > .form-section-buttons > .form-section-next')
-      .click();
-  });
+  // it('completes the language selection', () => {
+  //   cy
+  //     .get('[data-field-code="LanguageSelection"]')
+  //     .contains('English')
+  //     .click();
+  //   cy
+  //     .get('#form-section-0 > .form-section-buttons > .form-section-next')
+  //     .click();
+  // });
 
   it("clicks through instructions", function() {
     cy
-      .get('#form-section-1 > .form-section-buttons > .form-section-next')
+      .get('#form-section-0 > .form-section-buttons > .form-section-next')
       .click();
   });
 
@@ -31,7 +31,7 @@ describe('blind successful new submission - with an email address', () => {
       .contains('Apply for a new Blind Access CharlieCard')
       .click();
     cy
-      .get('#form-section-2 > .form-section-buttons > .form-section-next')
+      .get('#form-section-1 > .form-section-buttons > .form-section-next')
       .click();
   });
 
@@ -44,7 +44,7 @@ describe('blind successful new submission - with an email address', () => {
     cy.get('#element15').type(applicantFirstName).blur();
     cy.get('#element16').type(applicantLastName).blur();
     cy
-      .get('#form-section-3 > .form-section-buttons > .form-section-next')
+      .get('#form-section-2 > .form-section-buttons > .form-section-next')
       .click();
   });
 
@@ -55,33 +55,28 @@ describe('blind successful new submission - with an email address', () => {
     cy.get('#element19').type(applicantPhoneNumber).blur();
     cy.get('#element20').type(applicantEmailAddress).blur();
     cy
-      .get('#form-section-4 > .form-section-buttons > .form-section-next')
+      .get('#form-section-3 > .form-section-buttons > .form-section-next')
       .click();
   });
 
-  it("uploads a photo ID", function() {
+  it("uploads an MCB ID", function() {
     cy
-      .get('#element25')
+      .get('[data-field-code="MCBIDCardYesNo"]')
+      .contains('Yes')
+      .click();
+
+    cy
+      .get('#element148')
       .attachFile('youth-pass-test-image.png');
     cy.get('.k-text-success').should('exist');
     cy
-      .get('#form-section-5 > .form-section-buttons > .form-section-next')
+      .get('#form-section-4 > .form-section-buttons > .form-section-next')
       .click();
   });
 
   it("uploads a headshot", function() {
     cy
       .get('#element30')
-      .attachFile('youth-pass-test-image.png');
-    cy.get('.k-text-success').should('exist');
-    cy
-      .get('#form-section-6 > .form-section-buttons > .form-section-next')
-      .click();
-  });
-
-  it("uploads a Blind ID or Certificate", function() {
-    cy
-      .get('#element35')
       .attachFile('youth-pass-test-image.png');
     cy.get('.k-text-success').should('exist');
     cy
@@ -129,19 +124,19 @@ describe('blind successful renewal submission - without an email address', () =>
     cy.visit(blindUrl);
   });
 
-  it('completes the language selection', () => {
-    cy
-      .get('[data-field-code="LanguageSelection"]')
-      .contains('English')
-      .click();
-    cy
-      .get('#form-section-0 > .form-section-buttons > .form-section-next')
-      .click();
-  });
+  // it('completes the language selection', () => {
+  //   cy
+  //     .get('[data-field-code="LanguageSelection"]')
+  //     .contains('English')
+  //     .click();
+  //   cy
+  //     .get('#form-section-0 > .form-section-buttons > .form-section-next')
+  //     .click();
+  // });
 
   it("clicks through instructions", function() {
     cy
-      .get('#form-section-1 > .form-section-buttons > .form-section-next')
+      .get('#form-section-0 > .form-section-buttons > .form-section-next')
       .click();
   });
 
@@ -151,7 +146,7 @@ describe('blind successful renewal submission - without an email address', () =>
       .contains('Renew')
       .click();
     cy
-      .get('#form-section-2 > .form-section-buttons > .form-section-next')
+      .get('#form-section-1 > .form-section-buttons > .form-section-next')
       .click();
   });
 
@@ -164,13 +159,31 @@ describe('blind successful renewal submission - without an email address', () =>
     cy.get('#element15').type(applicantFirstName).blur();
     cy.get('#element16').type(applicantLastName).blur();
     cy
-      .get('#form-section-3 > .form-section-buttons > .form-section-next')
+      .get('#form-section-2 > .form-section-buttons > .form-section-next')
       .click();
   });
 
   it("does not enter an email address or phone number for contact info", function() {
     cy
+      .get('#form-section-3 > .form-section-buttons > .form-section-next')
+      .click();
+  });
+
+  it("uploads an blindness certification", function() {
+    cy
+      .get('[data-field-code="MCBIDCardYesNo"]')
+      .contains('No')
+      .click();
+    cy
       .get('#form-section-4 > .form-section-buttons > .form-section-next')
+      .click();
+
+    cy
+      .get('#element35')
+      .attachFile('youth-pass-test-image.png');
+    cy.get('.k-text-success').should('exist');
+    cy
+      .get('#form-section-5 > .form-section-buttons > .form-section-next')
       .click();
   });
 
@@ -180,23 +193,13 @@ describe('blind successful renewal submission - without an email address', () =>
       .attachFile('youth-pass-test-image.png');
     cy.get('.k-text-success').should('exist');
     cy
-      .get('#form-section-5 > .form-section-buttons > .form-section-next')
+      .get('#form-section-6 > .form-section-buttons > .form-section-next')
       .click();
   });
 
   it("uploads a headshot", function() {
     cy
       .get('#element30')
-      .attachFile('youth-pass-test-image.png');
-    cy.get('.k-text-success').should('exist');
-    cy
-      .get('#form-section-6 > .form-section-buttons > .form-section-next')
-      .click();
-  });
-
-  it("uploads a Blind ID or Certificate", function() {
-    cy
-      .get('#element35')
       .attachFile('youth-pass-test-image.png');
     cy.get('.k-text-success').should('exist');
     cy
