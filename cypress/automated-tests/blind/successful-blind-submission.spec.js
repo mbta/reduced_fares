@@ -169,7 +169,7 @@ describe('blind successful renewal submission - without an email address', () =>
       .click();
   });
 
-  it("uploads an blindness certification", function() {
+  it("uploads a blindness certification", function() {
     cy
       .get('[data-field-code="MCBIDCardYesNo"]')
       .contains('No')
