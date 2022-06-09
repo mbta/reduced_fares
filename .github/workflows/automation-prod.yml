@@ -1,5 +1,8 @@
 name: Cypress Automation Production Testing
-on: workflow_dispatch
+on: 
+  push:
+    branches:    
+      - 'fix-prod-scripts-krj'
 # on:
   # schedule:
   #   - cron: "0 5 * * *" # run at 5 AM UTC
