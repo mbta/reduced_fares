@@ -138,10 +138,6 @@ describe('senior required fields', () => {
       .get('[data-field-code="CardDeliveryPreference"]')
       .contains('Mail to my address')
       .click();
-    cy
-      .get('[data-field-code="MailingAddressSameAsHome"]')
-      .contains('Yes')
-      .click();
     cy.get('#element22').clear().blur();
 
     cy
@@ -166,10 +162,6 @@ describe('senior required fields', () => {
     cy.get('.required-text').should('be.visible');
 
     cy.get('#element26').type(applicantZipCode).blur();
-    cy
-      .get('[data-field-code="MailingAddressSameAsHome"]')
-      .contains('No')
-      .click();
 
     cy.get('#element31').type(applicantCity).blur();
     cy.get('#element33').type(applicantZipCode).blur();

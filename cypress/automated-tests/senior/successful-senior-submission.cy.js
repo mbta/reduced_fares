@@ -91,10 +91,6 @@ describe('senior successful new submission - with an email address', () => {
     cy.get('#element24').type(applicantCity).blur();
     cy.get('#element26').type(applicantZipCode).blur();
     cy
-      .get('[data-field-code="MailingAddressSameAsHome"]')
-      .contains('Yes')
-      .click();
-    cy
       .get('#form-section-7 > .form-section-buttons > .form-section-next')
       .click();
   });
@@ -199,10 +195,6 @@ describe('senior successful renewal submission - without an email address', () =
     cy.get('#element22').type(applicantStreetAddress).blur();
     cy.get('#element24').type(applicantCity).blur();
     cy.get('#element26').type(applicantZipCode).blur();
-    cy
-      .get('[data-field-code="MailingAddressSameAsHome"]')
-      .contains('Yes')
-      .click();
     cy
       .get('#form-section-7 > .form-section-buttons > .form-section-next')
       .click();

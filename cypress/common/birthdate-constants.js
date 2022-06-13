@@ -44,10 +44,10 @@ export function getRandomApplicantAge() {
     }
 
     /**
-     * Formats a date as a string in M/D/YYYY format
+     * Formats a date as a string in MM/DD/YYYY format
      */
     function formatDate(date) {
-        return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
+        return `${(date.getMonth() + 1).toString().padStart(2, "0")}/${date.getDate().toString().padStart(2, "0")}/${date.getFullYear()}`;
     }
 
     return {
