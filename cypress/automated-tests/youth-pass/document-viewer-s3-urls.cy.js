@@ -1,21 +1,21 @@
 import { submitApplication } from '../../common/submit-application';
 
-describe.skip('Youth Pass Document Viewer S3 URL Visibility', () => {
+describe('Youth Pass Document Viewer S3 URL Visibility', () => {
     const faker = require('faker');
     const applicantFirstName = faker.name.firstName();
     const applicantLastName = faker.name.lastName();
     
-    it('submits an application with three supporting documents', () => {
-        const applicantZipCode = '02148';
-        submitApplication(applicantZipCode, applicantFirstName, applicantLastName);
-    });
+    // it('submits an application with three supporting documents', () => {
+    //     const applicantZipCode = '02148';
+    //     submitApplication(applicantZipCode, applicantFirstName, applicantLastName);
+    // });
 
     it('sees three document viewer URLs when logged in as a group admin', () => {
         const youthPassDashboard = Cypress.env('youth_pass_dashboard_url');
         cy.visit(youthPassDashboard);
-        cy.get('#username').type(Cypress.env('malden_test_username'));
-        cy.get('#password').type(Cypress.env('malden_test_credentials'));
-        cy.get('#login').click();
+        cy.get('#form-input-email').type(Cypress.env('malden_test_username'));
+        cy.get('#form-input-password').type(Cypress.env('malden_test_credentials'));
+        cy.get('#sign-in').click();
         
         // find and approve application
         cy.get('[aria-rowindex="1"]').should('contain', applicantFirstName)
