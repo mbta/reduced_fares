@@ -2,3 +2,29 @@ body,
 html {
   font-size: 16px;
 }
+
+/* Focus for all text fields */
+input[type="text"]:focus {
+  border: 2px solid #165c96 !important;
+}
+
+/* Remove shadow on all text fields */
+input[type="text"].textfield:focus {
+  box-shadow: none !important;
+}
+
+/* Dropdown focus and shadow */
+.select2-container--bootstrap.select2-container--open .select2-selection {
+  border: 2px solid #165c96 !important;
+  box-shadow: none !important;
+}
+
+.select2-container--bootstrap .select2-selection:focus {
+  border: 2px solid #165c96 !important;
+  box-shadow: none !important;
+}
+
+.select2-container--bootstrap .select2-dropdown {
+  border: 2px solid #165c96 !important;
+  box-shadow: none !important;
+}
