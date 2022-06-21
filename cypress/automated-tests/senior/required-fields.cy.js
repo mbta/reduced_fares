@@ -163,6 +163,8 @@ describe('senior required fields', () => {
 
     cy.get('#element26').type(applicantZipCode).blur();
 
+    cy.get('#element27_Option_2').click();
+
     cy.get('#element31').type(applicantCity).blur();
     cy.get('#element33').type(applicantZipCode).blur();
 
