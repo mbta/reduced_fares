@@ -7,13 +7,13 @@ module.exports = defineConfig({
   chromeWebSecurity: false,
   env: {
     youth_pass_url:
-      'https://mbta.preprod.simpligov.com/preprod/portal/ShowWorkFlow/AnonymousEmbed/86cadfa6-e8ea-46f1-b6e8-62498f066962',
+      'https://mbta.prod.simpligov.com/prod/portal/ShowWorkFlow/AnonymousEmbed/e5e2dba6-5424-48d6-80d9-16a27e0fdd84',
     youth_pass_dashboard_url:
       'https://mbta.preprod.simpligov.com/preprod/portal/Dashboard',
     malden_test_username: 'maldentestuser@mbta.com',
     malden_test_credentials: 'MaldenTest1!',
     senior_url:
-      'https://mbta.preprod.simpligov.com/preprod/portal/ShowWorkFlow/AnonymousEmbed/4fd3d3fb-6b6a-4521-b214-896099a22af8',
+      'https://mbta.prod.simpligov.com/prod/portal/ShowWorkFlow/AnonymousEmbed/fc6ff5b0-f3bd-436d-8201-b6a4b98bc7fa',
     blind_url:
       'https://mbta.preprod.simpligov.com/preprod/portal/ShowWorkFlow/AnonymousEmbed/bc44cab3-9a58-4022-bd9f-e91699d681a1',
   },
