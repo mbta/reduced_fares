@@ -29,10 +29,11 @@ input[type=text].textfield:focus {
   box-shadow: none !important;
 }
 
-/* Background color and font size */
+/* Background color and min width */
 body,
 html {
   background-color: #f2f3f5 !important;
+  min-width: 300px !important;
 }
 
 /* SimpliGov header */
@@ -106,6 +107,22 @@ h3 {
 @media (max-width: 799px) {
   h3 {
     font-size: 1.1487rem !important;
+  }
+}
+/* Photo grid h2 */
+.h2-graphic {
+  font-size: 1.75rem !important;
+  line-height: 2.2313rem !important;
+  margin-top: 1.8813rem !important;
+  margin-bottom: 0.6563rem !important;
+}
+
+@media (max-width: 799px) {
+  .h2-graphic {
+    font-size: 1.4219rem !important;
+    line-height: 1.8129rem !important;
+    margin-top: 1.5285rem !important;
+    margin-bottom: 0.5332rem !important;
   }
 }
 /* Errors */
@@ -384,17 +401,6 @@ button.close:active:hover {
   outline: none !important;
 }
 
-/* Set photo guide image width and add border */
-.picture-guide {
-  width: 60% !important;
-  border: 1px solid #e9eaed !important;
-}
-
-@media (max-width: 799px) {
-  .picture-guide {
-    width: 98% !important;
-  }
-}
 /* Hide section breadcrumb titles */
 #section-breadcrumbs {
   visibility: hidden;
@@ -417,12 +423,115 @@ button.close:active:hover {
   margin: -20px 0;
 }
 
-/* Reduce size for XS screens */
-@media (max-width: 375px) {
-  #thank-you-text,
-#workflow-background-wrapper {
-    width: 85% !important;
+/* Add border to photo guide */
+@media (max-width: 799px) {
+  .picture-guide {
+    border: 1px solid #e9eaed !important;
+    padding: 0 19px 29px;
+    max-width: 515px;
   }
+}
+@media (max-width: 629px) {
+  .picture-guide {
+    border: 1px solid #e9eaed !important;
+    padding: 0 19px 29px;
+    max-width: 337px;
+  }
+}
+@media (min-width: 800px) {
+  .picture-guide {
+    border: 1px solid #e9eaed !important;
+    padding: 0 24px 29px;
+    max-width: 591px;
+  }
+}
+/* Container for example pictures */
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 21px;
+}
+
+@media (max-width: 799px) {
+  .flex-container {
+    gap: 19px;
+  }
+}
+/* Container for individual pictures and list */
+.outer-box {
+  flex-basis: 183px;
+  margin: 0;
+}
+
+@media (max-width: 799px) {
+  .outer-box {
+    flex-basis: 147px;
+  }
+}
+/* Example pictures */
+.example-picture {
+  width: 183px;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 799px) {
+  .example-picture {
+    width: auto;
+  }
+}
+/* Example photos list styling */
+.caption {
+  list-style: none;
+  margin-left: 0;
+  padding: 11px 0 0;
+}
+
+.accepted {
+  color: #145a06;
+}
+
+.denied {
+  color: #b3000f;
+}
+
+/* Reduce size of upload area on small screens */
+@media (max-width: 400px) {
+  .formFieldWrapper .k-upload,
+.form-element-wrapper .k-upload {
+    width: auto !important;
+  }
+}
+/* Reduce image size on small sceens */
+img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Reduce width of every form field on small screens */
+input[type=text],
+input[type=password],
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=month],
+input[type=week],
+input[type=email],
+input[type=number],
+input[type=search]:not(.select2-search__field),
+input[type=tel],
+input[type=time],
+input[type=url],
+textarea,
+select,
+.form-static-html.form-item {
+  max-width: 100% !important;
+}
+
+/* Add spacing to example documents and Thank You page logo */
+.example-document,
+.mbta-logo.thank-you-page {
+  margin-bottom: 20px !important;
 }
 
 /*# sourceMappingURL=Senior-Basic.css.map */
