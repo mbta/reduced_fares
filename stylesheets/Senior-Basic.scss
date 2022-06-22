@@ -400,9 +400,13 @@ button.close:active:hover {
 }
 
 /* Add border to photo guide */
+.picture-guide {
+  border: 1px solid #e9eaed !important;
+}
+
+/* Photo guide padding and width */
 @media (max-width: 799px) {
   .picture-guide {
-    border: 1px solid #e9eaed !important;
     padding: 0 19px 29px;
     max-width: 515px;
   }
@@ -410,7 +414,6 @@ button.close:active:hover {
 
 @media (max-width: 629px) {
   .picture-guide {
-    border: 1px solid #e9eaed !important;
     padding: 0 19px 29px;
     max-width: 337px;
   }
@@ -418,7 +421,6 @@ button.close:active:hover {
 
 @media (min-width: 800px) {
   .picture-guide {
-    border: 1px solid #e9eaed !important;
     padding: 0 24px 29px;
     max-width: 591px;
   }
