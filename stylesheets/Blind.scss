@@ -1,9 +1,10 @@
 @use "common";
 
-/* Background color */
+/* Background color and min width */
 body,
 html {
   background-color: #f2f3f5 !important;
+  min-width: 300px !important;
 }
 
 /* SimpliGov header */
@@ -345,9 +346,13 @@ button.close:active:hover {
 }
 
 /* Add border to photo guide */
+.picture-guide {
+  border: 1px solid #e9eaed !important;
+}
+
+/* Photo guide padding and width */
 @media (max-width: 799px) {
   .picture-guide {
-    border: 1px solid #e9eaed !important;
     padding: 0 19px 29px;
     max-width: 515px;
   }
@@ -355,7 +360,6 @@ button.close:active:hover {
 
 @media (max-width: 629px) {
   .picture-guide {
-    border: 1px solid #e9eaed !important;
     padding: 0 19px 29px;
     max-width: 337px;
   }
@@ -363,7 +367,6 @@ button.close:active:hover {
 
 @media (min-width: 800px) {
   .picture-guide {
-    border: 1px solid #e9eaed !important;
     padding: 0 24px 29px;
     max-width: 591px;
   }
@@ -422,10 +425,42 @@ button.close:active:hover {
   color: #b3000f;
 }
 
-/* Reduce size for XS screens */
-@media (max-width: 375px) {
-  #thank-you-text,
-  #workflow-background-wrapper {
-    width: 85% !important;
+/* Reduce size of upload area on small screens */
+@media (max-width: 400px) {
+  .formFieldWrapper .k-upload,
+  .form-element-wrapper .k-upload {
+    width: auto !important;
   }
+}
+
+/* Reduce image size on small sceens */
+img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Reduce width of every form field on small screens */
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"]:not(.select2-search__field),
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
+select,
+.form-static-html.form-item {
+  max-width: 100% !important;
+}
+
+/* Add spacing to example documents and Thank You page logo */
+.example-document,
+.mbta-logo.thank-you-page {
+  margin-bottom: 20px !important;
 }
