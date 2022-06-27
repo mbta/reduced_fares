@@ -29,6 +29,11 @@ input[type=text].textfield:focus {
   box-shadow: none !important;
 }
 
+/* Modal error support for small screens */
+.modal-dialog {
+  min-width: 250px !important;
+}
+
 /* Generic CSS */
 .formFieldWrapper .radio-checkbox-label,
 .form-element-wrapper .radio-checkbox-label {

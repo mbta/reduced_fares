@@ -29,6 +29,11 @@ input[type=text].textfield:focus {
   box-shadow: none !important;
 }
 
+/* Modal error support for small screens */
+.modal-dialog {
+  min-width: 250px !important;
+}
+
 /* Background color and min width */
 body,
 html {
@@ -424,23 +429,25 @@ button.close:active:hover {
 }
 
 /* Add border to photo guide */
+.picture-guide {
+  border: 1px solid #e9eaed !important;
+}
+
+/* Photo guide padding and width */
 @media (max-width: 799px) {
   .picture-guide {
-    border: 1px solid #e9eaed !important;
     padding: 0 19px 29px;
     max-width: 515px;
   }
 }
 @media (max-width: 629px) {
   .picture-guide {
-    border: 1px solid #e9eaed !important;
     padding: 0 19px 29px;
     max-width: 337px;
   }
 }
 @media (min-width: 800px) {
   .picture-guide {
-    border: 1px solid #e9eaed !important;
     padding: 0 24px 29px;
     max-width: 591px;
   }
@@ -509,22 +516,8 @@ img {
 }
 
 /* Reduce width of every form field on small screens */
-input[type=text],
-input[type=password],
-input[type=date],
-input[type=datetime],
-input[type=datetime-local],
-input[type=month],
-input[type=week],
-input[type=email],
-input[type=number],
-input[type=search]:not(.select2-search__field),
-input[type=tel],
-input[type=time],
-input[type=url],
-textarea,
-select,
-.form-static-html.form-item {
+input,
+.select2-container.select2-container--bootstrap {
   max-width: 100% !important;
 }
 
