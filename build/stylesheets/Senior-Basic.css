@@ -516,22 +516,8 @@ img {
 }
 
 /* Reduce width of every form field on small screens */
-input[type=text],
-input[type=password],
-input[type=date],
-input[type=datetime],
-input[type=datetime-local],
-input[type=month],
-input[type=week],
-input[type=email],
-input[type=number],
-input[type=search]:not(.select2-search__field),
-input[type=tel],
-input[type=time],
-input[type=url],
-textarea,
-select,
-.form-static-html.form-item {
+input,
+.select2-container.select2-container--bootstrap {
   max-width: 100% !important;
 }
 
