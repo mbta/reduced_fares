@@ -122,10 +122,6 @@ describe('senior required fields', () => {
       .get('#form-section-6 > .form-section-buttons > .form-section-next')
       .click();
 
-    cy.get('#element22').type(applicantStreetAddress).blur();
-    cy.get('#element24').type(applicantCity).blur();
-    cy.get('#element26').type(applicantZipCode).blur();
-
     cy
       .get('#form-section-7 > .form-section-buttons > .form-submit-button')
       .click();
@@ -162,36 +158,9 @@ describe('senior required fields', () => {
     cy.get('.required-text').should('be.visible');
 
     cy.get('#element26').type(applicantZipCode).blur();
-
-    cy.get('#element27_Option_2').click();
-
-    cy.get('#element31').type(applicantCity).blur();
-    cy.get('#element33').type(applicantZipCode).blur();
-
-    cy
-      .get('#form-section-7 > .form-section-buttons > .form-submit-button')
-      .click();
-    cy.get('.required-text').should('be.visible');
-
-    cy.get('#element29').type(applicantStreetAddress).blur()
-    cy.get('#element31').clear().blur();
-
-    cy
-      .get('#form-section-7 > .form-section-buttons > .form-submit-button')
-      .click();
-    cy.get('.required-text').should('be.visible');
-
-    cy.get('#element31').type(applicantCity).blur();
-    cy.get('#element33').clear().blur();
-
-    cy
-      .get('#form-section-7 > .form-section-buttons > .form-submit-button')
-      .click();
-    cy.get('.required-text').should('be.visible');
   });
 
   it("does not agree to the rules and sees an error", function() {
-    cy.get('#element33').type(applicantZipCode).blur();
     cy
       .get('#form-section-7 > .form-section-buttons > .form-section-next')
       .click();
