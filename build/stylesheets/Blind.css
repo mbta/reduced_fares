@@ -3,6 +3,21 @@ html {
   font-size: 16px;
 }
 
+/* Required text and regex error color */
+.required-text,
+.requiredLabelEmail,
+.regexErrorLabel,
+.datePickerFormatError {
+  color: #b3000f !important;
+  font-style: normal;
+}
+
+/* Color for field required asterisks */
+.form-label-required span[role=presentation],
+.form-label-required span[style="color: red;"] {
+  color: #b3000f !important;
+}
+
 /* Focus for all text fields */
 input[type=text]:focus {
   border: 2px solid #165c96 !important;
@@ -121,16 +136,6 @@ h2 {
     margin-bottom: 0.5332rem !important;
   }
 }
-/* Required text and regex error color */
-.required-text,
-.requiredLabelEmail,
-.regexErrorLabel,
-.form-label-required span[role=presentation],
-.form-label-required span[style="color: red;"] {
-  color: #b3000f !important;
-  font-style: normal;
-}
-
 /* Button size and font */
 .form-submit-button,
 .form-section-next,

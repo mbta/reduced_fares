@@ -1,4 +1,4 @@
-@use "common";
+@use "common" as *;
 
 /* Background color and min width */
 body,
@@ -104,7 +104,7 @@ h3 {
 /* Errors */
 .error-alert-item {
   background-color: #f2dede;
-  border-left: 0.25rem solid #b3000f;
+  border-left: 0.25rem solid $error-text;
   overflow: hidden;
   position: relative;
 }
@@ -136,16 +136,6 @@ h3 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.275em;
   color: inherit;
-}
-
-/* Required text and regex error color */
-.required-text,
-.requiredLabelEmail,
-.regexErrorLabel,
-.form-label-required span[role="presentation"],
-.form-label-required span[style="color: red;"] {
-  color: #b3000f !important;
-  font-style: normal;
 }
 
 /* Button size and font */
@@ -280,17 +270,17 @@ h3 {
 
 /* Make upload success message darker */
 .k-file-success .k-file-validation-message {
-  color: #145a06 !important;
+  color: $brand-success !important;
 }
 
 /* Make upload error message darker */
 .k-file-invalid .k-file-validation-message {
-  color: #b3000f !important;
+  color: $error-text !important;
 }
 
 /* Make upload "invalid files" error message darker */
 .validation-text.fileUploadErrorLabel.truncateWithEllipsis {
-  color: #b3000f !important;
+  color: $error-text !important;
 }
 
 /* Set k-button opacity */
@@ -472,11 +462,11 @@ button.close:active:hover {
 }
 
 .accepted {
-  color: #145a06;
+  color: $brand-success;
 }
 
 .denied {
-  color: #b3000f;
+  color: $error-text;
 }
 
 /* Reduce size of upload area on small screens */
