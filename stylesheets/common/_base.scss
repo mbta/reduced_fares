@@ -1,6 +1,23 @@
+@use "colors" as *;
+
 body,
 html {
   font-size: 16px;
+}
+
+/* Required text and regex error color */
+.required-text,
+.requiredLabelEmail,
+.regexErrorLabel,
+.datePickerFormatError {
+  color: $error-text !important;
+  font-style: normal;
+}
+
+/* Color for field required asterisks */
+.form-label-required span[role="presentation"],
+.form-label-required span[style="color: red;"] {
+  color: $error-text !important;
 }
 
 /* Focus for all text fields */
