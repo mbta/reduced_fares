@@ -22,7 +22,7 @@ html {
 
 /* Focus for all text fields */
 input[type="text"]:focus {
-  border: 2px solid #165c96 !important;
+  border: 2px solid $brand-primary !important;
 }
 
 /* Remove shadow on all text fields */
@@ -32,21 +32,49 @@ input[type="text"].textfield:focus {
 
 /* Dropdown focus and shadow */
 .select2-container--bootstrap.select2-container--open .select2-selection {
-  border: 2px solid #165c96 !important;
+  border: 2px solid $brand-primary !important;
   box-shadow: none !important;
 }
 
 .select2-container--bootstrap .select2-selection:focus {
-  border: 2px solid #165c96 !important;
+  border: 2px solid $brand-primary !important;
   box-shadow: none !important;
 }
 
 .select2-container--bootstrap .select2-dropdown {
-  border: 2px solid #165c96 !important;
+  border: 2px solid $brand-primary !important;
   box-shadow: none !important;
 }
 
 /* Modal error support for small screens */
 .modal-dialog {
   min-width: 250px !important;
+}
+
+/* Make upload light gray color darker */
+.k-icon.k-i-check,
+.k-file-group.k-icon,
+.k-dropzone .k-upload-status,
+.k-file-name {
+  color: $gray !important;
+}
+
+/* Make upload light gray border darker */
+.k-upload-files {
+  border-color: $gray !important;
+}
+
+/* Make upload success message darker */
+.k-file-success .k-file-validation-message {
+  color: $brand-success !important;
+}
+
+/* Make upload error message darker */
+.k-file-invalid .k-file-validation-message {
+  color: $error-text !important;
+}
+
+/* Make upload "invalid files" error message darker */
+.validation-text.fileUploadErrorLabel.truncateWithEllipsis {
+  color: $error-text !important;
 }

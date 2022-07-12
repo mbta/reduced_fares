@@ -49,6 +49,34 @@ input[type=text].textfield:focus {
   min-width: 250px !important;
 }
 
+/* Make upload light gray color darker */
+.k-icon.k-i-check,
+.k-file-group.k-icon,
+.k-dropzone .k-upload-status,
+.k-file-name {
+  color: #494f5c !important;
+}
+
+/* Make upload light gray border darker */
+.k-upload-files {
+  border-color: #494f5c !important;
+}
+
+/* Make upload success message darker */
+.k-file-success .k-file-validation-message {
+  color: #145a06 !important;
+}
+
+/* Make upload error message darker */
+.k-file-invalid .k-file-validation-message {
+  color: #b3000f !important;
+}
+
+/* Make upload "invalid files" error message darker */
+.validation-text.fileUploadErrorLabel.truncateWithEllipsis {
+  color: #b3000f !important;
+}
+
 /* Background color and min width */
 body,
 html {
@@ -297,34 +325,6 @@ h3 {
   background-color: #cee0f4;
   border-color: #061827;
   outline: none !important;
-}
-
-/* Make upload light gray color darker */
-.k-icon.k-i-check,
-.k-file-group.k-icon,
-.k-dropzone .k-upload-status,
-.k-file-name {
-  color: #494f5c !important;
-}
-
-/* Make upload light gray border darker */
-.k-upload-files {
-  border-color: #494f5c !important;
-}
-
-/* Make upload success message darker */
-.k-file-success .k-file-validation-message {
-  color: #145a06 !important;
-}
-
-/* Make upload error message darker */
-.k-file-invalid .k-file-validation-message {
-  color: #b3000f !important;
-}
-
-/* Make upload "invalid files" error message darker */
-.validation-text.fileUploadErrorLabel.truncateWithEllipsis {
-  color: #b3000f !important;
 }
 
 /* Set k-button opacity */

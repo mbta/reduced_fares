@@ -36,7 +36,7 @@ h3 {
 .wizardNormalMode {
   display: inline-block !important;
   padding: 5px 20px !important;
-  color: #fff !important;
+  color: $white !important;
   border: 0;
   border-radius: 4px !important;
   background: #3ba2fc !important;
@@ -184,13 +184,13 @@ div#workflow-background-wrapper {
 
 /* Links */
 a {
-  color: #165c96;
+  color: $brand-primary;
   text-decoration: underline;
 }
 
 a:focus,
 a:hover {
-  color: #0b2f4c;
+  color: $brand-primary-darkest;
   text-decoration: underline;
 }
 
@@ -286,7 +286,7 @@ h5 {
 
 /* Error style section */
 .error-alert-item {
-  background-color: #f2dede;
+  background-color: $form-error-message;
   border-left: 0.25rem solid $error-text;
   overflow: hidden;
   position: relative;
@@ -337,14 +337,14 @@ h5 {
 .form-section-next,
 /* Upload button */
 #divWorkflowContent .buttonPopup.blue {
-  background-color: #165c96 !important;
-  border-color: #165c96 !important;
+  background-color: $brand-primary !important;
+  border-color: $brand-primary !important;
 }
 
 /* Back button */
 .form-section-prev {
-  background-color: #fff !important;
-  color: #165c96 !important;
+  background-color: $white !important;
+  color: $brand-primary !important;
 }
 
 /* END Button colors */
@@ -356,7 +356,7 @@ h5 {
 .form-section-next:hover,
 /* Upload button hover */
 #divWorkflowContent .buttonPopup.blue:hover {
-  color: #fff !important;
+  color: $white !important;
   background-color: #0f416a !important;
   border-color: #0e3b61 !important;
   text-decoration: none !important;
@@ -373,7 +373,7 @@ h5 {
   outline: thin dotted !important;
   outline: 5px auto -webkit-focus-ring-color !important;
   outline-offset: -2px !important;
-  color: #fff !important;
+  color: $white !important;
   background-color: #0f416a !important;
   border-color: #0e3b61 !important;
   text-decoration: none !important;
@@ -384,21 +384,21 @@ h5 {
   outline: thin dotted !important;
   outline: 5px auto -webkit-focus-ring-color !important;
   outline-offset: -2px !important;
-  background-color: #cee0f4 !important;
-  color: #0b2f4c !important;
+  background-color: $brand-primary-lightest !important;
+  color: $brand-primary-darkest !important;
   border-color: #0e3b61 !important;
   text-decoration: none !important;
 }
 
 .form-section-prev:hover {
-  background-color: #cee0f4 !important;
-  color: #0b2f4c !important;
+  background-color: $brand-primary-lightest !important;
+  color: $brand-primary-darkest !important;
 }
 
 .form-section-prev:active:focus,
 .form-section-prev:active:hover {
-  background-color: #cee0f4 !important;
-  color: #0b2f4c !important;
+  background-color: $brand-primary-lightest !important;
+  color: $brand-primary-darkest !important;
   border-color: #061827 !important;
 }
 

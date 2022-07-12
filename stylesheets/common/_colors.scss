@@ -1,3 +1,19 @@
-// Colors
+// Brand Colors
+$brand-primary: #165c96;
+$brand-primary-darkest: #0b2f4c;
+$brand-primary-lightest: #cee0f4;
+
+// Greys
+$gray: #494f5c;
+$gray-background: #f2f3f5; // dotcom uses $grey-bordered-background and $service-alert-gray
+$gray-lightest: #e9eaed;
+
+// White
+$white: #fff;
+
+// Error message
 $error-text: #b3000f;
+$form-error-message: #f2dede;
+
+// Success message
 $brand-success: #145a06;

@@ -3,7 +3,7 @@
 /* Background color and min width */
 body,
 html {
-  background-color: #f2f3f5 !important;
+  background-color: $gray-background !important;
   min-width: 300px !important;
 }
 
@@ -15,13 +15,13 @@ html {
 
 /* Links */
 a {
-  color: #165c96;
+  color: $brand-primary;
   text-decoration: underline;
 }
 
 a:focus,
 a:hover {
-  color: #0b2f4c;
+  color: $brand-primary-darkest;
   text-decoration: underline;
 }
 
@@ -120,16 +120,16 @@ h2 {
 .form-section-next,
 #divWorkflowContent .buttonPopup.blue,
 .buttonPopup.blue.big {
-  color: #fff !important;
-  background-color: #165c96 !important;
-  border-color: #165c96 !important;
+  color: $white !important;
+  background-color: $brand-primary !important;
+  border-color: $brand-primary !important;
 }
 
 /* Secondary button colors */
 .form-section-prev {
-  color: #165c96 !important;
-  background-color: #fff !important;
-  border-color: #165c96 !important;
+  color: $brand-primary !important;
+  background-color: $white !important;
+  border-color: $brand-primary !important;
 }
 
 /* Primary button active, focus, and hover */
@@ -148,7 +148,7 @@ h2 {
 .form-section-prev:active,
 .form-section-prev:focus,
 .form-section-prev:hover {
-  color: #fff !important;
+  color: $white !important;
   background-color: #0f416a !important;
   border-color: #0e3b61 !important;
 }
@@ -157,8 +157,8 @@ h2 {
 .form-section-prev:active,
 .form-section-prev:focus,
 .form-section-prev:hover {
-  color: #0b2f4c !important;
-  background-color: #cee0f4 !important;
+  color: $brand-primary-darkest !important;
+  background-color: $brand-primary-lightest !important;
   border-color: #0e3b61 !important;
 }
 
@@ -187,7 +187,7 @@ h2 {
 #divWorkflowContent .buttonPopup.blue:active:hover,
 .buttonPopup.blue.big:active:focus,
 .buttonPopup.blue.big:active:hover {
-  color: #fff !important;
+  color: $white !important;
   background-color: #0b2e4a !important;
   border-color: #061827 !important;
   outline: none !important;
@@ -203,37 +203,9 @@ h2 {
 /* Secondary button active focus and hover effects */
 .form-section-prev:active:focus,
 .form-section-prev:active:hover {
-  background-color: #cee0f4;
+  background-color: $brand-primary-lightest;
   border-color: #061827;
   outline: none !important;
-}
-
-/* Make upload light gray color darker */
-.k-icon.k-i-check,
-.k-file-group.k-icon,
-.k-dropzone .k-upload-status,
-.k-file-name {
-  color: #494f5c !important;
-}
-
-/* Make upload light gray border darker */
-.k-upload-files {
-  border-color: #494f5c !important;
-}
-
-/* Make upload success message darker */
-.k-file-success .k-file-validation-message {
-  color: $brand-success !important;
-}
-
-/* Make upload error message darker */
-.k-file-invalid .k-file-validation-message {
-  color: $error-text !important;
-}
-
-/* Make upload "invalid files" error message darker */
-.validation-text.fileUploadErrorLabel.truncateWithEllipsis {
-  color: $error-text !important;
 }
 
 /* Set k-button opacity */
@@ -265,8 +237,8 @@ button.close {
   -ms-user-select: none !important;
   user-select: none !important;
   font-size: 14px !important;
-  color: #165c96 !important;
-  background-color: #fff !important;
+  color: $brand-primary !important;
+  background-color: $white !important;
 }
 
 /* Modal close button */
@@ -279,8 +251,8 @@ button.close {
   -moz-user-select: none !important;
   -ms-user-select: none !important;
   user-select: none !important;
-  color: #165c96 !important;
-  background-color: #fff !important;
+  color: $brand-primary !important;
+  background-color: $white !important;
   text-shadow: none !important;
   padding: 0 0.451em !important;
   line-height: 1.5 !important;
@@ -297,7 +269,7 @@ button.close:active,
 button.close:focus,
 button.close:hover {
   color: #0e3b61 !important;
-  background-color: #cee0f4 !important;
+  background-color: $brand-primary-lightest !important;
 }
 
 /* k-button and close button focus settings */
@@ -316,7 +288,7 @@ button.close:active:focus {
 button.close:active:focus,
 button.close:active:hover {
   color: #0e3b61 !important;
-  background-color: #cee0f4 !important;
+  background-color: $brand-primary-lightest !important;
   outline: none !important;
 }
 
@@ -337,7 +309,7 @@ button.close:active:hover {
 
 /* Add border to photo guide */
 .picture-guide {
-  border: 1px solid #e9eaed !important;
+  border: 1px solid $gray-lightest !important;
 }
 
 /* Photo guide padding and width */
