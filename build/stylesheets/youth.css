@@ -1,6 +1,28 @@
 body,
 html {
   font-size: 16px;
+  min-width: 300px !important;
+}
+
+/* SimpliGov header */
+#formHeaderDiv {
+  height: 0;
+  margin: -10px 0;
+}
+
+/* Hide section breadcrumb titles */
+#section-breadcrumbs {
+  visibility: hidden !important;
+}
+
+/* Hide calendar */
+.datetimepicker.datetimepicker-dropdown-bottom-right.dropdown-menu {
+  display: none !important;
+}
+
+/* Hide print icon */
+#print-preview {
+  display: none !important;
 }
 
 /* Required text and regex error color */
@@ -44,11 +66,6 @@ input[type=text].textfield:focus {
   box-shadow: none !important;
 }
 
-/* Modal error support for small screens */
-.modal-dialog {
-  min-width: 250px !important;
-}
-
 /* Make upload light gray color darker */
 .k-icon.k-i-check,
 .k-file-group.k-icon,
@@ -77,101 +94,40 @@ input[type=text].textfield:focus {
   color: #b3000f !important;
 }
 
-/* Generic CSS */
-.formFieldWrapper .radio-checkbox-label,
-.form-element-wrapper .radio-checkbox-label {
-  margin: 0;
+/* Modal error support for small screens */
+.modal-dialog {
+  min-width: 250px !important;
+}
+
+/* Reduce size of upload area on small screens */
+@media (max-width: 400px) {
+  .formFieldWrapper .k-upload,
+.form-element-wrapper .k-upload {
+    width: auto !important;
+  }
+}
+/* Reduce image size on small sceens */
+img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Reduce width of every form field on small screens */
+input,
+.select2-container.select2-container--bootstrap {
+  max-width: 100% !important;
+}
+
+/* Add spacing to example documents and Thank You page logo */
+.example-document,
+.mbta-logo.thank-you-page {
+  margin-bottom: 20px !important;
 }
 
 /* Background */
 html,
 body {
   background-color: #223b75 !important;
-}
-
-.loadingPanel {
-  top: 0 !important;
-}
-
-h3 {
-  border-color: #a9a9a9 !important;
-}
-
-#divWorkflowContent {
-  width: 80%;
-}
-
-/* turn off title, header/footer, info, summary/attachments/communications sections */
-.page-head,
-.page-footer,
-.infoSection,
-.workflowRightTab {
-  display: none !important;
-}
-
-/* turn on the wizard button to toggle between wizard view and normal view */
-.wizardNormalMode {
-  display: inline-block !important;
-  padding: 5px 20px !important;
-  color: #fff !important;
-  border: 0;
-  border-radius: 4px !important;
-  background: #3ba2fc !important;
-  margin-top: 5px !important;
-}
-
-/* add background color and padding so that it's visible above/below form */
-#workflow-wrapper {
-  /* go Dodgers (used to be: #3489ba) */
-  background-color: #223b75 !important;
-  padding: 50px 0 !important;
-}
-
-/* put space between bottom of form fields and top of submit button */
-.submit-button-wrapper {
-  padding-top: 50px !important;
-}
-
-/* default space below submit button is 100px, too much */
-#formPartialDiv {
-  margin-bottom: 50px !important;
-}
-
-/* make form wide enough to fit 3 fields on one line */
-@media screen and (min-width: 1100px) and (max-width: 1340px) {
-  #workflow-background-wrapper {
-    min-width: 840px !important;
-  }
-}
-/* set form width to 94%, override default @media query that sets width to 100% */
-@media screen and (min-width: 700px) and (max-width: 1100px) {
-  #workflow-background-wrapper {
-    width: 94% !important;
-  }
-}
-/* get rid of top/bottom padding, form takes up entire screen */
-@media screen and (max-width: 700px) {
-  #workflow-wrapper {
-    padding: none !important;
-  }
-}
-.workflowRightTab {
-  width: 10% !important;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-}
-
-div#workflow-background-wrapper {
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-}
-
-#workflow-background-wrapper {
-  min-width: 2px !important;
-}
-
-#workflow-wrapper:not(.embed):not(.registered-embed) {
-  justify-content: center;
 }
 
 /* Hide error fields and values */
@@ -195,52 +151,6 @@ div#workflow-background-wrapper {
 }
 
 /* END Hide error fields and values */
-/* Hide section breadcrumb titles */
-#section-breadcrumbs {
-  visibility: hidden;
-}
-
-#formHeaderDiv {
-  height: 0;
-  margin: -10px 0;
-}
-
-/* Hide datepicker calendar */
-.datetimepicker.datetimepicker-dropdown-bottom-right.dropdown-menu {
-  display: none !important;
-}
-
-/* Hide print icon */
-#print-preview {
-  display: none !important;
-}
-
-/* Update column width */
-@media (min-width: 250px) {
-  .container {
-    max-width: 80%;
-  }
-}
-@media (min-width: 544px) {
-  .container {
-    max-width: 100%;
-  }
-}
-@media (min-width: 800px) {
-  .container {
-    max-width: 768px;
-  }
-}
-@media (min-width: 1088px) {
-  .container {
-    max-width: 960px;
-  }
-}
-@media (min-width: 1344px) {
-  .container {
-    max-width: 1200px;
-  }
-}
 /* Zeroheight Style Section */
 /* Links */
 a {

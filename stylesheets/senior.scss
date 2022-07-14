@@ -4,13 +4,6 @@
 body,
 html {
   background-color: $gray-background !important;
-  min-width: 300px !important;
-}
-
-/* SimpliGov header */
-#formHeaderDiv {
-  height: 0;
-  margin: -10px 0;
 }
 
 /* Links */
@@ -339,21 +332,6 @@ button.close:active:hover {
   outline: none !important;
 }
 
-/* Hide section breadcrumb titles */
-#section-breadcrumbs {
-  visibility: hidden;
-}
-
-/* Hide calendar */
-.datetimepicker.datetimepicker-dropdown-bottom-right.dropdown-menu {
-  display: none !important;
-}
-
-/* Hide print icon */
-#print-preview {
-  display: none !important;
-}
-
 /* Hide birthdate error field */
 #form-element-wrapper_56 {
   visibility: hidden;
@@ -439,30 +417,4 @@ button.close:active:hover {
 
 .denied {
   color: $error-text;
-}
-
-/* Reduce size of upload area on small screens */
-@media (max-width: 400px) {
-  .formFieldWrapper .k-upload,
-  .form-element-wrapper .k-upload {
-    width: auto !important;
-  }
-}
-
-/* Reduce image size on small sceens */
-img {
-  max-width: 100% !important;
-  height: auto !important;
-}
-
-/* Reduce width of every form field on small screens */
-input,
-.select2-container.select2-container--bootstrap {
-  max-width: 100% !important;
-}
-
-/* Add spacing to example documents and Thank You page logo */
-.example-document,
-.mbta-logo.thank-you-page {
-  margin-bottom: 20px !important;
 }
