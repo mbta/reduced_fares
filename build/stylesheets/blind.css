@@ -4,6 +4,64 @@ html {
   min-width: 300px !important;
 }
 
+/* Links */
+a {
+  color: #165c96;
+  text-decoration: underline;
+}
+
+a:focus,
+a:hover {
+  color: #0b2f4c;
+  text-decoration: underline;
+}
+
+a:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+/* Text */
+p,
+li {
+  font-family: "Inter UI", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 1rem !important;
+}
+
+@media (max-width: 799px) {
+  p,
+li {
+    font-size: 0.85rem !important;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-weight: 700 !important;
+}
+
+h1 {
+  font-size: 2.5rem !important;
+}
+
+@media (max-width: 799px) {
+  h1 {
+    font-size: 1.75rem !important;
+  }
+}
+h2 {
+  font-size: 1.75rem !important;
+}
+
+@media (max-width: 799px) {
+  h2 {
+    font-size: 1.4219rem !important;
+  }
+}
 /* SimpliGov header */
 #formHeaderDiv {
   height: 0;
@@ -124,86 +182,6 @@ input,
   margin-bottom: 20px !important;
 }
 
-/* Background color and min width */
-body,
-html {
-  background-color: #f2f3f5 !important;
-}
-
-/* Links */
-a {
-  color: #165c96;
-  text-decoration: underline;
-}
-
-a:focus,
-a:hover {
-  color: #0b2f4c;
-  text-decoration: underline;
-}
-
-a:focus {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
-
-/* zeroheight text style */
-p,
-li {
-  font-family: "Inter UI", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-  font-size: 1rem !important;
-}
-
-@media (max-width: 799px) {
-  p,
-li {
-    font-size: 0.85rem !important;
-  }
-}
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-  font-weight: 700 !important;
-}
-
-h1 {
-  font-size: 2.5rem !important;
-}
-
-@media (max-width: 799px) {
-  h1 {
-    font-size: 1.75rem !important;
-  }
-}
-h2 {
-  font-size: 1.75rem !important;
-}
-
-@media (max-width: 799px) {
-  h2 {
-    font-size: 1.4219rem !important;
-  }
-}
-/* Photo grid h2 */
-.h2-graphic {
-  font-size: 1.75rem !important;
-  line-height: 2.2313rem !important;
-  margin-top: 1.8813rem !important;
-  margin-bottom: 0.6563rem !important;
-}
-
-@media (max-width: 799px) {
-  .h2-graphic {
-    font-size: 1.4219rem !important;
-    line-height: 1.8129rem !important;
-    margin-top: 1.5285rem !important;
-    margin-bottom: 0.5332rem !important;
-  }
-}
 /* Button size and font */
 .form-submit-button,
 .form-section-next,
@@ -405,6 +383,28 @@ button.close:active:hover {
   outline: none !important;
 }
 
+/* Background color */
+body,
+html {
+  background-color: #f2f3f5 !important;
+}
+
+/* Photo grid h2 */
+.h2-graphic {
+  font-size: 1.75rem !important;
+  line-height: 2.2313rem !important;
+  margin-top: 1.8813rem !important;
+  margin-bottom: 0.6563rem !important;
+}
+
+@media (max-width: 799px) {
+  .h2-graphic {
+    font-size: 1.4219rem !important;
+    line-height: 1.8129rem !important;
+    margin-top: 1.5285rem !important;
+    margin-bottom: 0.5332rem !important;
+  }
+}
 /* Add border to photo guide */
 .picture-guide {
   border: 1px solid #e9eaed !important;

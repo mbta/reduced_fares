@@ -4,6 +4,64 @@ html {
   min-width: 300px !important;
 }
 
+/* Links */
+a {
+  color: #165c96;
+  text-decoration: underline;
+}
+
+a:focus,
+a:hover {
+  color: #0b2f4c;
+  text-decoration: underline;
+}
+
+a:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+/* Text */
+p,
+li {
+  font-family: "Inter UI", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 1rem !important;
+}
+
+@media (max-width: 799px) {
+  p,
+li {
+    font-size: 0.85rem !important;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-weight: 700 !important;
+}
+
+h1 {
+  font-size: 2.5rem !important;
+}
+
+@media (max-width: 799px) {
+  h1 {
+    font-size: 1.75rem !important;
+  }
+}
+h2 {
+  font-size: 1.75rem !important;
+}
+
+@media (max-width: 799px) {
+  h2 {
+    font-size: 1.4219rem !important;
+  }
+}
 /* SimpliGov header */
 #formHeaderDiv {
   height: 0;
@@ -122,132 +180,6 @@ input,
 .example-document,
 .mbta-logo.thank-you-page {
   margin-bottom: 20px !important;
-}
-
-/* Background color and min width */
-body,
-html {
-  background-color: #f2f3f5 !important;
-}
-
-/* Links */
-a {
-  color: #165c96;
-  text-decoration: underline;
-}
-
-a:focus,
-a:hover {
-  color: #0b2f4c;
-  text-decoration: underline;
-}
-
-a:focus {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
-
-/* zeroheight text style */
-p,
-li {
-  font-family: "Inter UI", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-  font-size: 1rem !important;
-}
-
-@media (max-width: 799px) {
-  p,
-li {
-    font-size: 0.85rem !important;
-  }
-}
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-  font-weight: 700 !important;
-}
-
-h1 {
-  font-size: 2.5rem !important;
-}
-
-@media (max-width: 799px) {
-  h1 {
-    font-size: 1.75rem !important;
-  }
-}
-h2 {
-  font-size: 1.75rem !important;
-}
-
-@media (max-width: 799px) {
-  h2 {
-    font-size: 1.4219rem !important;
-  }
-}
-h3 {
-  font-size: 1.3125rem !important;
-}
-
-@media (max-width: 799px) {
-  h3 {
-    font-size: 1.1487rem !important;
-  }
-}
-/* Photo grid h2 */
-.h2-graphic {
-  font-size: 1.75rem !important;
-  line-height: 2.2313rem !important;
-  margin-top: 1.8813rem !important;
-  margin-bottom: 0.6563rem !important;
-}
-
-@media (max-width: 799px) {
-  .h2-graphic {
-    font-size: 1.4219rem !important;
-    line-height: 1.8129rem !important;
-    margin-top: 1.5285rem !important;
-    margin-bottom: 0.5332rem !important;
-  }
-}
-/* Errors */
-.error-alert-item {
-  background-color: #f2dede;
-  border-left: 0.25rem solid #b3000f;
-  overflow: hidden;
-  position: relative;
-}
-
-.error-alert-item__top {
-  display: flex;
-  padding-left: 3rem;
-}
-
-.error-alert-item__top-text-container {
-  flex: 1 1 auto;
-  padding: 1rem;
-}
-
-.error-alert-item__icon {
-  align-content: center;
-  left: 1.25rem;
-  pointer-events: none;
-  position: absolute;
-  top: 1.2rem;
-  height: 2rem;
-  width: 2rem;
-}
-
-.error-alert-item__effect {
-  font-size: 1.125rem;
-  font-weight: 700;
-  margin-bottom: 0.375em;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 1.275em;
-  color: inherit;
 }
 
 /* Button size and font */
@@ -451,6 +383,49 @@ button.close:active:hover {
   outline: none !important;
 }
 
+/* Background color  */
+body,
+html {
+  background-color: #f2f3f5 !important;
+}
+
+/* Errors */
+.error-alert-item {
+  background-color: #f2dede;
+  border-left: 0.25rem solid #b3000f;
+  overflow: hidden;
+  position: relative;
+}
+
+.error-alert-item__top {
+  display: flex;
+  padding-left: 3rem;
+}
+
+.error-alert-item__top-text-container {
+  flex: 1 1 auto;
+  padding: 1rem;
+}
+
+.error-alert-item__icon {
+  align-content: center;
+  left: 1.25rem;
+  pointer-events: none;
+  position: absolute;
+  top: 1.2rem;
+  height: 2rem;
+  width: 2rem;
+}
+
+.error-alert-item__effect {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 0.375em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.275em;
+  color: inherit;
+}
+
 /* Hide birthdate error field */
 #form-element-wrapper_56 {
   visibility: hidden;
@@ -458,6 +433,22 @@ button.close:active:hover {
   margin: -20px 0;
 }
 
+/* Photo grid h2 */
+.h2-graphic {
+  font-size: 1.75rem !important;
+  line-height: 2.2313rem !important;
+  margin-top: 1.8813rem !important;
+  margin-bottom: 0.6563rem !important;
+}
+
+@media (max-width: 799px) {
+  .h2-graphic {
+    font-size: 1.4219rem !important;
+    line-height: 1.8129rem !important;
+    margin-top: 1.5285rem !important;
+    margin-bottom: 0.5332rem !important;
+  }
+}
 /* Add border to photo guide */
 .picture-guide {
   border: 1px solid #e9eaed !important;
