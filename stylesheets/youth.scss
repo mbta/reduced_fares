@@ -6,6 +6,11 @@ body {
   background-color: #223b75 !important;
 }
 
+.page-content div#workflow-background-wrapper {
+  padding: 0 !important;
+  border: none !important;
+}
+
 /* Hide error fields and values */
 
 /* HomeZipError field */
@@ -34,7 +39,6 @@ body {
 }
 
 /* END Hide error fields and values */
-
 
 /* Zeroheight Style Section */
 
