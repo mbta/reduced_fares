@@ -6,6 +6,7 @@ body {
   background-color: #223b75 !important;
 }
 
+/* Remove extra padding */
 .page-content div#workflow-background-wrapper {
   padding: 0 !important;
   border: none !important;
@@ -38,113 +39,21 @@ body {
   margin: -20px 0;
 }
 
-/* END Hide error fields and values */
-
-/* Zeroheight Style Section */
-
-/* Links */
-a {
-  color: $brand-primary;
-  text-decoration: underline;
-}
-
-a:focus,
-a:hover {
-  color: $brand-primary-darkest;
-  text-decoration: underline;
-}
-
-a:focus {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
-
-/* Other Content */
-body {
-  font-family: "Inter UI", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-}
-
-@media (max-width: 799px) {
-  body {
-    font-size: 0.875rem !important;
-  }
-}
-
-p {
-  font-family: "Inter UI", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-  font-size: inherit !important;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
+/* Style form instructions required documents */
 .h3 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 1.3125rem !important;
   font-weight: 700 !important;
-}
-
-.h3 {
   margin-top: 0 !important;
 }
 
-h1 {
-  font-size: 2.5rem !important;
-}
-
 @media (max-width: 799px) {
-  h1 {
-    font-size: 1.75rem !important;
-  }
-}
-
-h2 {
-  font-size: 1.75rem !important;
-}
-
-@media (max-width: 799px) {
-  h2 {
-    font-size: 1.4219rem !important;
-  }
-}
-
-h3,
-.h3 {
-  font-size: 1.3125rem !important;
-}
-
-@media (max-width: 799px) {
-  h3,
   .h3 {
     font-size: 1.1487rem !important;
   }
 }
 
-h4 {
-  font-size: 0.9844rem;
-}
-
-@media (max-width: 799px) {
-  h4 {
-    font-size: 2rem !important;
-  }
-}
-
-h5 {
-  font-size: 1rem;
-}
-
-@media (max-width: 799px) {
-  h5 {
-    font-size: 0.875rem !important;
-  }
-}
-
-/* END Zeroheight style section */
-
-/* Error style section */
+/* Errors */
 .error-alert-item {
   background-color: $form-error-message;
   border-left: 0.25rem solid $error-text;
@@ -187,79 +96,3 @@ h5 {
   line-height: 1.275em;
   color: inherit;
 }
-
-/* END Error style section */
-
-/* Button colors */
-
-/* Submit-Next button */
-.form-submit-button,
-.form-section-next,
-/* Upload button */
-#divWorkflowContent .buttonPopup.blue {
-  background-color: $brand-primary !important;
-  border-color: $brand-primary !important;
-}
-
-/* Back button */
-.form-section-prev {
-  background-color: $white !important;
-  color: $brand-primary !important;
-}
-
-/* END Button colors */
-
-/* Button focus and hover */
-
-/* Submit-Next button hover */
-.form-submit-button:hover,
-.form-section-next:hover,
-/* Upload button hover */
-#divWorkflowContent .buttonPopup.blue:hover {
-  color: $white !important;
-  background-color: #0f416a !important;
-  border-color: #0e3b61 !important;
-  text-decoration: none !important;
-}
-
-/* Submit-Next button focus */
-.form-submit-button:focus,
-.form-submit-button:active:focus,
-.form-section-next:focus,
-.form-section-next:active:focus,
-/* Upload button focus */
-#divWorkflowContent .buttonPopup.blue:focus,
-#divWorkflowContent .buttonPopup.blue:active:focus {
-  outline: thin dotted !important;
-  outline: 5px auto -webkit-focus-ring-color !important;
-  outline-offset: -2px !important;
-  color: $white !important;
-  background-color: #0f416a !important;
-  border-color: #0e3b61 !important;
-  text-decoration: none !important;
-}
-
-/* Back button focus and hover */
-.form-section-prev:focus {
-  outline: thin dotted !important;
-  outline: 5px auto -webkit-focus-ring-color !important;
-  outline-offset: -2px !important;
-  background-color: $brand-primary-lightest !important;
-  color: $brand-primary-darkest !important;
-  border-color: #0e3b61 !important;
-  text-decoration: none !important;
-}
-
-.form-section-prev:hover {
-  background-color: $brand-primary-lightest !important;
-  color: $brand-primary-darkest !important;
-}
-
-.form-section-prev:active:focus,
-.form-section-prev:active:hover {
-  background-color: $brand-primary-lightest !important;
-  color: $brand-primary-darkest !important;
-  border-color: #061827 !important;
-}
-
-/* END Button focus and hover */
