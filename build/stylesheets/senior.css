@@ -1,6 +1,28 @@
 body,
 html {
   font-size: 16px;
+  min-width: 300px !important;
+}
+
+/* SimpliGov header */
+#formHeaderDiv {
+  height: 0;
+  margin: -10px 0;
+}
+
+/* Hide section breadcrumb titles */
+#section-breadcrumbs {
+  visibility: hidden !important;
+}
+
+/* Hide calendar */
+.datetimepicker.datetimepicker-dropdown-bottom-right.dropdown-menu {
+  display: none !important;
+}
+
+/* Hide print icon */
+#print-preview {
+  display: none !important;
 }
 
 /* Required text and regex error color */
@@ -44,11 +66,6 @@ input[type=text].textfield:focus {
   box-shadow: none !important;
 }
 
-/* Modal error support for small screens */
-.modal-dialog {
-  min-width: 250px !important;
-}
-
 /* Make upload light gray color darker */
 .k-icon.k-i-check,
 .k-file-group.k-icon,
@@ -77,17 +94,40 @@ input[type=text].textfield:focus {
   color: #b3000f !important;
 }
 
+/* Modal error support for small screens */
+.modal-dialog {
+  min-width: 250px !important;
+}
+
+/* Reduce size of upload area on small screens */
+@media (max-width: 400px) {
+  .formFieldWrapper .k-upload,
+.form-element-wrapper .k-upload {
+    width: auto !important;
+  }
+}
+/* Reduce image size on small sceens */
+img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Reduce width of every form field on small screens */
+input,
+.select2-container.select2-container--bootstrap {
+  max-width: 100% !important;
+}
+
+/* Add spacing to example documents and Thank You page logo */
+.example-document,
+.mbta-logo.thank-you-page {
+  margin-bottom: 20px !important;
+}
+
 /* Background color and min width */
 body,
 html {
   background-color: #f2f3f5 !important;
-  min-width: 300px !important;
-}
-
-/* SimpliGov header */
-#formHeaderDiv {
-  height: 0;
-  margin: -10px 0;
 }
 
 /* Links */
@@ -411,21 +451,6 @@ button.close:active:hover {
   outline: none !important;
 }
 
-/* Hide section breadcrumb titles */
-#section-breadcrumbs {
-  visibility: hidden;
-}
-
-/* Hide calendar */
-.datetimepicker.datetimepicker-dropdown-bottom-right.dropdown-menu {
-  display: none !important;
-}
-
-/* Hide print icon */
-#print-preview {
-  display: none !important;
-}
-
 /* Hide birthdate error field */
 #form-element-wrapper_56 {
   visibility: hidden;
@@ -505,31 +530,6 @@ button.close:active:hover {
 
 .denied {
   color: #b3000f;
-}
-
-/* Reduce size of upload area on small screens */
-@media (max-width: 400px) {
-  .formFieldWrapper .k-upload,
-.form-element-wrapper .k-upload {
-    width: auto !important;
-  }
-}
-/* Reduce image size on small sceens */
-img {
-  max-width: 100% !important;
-  height: auto !important;
-}
-
-/* Reduce width of every form field on small screens */
-input,
-.select2-container.select2-container--bootstrap {
-  max-width: 100% !important;
-}
-
-/* Add spacing to example documents and Thank You page logo */
-.example-document,
-.mbta-logo.thank-you-page {
-  margin-bottom: 20px !important;
 }
 
 /*# sourceMappingURL=senior.css.map */
