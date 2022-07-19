@@ -1,6 +1,7 @@
 body,
 html {
   font-size: 16px;
+  background-color: #f2f3f5 !important;
   min-width: 300px !important;
 }
 
@@ -383,10 +384,146 @@ button.close:active:hover {
   outline: none !important;
 }
 
-/* Background */
-html,
-body {
-  background-color: #223b75 !important;
+/* Alert base */
+.error-alert-item,
+.info-alert-item {
+  overflow: hidden;
+  position: relative;
+}
+
+.error-alert-item__top,
+.info-alert-item__top {
+  display: flex;
+  padding-left: 3rem;
+}
+
+.error-alert-item__top-text-container,
+.info-alert-item__top-text-container {
+  flex: 1 1 auto;
+  padding: 1rem;
+}
+
+.error-alert-item__icon,
+.info-alert-item__icon {
+  align-content: center;
+  left: 1.25rem;
+  pointer-events: none;
+  position: absolute;
+  top: 1.2rem;
+  height: 2rem;
+  width: 2rem;
+}
+
+.error-alert-item__effect,
+.info-alert-item__effect {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 0.375em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.275em;
+  color: inherit;
+}
+
+/* Error alert colors */
+.error-alert-item {
+  background-color: #f2dede;
+  border-left: 0.25rem solid #b3000f;
+}
+
+/* Info alert colors */
+.info-alert-item {
+  background-color: #e2ecf9;
+  border-left: 0.25rem solid #0b2f4c;
+}
+
+/* Photo grid h2 */
+.h2-graphic {
+  font-size: 1.75rem !important;
+  line-height: 2.2313rem !important;
+  margin-top: 1.8813rem !important;
+  margin-bottom: 0.6563rem !important;
+}
+
+@media (max-width: 799px) {
+  .h2-graphic {
+    font-size: 1.4219rem !important;
+    line-height: 1.8129rem !important;
+    margin-top: 1.5285rem !important;
+    margin-bottom: 0.5332rem !important;
+  }
+}
+/* Add border to photo guide */
+.picture-guide {
+  border: 1px solid #e9eaed !important;
+}
+
+/* Photo guide padding and width */
+@media (max-width: 799px) {
+  .picture-guide {
+    padding: 0 19px 29px;
+    max-width: 515px;
+  }
+}
+@media (max-width: 629px) {
+  .picture-guide {
+    padding: 0 19px 29px;
+    max-width: 337px;
+  }
+}
+@media (min-width: 800px) {
+  .picture-guide {
+    padding: 0 24px 29px;
+    max-width: 591px;
+  }
+}
+/* Container for example pictures */
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 21px;
+}
+
+@media (max-width: 799px) {
+  .flex-container {
+    gap: 19px;
+  }
+}
+/* Container for individual pictures and list */
+.outer-box {
+  flex-basis: 183px;
+  margin: 0;
+}
+
+@media (max-width: 799px) {
+  .outer-box {
+    flex-basis: 147px;
+  }
+}
+/* Example pictures */
+.example-picture {
+  width: 183px;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 799px) {
+  .example-picture {
+    width: auto;
+  }
+}
+/* Example photos list styling */
+.caption {
+  list-style: none;
+  margin-left: 0;
+  padding: 11px 0 0;
+}
+
+.accepted {
+  color: #145a06;
+}
+
+.denied {
+  color: #b3000f;
 }
 
 /* Remove extra padding */
@@ -427,48 +564,6 @@ body {
   .h3 {
     font-size: 1.1487rem !important;
   }
-}
-/* Errors */
-.error-alert-item {
-  background-color: #f2dede;
-  border-left: 0.25rem solid #b3000f;
-  overflow: hidden;
-  position: relative;
-}
-
-@media (max-width: 799px) {
-  .error-alert-item {
-    border-left: 0;
-    border-right: 0;
-  }
-}
-.error-alert-item__top {
-  display: flex;
-  padding-left: 3rem;
-}
-
-.error-alert-item__top-text-container {
-  flex: 1 1 auto;
-  padding: 1rem;
-}
-
-.error-alert-item__icon {
-  align-content: center;
-  height: 2rem;
-  left: 1.25rem;
-  pointer-events: none;
-  position: absolute;
-  top: 1.2rem;
-  width: 2rem;
-}
-
-.error-alert-item__effect {
-  font-size: 1.125rem;
-  margin-bottom: 0.375em;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  line-height: 1.275em;
-  color: inherit;
 }
 
 /*# sourceMappingURL=youth.css.map */

@@ -1,11 +1,5 @@
 @use "common" as *;
 
-/* Background */
-html,
-body {
-  background-color: #223b75 !important;
-}
-
 /* Remove extra padding */
 .page-content div#workflow-background-wrapper {
   padding: 0 !important;
@@ -51,48 +45,4 @@ body {
   .h3 {
     font-size: 1.1487rem !important;
   }
-}
-
-/* Errors */
-.error-alert-item {
-  background-color: $form-error-message;
-  border-left: 0.25rem solid $error-text;
-  overflow: hidden;
-  position: relative;
-}
-
-@media (max-width: 799px) {
-  .error-alert-item {
-    border-left: 0;
-    border-right: 0;
-  }
-}
-
-.error-alert-item__top {
-  display: flex;
-  padding-left: 3rem;
-}
-
-.error-alert-item__top-text-container {
-  flex: 1 1 auto;
-  padding: 1rem;
-}
-
-.error-alert-item__icon {
-  align-content: center;
-  height: 2rem;
-  left: 1.25rem;
-  pointer-events: none;
-  position: absolute;
-  top: 1.2rem;
-  width: 2rem;
-}
-
-.error-alert-item__effect {
-  font-size: 1.125rem;
-  margin-bottom: 0.375em;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  line-height: 1.275em;
-  color: inherit;
 }

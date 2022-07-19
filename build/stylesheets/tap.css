@@ -526,11 +526,4 @@ button.close:active:hover {
   color: #b3000f;
 }
 
-/* Hide birthdate error field */
-#form-element-wrapper_56 {
-  visibility: hidden;
-  height: 0;
-  margin: -20px 0;
-}
-
-/*# sourceMappingURL=senior.css.map */
+/*# sourceMappingURL=tap.css.map */
