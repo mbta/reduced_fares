@@ -1,6 +1,7 @@
 body,
 html {
   font-size: 16px;
+  background-color: #f2f3f5 !important;
   min-width: 300px !important;
 }
 
@@ -383,56 +384,6 @@ button.close:active:hover {
   outline: none !important;
 }
 
-/* Background color  */
-body,
-html {
-  background-color: #f2f3f5 !important;
-}
-
-/* Errors */
-.error-alert-item {
-  background-color: #f2dede;
-  border-left: 0.25rem solid #b3000f;
-  overflow: hidden;
-  position: relative;
-}
-
-.error-alert-item__top {
-  display: flex;
-  padding-left: 3rem;
-}
-
-.error-alert-item__top-text-container {
-  flex: 1 1 auto;
-  padding: 1rem;
-}
-
-.error-alert-item__icon {
-  align-content: center;
-  left: 1.25rem;
-  pointer-events: none;
-  position: absolute;
-  top: 1.2rem;
-  height: 2rem;
-  width: 2rem;
-}
-
-.error-alert-item__effect {
-  font-size: 1.125rem;
-  font-weight: 700;
-  margin-bottom: 0.375em;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 1.275em;
-  color: inherit;
-}
-
-/* Hide birthdate error field */
-#form-element-wrapper_56 {
-  visibility: hidden;
-  height: 0;
-  margin: -20px 0;
-}
-
 /* Photo grid h2 */
 .h2-graphic {
   font-size: 1.75rem !important;
@@ -521,6 +472,50 @@ html {
 
 .denied {
   color: #b3000f;
+}
+
+/* Red error alert */
+.error-alert-item {
+  background-color: #f2dede;
+  border-left: 0.25rem solid #b3000f;
+  overflow: hidden;
+  position: relative;
+}
+
+.error-alert-item__top {
+  display: flex;
+  padding-left: 3rem;
+}
+
+.error-alert-item__top-text-container {
+  flex: 1 1 auto;
+  padding: 1rem;
+}
+
+.error-alert-item__icon {
+  align-content: center;
+  left: 1.25rem;
+  pointer-events: none;
+  position: absolute;
+  top: 1.2rem;
+  height: 2rem;
+  width: 2rem;
+}
+
+.error-alert-item__effect {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 0.375em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.275em;
+  color: inherit;
+}
+
+/* Hide birthdate error field */
+#form-element-wrapper_56 {
+  visibility: hidden;
+  height: 0;
+  margin: -20px 0;
 }
 
 /*# sourceMappingURL=senior.css.map */
