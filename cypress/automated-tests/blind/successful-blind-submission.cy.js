@@ -9,19 +9,19 @@ describe('blind successful new submission - with an email address', () => {
     cy.visit(blindUrl);
   });
 
-  // it('completes the language selection', () => {
-  //   cy
-  //     .get('[data-field-code="LanguageSelection"]')
-  //     .contains('English')
-  //     .click();
-  //   cy
-  //     .get('#form-section-0 > .form-section-buttons > .form-section-next')
-  //     .click();
-  // });
+  it('completes the language selection', () => {
+    cy
+      .get('[data-field-code="LanguageSelection"]')
+      .contains('English')
+      .click();
+    cy
+      .get('#form-section-0 > .form-section-buttons > .form-section-next')
+      .click();
+  });
 
   it("clicks through instructions", function() {
     cy
-      .get('#form-section-0 > .form-section-buttons > .form-section-next')
+      .get('#form-section-1 > .form-section-buttons > .form-section-next')
       .click();
   });
 
@@ -31,7 +31,7 @@ describe('blind successful new submission - with an email address', () => {
       .contains('Apply for a new Blind Access CharlieCard')
       .click();
     cy
-      .get('#form-section-1 > .form-section-buttons > .form-section-next')
+      .get('#form-section-2 > .form-section-buttons > .form-section-next')
       .click();
   });
 
@@ -44,7 +44,7 @@ describe('blind successful new submission - with an email address', () => {
     cy.get('#element15').type(applicantFirstName).blur();
     cy.get('#element16').type(applicantLastName).blur();
     cy
-      .get('#form-section-2 > .form-section-buttons > .form-section-next')
+      .get('#form-section-3 > .form-section-buttons > .form-section-next')
       .click();
   });
 
@@ -55,7 +55,7 @@ describe('blind successful new submission - with an email address', () => {
     cy.get('#element19').type(applicantPhoneNumber).blur();
     cy.get('#element20').type(applicantEmailAddress).blur();
     cy
-      .get('#form-section-3 > .form-section-buttons > .form-section-next')
+      .get('#form-section-4 > .form-section-buttons > .form-section-next')
       .click();
   });
 
@@ -70,7 +70,7 @@ describe('blind successful new submission - with an email address', () => {
       .attachFile('youth-pass-test-image.png');
     cy.get('.k-text-success').should('exist');
     cy
-      .get('#form-section-4 > .form-section-buttons > .form-section-next')
+      .get('#form-section-5 > .form-section-buttons > .form-section-next')
       .click();
   });
 
@@ -80,7 +80,7 @@ describe('blind successful new submission - with an email address', () => {
       .attachFile('youth-pass-test-image.png');
     cy.get('.k-text-success').should('exist');
     cy
-      .get('#form-section-7 > .form-section-buttons > .form-section-next')
+      .get('#form-section-8 > .form-section-buttons > .form-section-next')
       .click();
   });
 
@@ -96,20 +96,20 @@ describe('blind successful new submission - with an email address', () => {
     cy.get('#element46').type(applicantCity).blur();
     cy.get('#element48').type(applicantZipCode).blur();
     cy
-      .get('#form-section-8 > .form-section-buttons > .form-section-next')
+      .get('#form-section-9 > .form-section-buttons > .form-section-next')
       .click();
   });
 
   it("skips the demographic section and agrees to the rules", function() {
     cy
-      .get('#form-section-9 > .form-section-buttons > .form-section-next')
+      .get('#form-section-10 > .form-section-buttons > .form-section-next')
       .click();
     cy
       .get('[data-field-code="RulesAndConditionsCheckbox"]')
       .contains('I agree')
       .click();
     cy
-      .get('#form-section-10 > .form-section-buttons > .form-submit-button')
+      .get('#form-section-11 > .form-section-buttons > .form-submit-button')
       .click();
 
     cy
@@ -124,19 +124,19 @@ describe('blind successful renewal submission - without an email address', () =>
     cy.visit(blindUrl);
   });
 
-  // it('completes the language selection', () => {
-  //   cy
-  //     .get('[data-field-code="LanguageSelection"]')
-  //     .contains('English')
-  //     .click();
-  //   cy
-  //     .get('#form-section-0 > .form-section-buttons > .form-section-next')
-  //     .click();
-  // });
+  it('completes the language selection', () => {
+    cy
+      .get('[data-field-code="LanguageSelection"]')
+      .contains('English')
+      .click();
+    cy
+      .get('#form-section-0 > .form-section-buttons > .form-section-next')
+      .click();
+  });
 
   it("clicks through instructions", function() {
     cy
-      .get('#form-section-0 > .form-section-buttons > .form-section-next')
+      .get('#form-section-1 > .form-section-buttons > .form-section-next')
       .click();
   });
 
@@ -146,7 +146,7 @@ describe('blind successful renewal submission - without an email address', () =>
       .contains('Renew')
       .click();
     cy
-      .get('#form-section-1 > .form-section-buttons > .form-section-next')
+      .get('#form-section-2 > .form-section-buttons > .form-section-next')
       .click();
   });
 
@@ -159,13 +159,13 @@ describe('blind successful renewal submission - without an email address', () =>
     cy.get('#element15').type(applicantFirstName).blur();
     cy.get('#element16').type(applicantLastName).blur();
     cy
-      .get('#form-section-2 > .form-section-buttons > .form-section-next')
+      .get('#form-section-3 > .form-section-buttons > .form-section-next')
       .click();
   });
 
   it("does not enter an email address or phone number for contact info", function() {
     cy
-      .get('#form-section-3 > .form-section-buttons > .form-section-next')
+      .get('#form-section-4 > .form-section-buttons > .form-section-next')
       .click();
   });
 
@@ -175,7 +175,7 @@ describe('blind successful renewal submission - without an email address', () =>
       .contains('No')
       .click();
     cy
-      .get('#form-section-4 > .form-section-buttons > .form-section-next')
+      .get('#form-section-5 > .form-section-buttons > .form-section-next')
       .click();
 
     cy
@@ -183,7 +183,7 @@ describe('blind successful renewal submission - without an email address', () =>
       .attachFile('youth-pass-test-image.png');
     cy.get('.k-text-success').should('exist');
     cy
-      .get('#form-section-5 > .form-section-buttons > .form-section-next')
+      .get('#form-section-6 > .form-section-buttons > .form-section-next')
       .click();
   });
 
@@ -193,7 +193,7 @@ describe('blind successful renewal submission - without an email address', () =>
       .attachFile('youth-pass-test-image.png');
     cy.get('.k-text-success').should('exist');
     cy
-      .get('#form-section-6 > .form-section-buttons > .form-section-next')
+      .get('#form-section-7 > .form-section-buttons > .form-section-next')
       .click();
   });
 
@@ -203,7 +203,7 @@ describe('blind successful renewal submission - without an email address', () =>
       .attachFile('youth-pass-test-image.png');
     cy.get('.k-text-success').should('exist');
     cy
-      .get('#form-section-7 > .form-section-buttons > .form-section-next')
+      .get('#form-section-8 > .form-section-buttons > .form-section-next')
       .click();
   });
 
@@ -219,20 +219,20 @@ describe('blind successful renewal submission - without an email address', () =>
     cy.get('#element46').type(applicantCity).blur();
     cy.get('#element48').type(applicantZipCode).blur();
     cy
-      .get('#form-section-8 > .form-section-buttons > .form-section-next')
+      .get('#form-section-9 > .form-section-buttons > .form-section-next')
       .click();
   });
 
   it("skips the demographic section and agrees to the rules", function() {
     cy
-      .get('#form-section-9 > .form-section-buttons > .form-section-next')
+      .get('#form-section-10 > .form-section-buttons > .form-section-next')
       .click();
     cy
       .get('[data-field-code="RulesAndConditionsCheckbox"]')
       .contains('I agree')
       .click();
     cy
-      .get('#form-section-10 > .form-section-buttons > .form-submit-button')
+      .get('#form-section-11 > .form-section-buttons > .form-submit-button')
       .click();
 
     cy
