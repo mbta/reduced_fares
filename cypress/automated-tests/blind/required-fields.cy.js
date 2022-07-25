@@ -16,23 +16,23 @@ describe('blind required fields', () => {
     cy.visit(blindUrl);
 
     // Language selection
-    // cy
-    //   .get('[data-field-code="LanguageSelection"]')
-    //   .contains('English')
-    //   .click();
-    // cy
-    //   .get('#form-section-0 > .form-section-buttons > .form-section-next')
-    //   .click();
+    cy
+      .get('[data-field-code="LanguageSelection"]')
+      .contains('English')
+      .click();
+    cy
+      .get('#form-section-0 > .form-section-buttons > .form-section-next')
+      .click();
     
     // Instructions
     cy
-      .get('#form-section-0 > .form-section-buttons > .form-section-next')
+      .get('#form-section-1 > .form-section-buttons > .form-section-next')
       .click();
   });
 
   it("does not fill in the application type and sees an error", function() {
     cy
-      .get('#form-section-1 > .form-section-buttons > .form-submit-button')
+      .get('#form-section-2 > .form-section-buttons > .form-submit-button')
       .click()
 
     cy.get('.required-text').should('be.visible');
@@ -44,14 +44,14 @@ describe('blind required fields', () => {
       .contains('Apply for a new Blind Access CharlieCard')
       .click();
     cy
-      .get('#form-section-1 > .form-section-buttons > .form-section-next')
+      .get('#form-section-2 > .form-section-buttons > .form-section-next')
       .click();
 
     cy.get('#element15').type(applicantFirstName).blur();
     cy.get('#element16').type(applicantLastName).blur();
 
     cy
-      .get('#form-section-2 > .form-section-buttons > .form-submit-button')
+      .get('#form-section-3 > .form-section-buttons > .form-submit-button')
       .click();
     
     cy.get('.required-text').should('be.visible');
@@ -62,7 +62,7 @@ describe('blind required fields', () => {
     cy.get('#element15').clear().blur();
 
     cy
-      .get('#form-section-2 > .form-section-buttons > .form-submit-button')
+      .get('#form-section-3 > .form-section-buttons > .form-submit-button')
       .click();
     
     cy.get('.required-text').should('be.visible');
@@ -73,7 +73,7 @@ describe('blind required fields', () => {
     cy.get('#element16').clear().blur();
 
     cy
-      .get('#form-section-2 > .form-section-buttons > .form-submit-button')
+      .get('#form-section-3 > .form-section-buttons > .form-submit-button')
       .click();
     
     cy.get('.required-text').should('be.visible');
@@ -82,15 +82,15 @@ describe('blind required fields', () => {
   it("does not answer the MCB ID question and sees an error", function() {
     cy.get('#element16').type(applicantLastName).blur();
     cy
-      .get('#form-section-2 > .form-section-buttons > .form-section-next')
+      .get('#form-section-3 > .form-section-buttons > .form-section-next')
       .click();
     // Skip contact info
     cy
-      .get('#form-section-3 > .form-section-buttons > .form-section-next')
+      .get('#form-section-4 > .form-section-buttons > .form-section-next')
       .click();
 
     cy
-      .get('#form-section-4 > .form-section-buttons > .form-submit-button')
+      .get('#form-section-5 > .form-section-buttons > .form-submit-button')
       .click();
 
     cy.get('.required-text').should('be.visible');
@@ -103,7 +103,7 @@ describe('blind required fields', () => {
       .click();
 
     cy
-      .get('#form-section-4 > .form-section-buttons > .form-submit-button')
+      .get('#form-section-5 > .form-section-buttons > .form-submit-button')
       .click();
 
     cy.get('.required-text').should('be.visible');
@@ -115,11 +115,11 @@ describe('blind required fields', () => {
       .attachFile('youth-pass-test-image.png');
     cy.get('.k-text-success').should('exist');
     cy
-      .get('#form-section-4 > .form-section-buttons > .form-section-next')
+      .get('#form-section-5 > .form-section-buttons > .form-section-next')
       .click();
 
     cy
-      .get('#form-section-7 > .form-section-buttons > .form-submit-button')
+      .get('#form-section-8 > .form-section-buttons > .form-submit-button')
       .click();
 
     cy.get('.required-text').should('be.visible');
@@ -131,11 +131,11 @@ describe('blind required fields', () => {
       .attachFile('youth-pass-test-image.png');
     cy.get('.k-text-success').should('exist');
     cy
-      .get('#form-section-7 > .form-section-buttons > .form-section-next')
+      .get('#form-section-8 > .form-section-buttons > .form-section-next')
       .click();
 
     cy
-      .get('#form-section-8 > .form-section-buttons > .form-submit-button')
+      .get('#form-section-9 > .form-section-buttons > .form-submit-button')
       .click()
 
       cy.get('.required-text').should('be.visible');
@@ -151,7 +151,7 @@ describe('blind required fields', () => {
     cy.get('#element48').type(applicantZipCode).blur();
 
     cy
-      .get('#form-section-8 > .form-section-buttons > .form-submit-button')
+      .get('#form-section-9 > .form-section-buttons > .form-submit-button')
       .click();
     cy.get('.required-text').should('be.visible');
 
@@ -159,7 +159,7 @@ describe('blind required fields', () => {
     cy.get('#element46').clear().blur();
 
     cy
-      .get('#form-section-8 > .form-section-buttons > .form-submit-button')
+      .get('#form-section-9 > .form-section-buttons > .form-submit-button')
       .click();
     cy.get('.required-text').should('be.visible');
 
@@ -167,7 +167,7 @@ describe('blind required fields', () => {
     cy.get('#element48').clear().blur();
 
     cy
-      .get('#form-section-8 > .form-section-buttons > .form-submit-button')
+      .get('#form-section-9 > .form-section-buttons > .form-submit-button')
       .click();
     cy.get('.required-text').should('be.visible');
   });
@@ -175,14 +175,14 @@ describe('blind required fields', () => {
   it("does not agree to the rules and sees an error", function() {
     cy.get('#element48').type(applicantZipCode).blur();
     cy
-      .get('#form-section-8 > .form-section-buttons > .form-section-next')
+      .get('#form-section-9 > .form-section-buttons > .form-section-next')
       .click();
     cy
-      .get('#form-section-9 > .form-section-buttons > .form-section-next')
+      .get('#form-section-10 > .form-section-buttons > .form-section-next')
       .click();
 
     cy
-      .get('#form-section-10 > .form-section-buttons > .form-submit-button')
+      .get('#form-section-11 > .form-section-buttons > .form-submit-button')
       .click();
 
     cy.get('.required-text').should('be.visible');
