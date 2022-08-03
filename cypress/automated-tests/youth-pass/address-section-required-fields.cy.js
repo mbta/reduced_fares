@@ -21,6 +21,7 @@ describe('Youth Pass Address Section Required Fields', () => {
         cy.get('#element15').type(applicantBirthdate).blur();
         cy.get('#form-section-2 > .form-section-buttons > .form-section-next').click();
         
+        cy.get('#element159_Yes').should('be.visible');
         cy.get('#element159_Yes').click().blur();
         cy.get('#element160_No').click().blur();
         cy.get('#element163').type(applicantSchoolName).blur();
