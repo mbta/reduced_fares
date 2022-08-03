@@ -10,8 +10,6 @@ module.exports = defineConfig({
       'https://mbta.preprod.simpligov.com/preprod/portal/ShowWorkFlow/AnonymousEmbed/86cadfa6-e8ea-46f1-b6e8-62498f066962',
     youth_pass_dashboard_url:
       'https://mbta.preprod.simpligov.com/preprod/portal/Dashboard',
-    malden_test_username: 'maldentestuser@mbta.com',
-    malden_test_credentials: 'MaldenTest1!',
     senior_url:
       'https://mbta.preprod.simpligov.com/preprod/portal/ShowWorkFlow/AnonymousEmbed/4fd3d3fb-6b6a-4521-b214-896099a22af8',
     blind_url:
