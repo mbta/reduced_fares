@@ -25,14 +25,17 @@ a:focus {
 
 /* Text */
 p,
-li {
+li,
+figcaption {
   font-family: "Inter UI", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-size: 1rem !important;
+  color: #1c1e23 !important;
 }
 
 @media (max-width: 799px) {
   p,
-li {
+li,
+figcaption {
     font-size: 0.85rem !important;
   }
 }
@@ -43,6 +46,7 @@ h4,
 h5 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-weight: 700 !important;
+  color: #1c1e23 !important;
 }
 
 h1 {
@@ -61,6 +65,24 @@ h2 {
 @media (max-width: 799px) {
   h2 {
     font-size: 1.4219rem !important;
+  }
+}
+h3 {
+  font-size: 1.3125rem !important;
+}
+
+@media (max-width: 799px) {
+  h3 {
+    font-size: 1.1487rem !important;
+  }
+}
+h4 {
+  font-size: 1.125rem !important;
+}
+
+@media (max-width: 799px) {
+  h4 {
+    font-size: 0.9844rem !important;
   }
 }
 /* SimpliGov header */
@@ -524,6 +546,175 @@ button.close:active:hover {
 
 .denied {
   color: #b3000f;
+}
+
+/* Remove padding on every custom HTML SimpliGov form field */
+.static-html-wrapper,
+.workflowContent .form-static-html {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin: 0 !important;
+}
+
+/* Support header and logo after removing extra padding */
+.mbta-logo {
+  margin-top: 15px !important;
+}
+
+#formHeaderDiv {
+  margin: 0 !important;
+}
+
+.mbta-logo.thank-you-page {
+  margin-bottom: 0 !important;
+}
+
+/* Remove SimpliGov default header padding */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  padding-bottom: 0 !important;
+}
+
+/* Add zeroheight header spacing */
+h1 {
+  line-height: 3.1875rem !important;
+  margin-top: 2.6875rem !important;
+  margin-bottom: 0.9375rem !important;
+}
+
+@media (max-width: 799px) {
+  h1 {
+    line-height: 2.2313rem !important;
+    margin-top: 1.8813rem !important;
+    margin-bottom: 0.6563rem !important;
+  }
+}
+h2 {
+  line-height: 2.2313rem !important;
+  margin-top: 1.8813rem !important;
+  margin-bottom: 0.6563rem !important;
+}
+
+@media (max-width: 799px) {
+  h2 {
+    line-height: 1.8129rem !important;
+    margin-top: 1.5285rem !important;
+    margin-bottom: 0.5332rem !important;
+  }
+}
+h3 {
+  line-height: 1.6734rem !important;
+  margin-top: 1.4109rem !important;
+  margin-bottom: 0.4922rem !important;
+}
+
+@media (max-width: 799px) {
+  h3 {
+    line-height: 1.465rem !important;
+    margin-top: 1.235rem !important;
+    margin-bottom: 0.4308rem !important;
+  }
+}
+h4 {
+  line-height: 1.4344rem !important;
+  margin-top: 1.2094rem !important;
+  margin-bottom: 0.4219rem !important;
+}
+
+@media (max-width: 799px) {
+  h4 {
+    line-height: 1.2551rem !important;
+    margin-top: 1.0582rem !important;
+    margin-bottom: 0.3692rem !important;
+  }
+}
+/* Increase space between list items for accessibility */
+li {
+  line-height: 1.5 !important;
+}
+
+/* Remove extra list padding */
+ul ul {
+  padding-bottom: 0 !important;
+}
+
+/* Add extra spacing to example proof of disability documents */
+.disability-example {
+  margin-top: 25px !important;
+  margin-bottom: 15px !important;
+}
+
+/* Container for proof of disability options */
+.options-container {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.card {
+  display: flex;
+  border-radius: 20px;
+  min-width: 100%;
+}
+
+.card-intro {
+  width: 30%;
+  border-radius: 20px 0 0 20px;
+}
+
+.card-header {
+  max-width: 80%;
+}
+
+.card-header p {
+  margin-bottom: 0;
+}
+
+.card-header p span {
+  color: white;
+  background-color: black;
+  font-weight: 600;
+  padding: 5px 20px 5px 15px;
+  border-radius: 20px 0;
+  display: inline-block;
+}
+
+.card-intro-content {
+  padding: 10px 20px;
+  align-items: center !important;
+  text-align: center;
+  justify-content: space-around;
+  font-weight: 600;
+}
+
+.example-icon {
+  width: 75px !important;
+}
+
+.card-main {
+  background-color: #f1f1f1;
+  border-radius: 0 20px 20px 0;
+  padding: 20px 20px 10px;
+  width: 70%;
+}
+
+/* Stack option cards on smaller screens */
+@media (max-width: 543px) {
+  .card {
+    flex-flow: column wrap;
+  }
+  .card-intro {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+  }
+  .card-main {
+    border-radius: 0 0 20px 20px;
+    width: calc(100% - 40px);
+  }
 }
 
 /*# sourceMappingURL=tap.css.map */
