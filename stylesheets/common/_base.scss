@@ -31,7 +31,7 @@ li,
 figcaption {
   font-family: "Inter UI", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-size: 1rem !important;
-  color: #1c1e23 !important;
+  color: $gray-dark !important;
 }
 
 @media (max-width: 799px) {
@@ -49,7 +49,7 @@ h4,
 h5 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-weight: 700 !important;
-  color: #1c1e23 !important;
+  color: $gray-dark !important;
 }
 
 h1 {
@@ -113,13 +113,68 @@ h4 {
   display: none !important;
 }
 
-/* Required text and regex error color */
+/* Form label */
+.form-label {
+  color: $gray-dark !important;
+  font-family: "Inter UI", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 1rem !important;
+}
+
+@media (max-width: 799px) {
+  .form-label {
+    font-size: 0.85rem !important;
+  }
+}
+
+/* Bold all labels except Boolean checkbox */
+.label-check-box,
+.label-datepicker,
+.label-drop-down,
+.label-file-upload,
+.label-radio-button,
+.label-text-box {
+  font-weight: 700 !important;
+}
+
+/* Help text */
+.sub-heading {
+  color: $gray !important;
+  font-family: "Inter UI", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 1rem !important;
+  line-height: 1.2 !important;
+}
+
+@media (max-width: 799px) {
+  .sub-heading {
+    font-size: 0.85rem !important;
+  }
+}
+
+/* Form field error message styling */
 .required-text,
 .requiredLabelEmail,
 .regexErrorLabel,
 .datePickerFormatError {
+  font-style: normal !important;
+  font-family: "Inter UI", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 1rem !important;
   color: $error-text !important;
-  font-style: normal;
+}
+
+@media (max-width: 799px) {
+  .required-text,
+  .requiredLabelEmail,
+  .regexErrorLabel,
+  .datePickerFormatError {
+    font-size: 0.85rem !important;
+  }
+}
+
+/* Position form field error messages */
+.workflowContent .formFieldWrapper .required-text,
+.workflowContent .formFieldWrapper .truncateWithEllipsis {
+  position: relative !important;
+  margin-top: 0.25rem !important;
 }
 
 /* Color for field required asterisks */
@@ -154,6 +209,32 @@ input[type="text"].textfield:focus {
   box-shadow: none !important;
 }
 
+/* Make dropdown list highlighted text white */
+.select2-results__option--highlighted {
+  color: $white !important;
+}
+
+/* Upload field messages */
+.k-dropzone .k-upload-status,
+.k-file-information,
+.k-file-name,
+.k-file-size,
+.k-file-validation-message {
+  font-family: "Inter UI", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-weight: 400;
+  font-size: 1rem !important;
+}
+
+@media (max-width: 799px) {
+  .k-dropzone .k-upload-status,
+  .k-file-information,
+  .k-file-name,
+  .k-file-size,
+  .k-file-validation-message {
+    font-size: 0.85rem !important;
+  }
+}
+
 /* Make upload light gray color darker */
 .k-icon.k-i-check,
 .k-file-group.k-icon,
@@ -174,12 +255,28 @@ input[type="text"].textfield:focus {
 
 /* Make upload error message darker */
 .k-file-invalid .k-file-validation-message {
+  font-family: "Inter UI", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 1rem !important;
   color: $error-text !important;
+}
+
+@media (max-width: 799px) {
+  .k-file-invalid .k-file-validation-message {
+    font-size: 0.85rem !important;
+  }
 }
 
 /* Make upload "invalid files" error message darker */
 .validation-text.fileUploadErrorLabel.truncateWithEllipsis {
+  font-family: "Inter UI", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 1rem !important;
   color: $error-text !important;
+}
+
+@media (max-width: 799px) {
+  .validation-text.fileUploadErrorLabel.truncateWithEllipsis {
+    font-size: 0.85rem !important;
+  }
 }
 
 /* Modal error support for small screens */
