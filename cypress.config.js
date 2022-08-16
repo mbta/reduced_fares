@@ -5,6 +5,7 @@ module.exports = defineConfig({
   video: false,
   screenshotOnRunFailure: false,
   chromeWebSecurity: false,
+  retries: 2,
   env: {
     youth_pass_url:
       'https://mbta.preprod.simpligov.com/preprod/portal/ShowWorkFlow/AnonymousEmbed/86cadfa6-e8ea-46f1-b6e8-62498f066962',
@@ -22,5 +23,5 @@ module.exports = defineConfig({
       return require('./cypress/plugins/index.js')(on, config)
     },
     specPattern: 'cypress/automated-tests/**/*.cy.{js,jsx,ts,tsx}',
-  },
+  }
 })
