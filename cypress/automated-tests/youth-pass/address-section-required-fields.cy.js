@@ -5,7 +5,7 @@ describe('Youth Pass Address Section Required Fields', () => {
     
     // this test follows the by mail flow
     it('proceeds through an application', () => {
-        const applicantZipCode = '01545';
+        const applicantZipCode = '02114';
         const youthPassUrl = Cypress.env('youth_pass_url');
         const applicantBirthdate = getRandomApplicantAge().applicantBirthdate12to17;
         const applicantSchoolName = `Automation Testing ${faker.datatype.number()} School`;
