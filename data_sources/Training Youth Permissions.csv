@@ -89,18 +89,18 @@
 02155,Medford,testadmin@example.com,,,,,,,,,,notificationemail@example.com
 02156,Medford,testadmin@example.com,,,,,,,,,,notificationemail@example.com
 02176,Melrose,testadmin@example.com,,,,,,,,,,notificationemail@example.com
-02456,Newton,nfreedman@newtonma.gov,,,,,,,,,,notificationemail@example.com
-02458,Newton,nfreedman@newtonma.gov,,,,,,,,,,notificationemail@example.com
-02459,Newton,nfreedman@newtonma.gov,,,,,,,,,,notificationemail@example.com
-02460,Newton,nfreedman@newtonma.gov,,,,,,,,,,notificationemail@example.com
-02461,Newton,nfreedman@newtonma.gov,,,,,,,,,,notificationemail@example.com
-02462,Newton,nfreedman@newtonma.gov,,,,,,,,,,notificationemail@example.com
-02464,Newton,nfreedman@newtonma.gov,,,,,,,,,,notificationemail@example.com
-02465,Newton,nfreedman@newtonma.gov,,,,,,,,,,notificationemail@example.com
-02466,Newton,nfreedman@newtonma.gov,,,,,,,,,,notificationemail@example.com
-02467,Newton,nfreedman@newtonma.gov,,,,,,,,,,notificationemail@example.com
-02468,Newton,nfreedman@newtonma.gov,,,,,,,,,,notificationemail@example.com
-02495,Newton,nfreedman@newtonma.gov,,,,,,,,,,notificationemail@example.com
+02456,Newton,testadmin@example.com,,,,,,,,,,notificationemail@example.com
+02458,Newton,testadmin@example.com,,,,,,,,,,notificationemail@example.com
+02459,Newton,testadmin@example.com,,,,,,,,,,notificationemail@example.com
+02460,Newton,testadmin@example.com,,,,,,,,,,notificationemail@example.com
+02461,Newton,testadmin@example.com,,,,,,,,,,notificationemail@example.com
+02462,Newton,testadmin@example.com,,,,,,,,,,notificationemail@example.com
+02464,Newton,testadmin@example.com,,,,,,,,,,notificationemail@example.com
+02465,Newton,testadmin@example.com,,,,,,,,,,notificationemail@example.com
+02466,Newton,testadmin@example.com,,,,,,,,,,notificationemail@example.com
+02467,Newton,testadmin@example.com,,,,,,,,,,notificationemail@example.com
+02468,Newton,testadmin@example.com,,,,,,,,,,notificationemail@example.com
+02495,Newton,testadmin@example.com,,,,,,,,,,notificationemail@example.com
 01833,North Shore,testadmin@example.com,,,,,,,,,,notificationemail@example.com
 01834,North Shore,testadmin@example.com,,,,,,,,,,notificationemail@example.com
 01860,North Shore,testadmin@example.com,,,,,,,,,,notificationemail@example.com
@@ -143,7 +143,7 @@
 02170,Quincy,testadmin@example.com,,,,,,,,,,notificationemail@example.com
 02171,Quincy,testadmin@example.com,,,,,,,,,,notificationemail@example.com
 02269,Quincy,testadmin@example.com,,,,,,,,,,notificationemail@example.com
-01867,Reading,fmaltez@ci.reading.ma.us,jlaverde@ci.reading.ma.us,csaunders@ci.reading.ma.us,,,,,,,,notificationemail@example.com
+01867,Reading,testadmin@example.com,,,,,,,,,,notificationemail@example.com
 02151,Revere,testadmin@example.com,,,,,,,,,,notificationemail@example.com
 02143,Somerville,testadmin@example.com,,,,,,,,,,notificationemail@example.com
 02144,Somerville,testadmin@example.com,,,,,,,,,,notificationemail@example.com
@@ -152,6 +152,7 @@
 02471,Watertown,testadmin@example.com,,,,,,,,,,notificationemail@example.com
 02472,Watertown,testadmin@example.com,,,,,,,,,,notificationemail@example.com
 02477,Watertown,testadmin@example.com,,,,,,,,,,notificationemail@example.com
+02152,Winthrop,rrepucci@town.winthrop.ma.us,mhurley@town.winthrop.ma.us,zmurray@town.winthrop.ma.us,,,,,,,,notificationemail@example.com
 01601,Worcester,testadmin@example.com,,,,,,,,,,notificationemail@example.com
 01602,Worcester,testadmin@example.com,,,,,,,,,,notificationemail@example.com
 01603,Worcester,testadmin@example.com,,,,,,,,,,notificationemail@example.com
