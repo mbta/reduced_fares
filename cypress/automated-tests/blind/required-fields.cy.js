@@ -14,177 +14,134 @@ describe('blind required fields', () => {
     // Load the form
     const blindUrl = Cypress.env('blind_url');
     cy.visit(blindUrl);
-
-    // Language selection
-    cy
-      .get('[data-field-code="LanguageSelection"]')
-      .contains('English')
-      .click();
-    cy
-      .get('#form-section-0 > .form-section-buttons > .form-section-next')
-      .click();
-    
-    // Instructions
-    cy
-      .get('#form-section-1 > .form-section-buttons > .form-section-next')
-      .click();
   });
 
-  it("does not fill in the application type and sees an error", function() {
-    cy
-      .get('#form-section-2 > .form-section-buttons > .form-submit-button')
-      .click()
-
-    cy.get('.required-text').should('be.visible');
+  it("tries to submit without filling out anything", function() {
+    cy.get('.form-submit-button').click();
   });
 
-  it("does not fill in the date of birth and sees an error", function() {
+  it("sees a required error for application type", function() {
     cy
-      .get('[data-field-code="ApplicantStatus"]')
-      .contains('Apply for a new Blind Access CharlieCard')
-      .click();
-    cy
-      .get('#form-section-2 > .form-section-buttons > .form-section-next')
-      .click();
-
-    cy.get('#element15').type(applicantFirstName).blur();
-    cy.get('#element16').type(applicantLastName).blur();
-
-    cy
-      .get('#form-section-3 > .form-section-buttons > .form-submit-button')
-      .click();
-    
-    cy.get('.required-text').should('be.visible');
+      .get('#form-element-wrapper_10 > :nth-child(1) > [rcd=""] > .required-text')
+      .should('be.visible');
   });
 
-  it("does not fill out the first name and sees an error", function() {
-    cy.get('#element13').type(applicantBirthdate).blur();
-    cy.get('#element15').clear().blur();
-
+  it("sees a required error for date of birth", function() {
     cy
-      .get('#form-section-3 > .form-section-buttons > .form-submit-button')
-      .click();
-    
-    cy.get('.required-text').should('be.visible');
+      .get('#form-element-wrapper_13 > :nth-child(1) > [rcd=""] > .required-text')
+      .should('be.visible');
   });
 
-  it("does not fill out the last name and sees an error", function() {
-    cy.get('#element15').type(applicantFirstName).blur();
-    cy.get('#element16').clear().blur();
 
+  it("sees a required error for first name", function() {
     cy
-      .get('#form-section-3 > .form-section-buttons > .form-submit-button')
-      .click();
-    
-    cy.get('.required-text').should('be.visible');
+      .get('#form-element-wrapper_15 > :nth-child(1) > [rcd=""] > .required-text')
+      .should('be.visible');
   });
 
-  it("does not answer the MCB ID question and sees an error", function() {
-    cy.get('#element16').type(applicantLastName).blur();
-    cy
-      .get('#form-section-3 > .form-section-buttons > .form-section-next')
-      .click();
-    // Skip contact info
-    cy
-      .get('#form-section-4 > .form-section-buttons > .form-section-next')
-      .click();
 
+  it("sees a required error for last name", function() {
     cy
-      .get('#form-section-5 > .form-section-buttons > .form-submit-button')
-      .click();
-
-    cy.get('.required-text').should('be.visible');
+      .get('#form-element-wrapper_16 > :nth-child(1) > [rcd=""] > .required-text')
+      .should('be.visible');
   });
 
-  it("does not upload an MCB ID and sees an error", function() {
-    cy
-      .get('[data-field-code="MCBIDCardYesNo"]')
-      .contains('Yes')
-      .click();
 
+  it("sees a required error for MCB ID", function() {
     cy
-      .get('#form-section-5 > .form-section-buttons > .form-submit-button')
-      .click();
-
-    cy.get('.required-text').should('be.visible');
-  });
-    
-  it("does not upload a headshot and sees an error", function() {
-    cy
-      .get('#element148')
-      .attachFile('youth-pass-test-image.png');
-    cy.get('.k-text-success').should('exist');
-    cy
-      .get('#form-section-5 > .form-section-buttons > .form-section-next')
-      .click();
-
-    cy
-      .get('#form-section-8 > .form-section-buttons > .form-submit-button')
-      .click();
-
-    cy.get('.required-text').should('be.visible');
+      .get('#form-element-wrapper_146 > :nth-child(1) > [rcd=""] > .required-text')
+      .should('be.visible');
   });
 
-  it("does not answer the delivery preference question and sees an error", function() {
-    cy
-      .get('#element30')
-      .attachFile('youth-pass-test-image.png');
-    cy.get('.k-text-success').should('exist');
-    cy
-      .get('#form-section-8 > .form-section-buttons > .form-section-next')
-      .click();
 
+  it("sees a required error for photo ID", function() {
     cy
-      .get('#form-section-9 > .form-section-buttons > .form-submit-button')
-      .click()
-
-      cy.get('.required-text').should('be.visible');
+      .get('#form-element-wrapper_25 > :nth-child(1) > [rcd=""] > .required-text')
+      .should('be.visible');
   });
 
-  it("sees an error if any required address fields are missing", function() {
+
+  it("sees a required error for headshot", function() {
+    cy
+      .get('#form-element-wrapper_30 > :nth-child(1) > [rcd=""] > .required-text')
+      .should('be.visible');
+  });
+
+
+  it("sees a required error for delivery preference", function() {
+    cy
+      .get('#form-element-wrapper_39 > :nth-child(1) > [rcd=""] > .required-text')
+      .should('be.visible');
+  });
+
+
+  it("sees a required error for rules", function() {
+    cy
+      .get('#form-element-wrapper_61 > :nth-child(1) > [rcd=""] > .required-text')
+      .should('be.visible');
+  });
+
+  it("selects 'Mail to my address' for delivery preference and tries to submit", function() {
     cy
       .get('[data-field-code="CardDeliveryPreference"]')
       .contains('Mail to my address')
       .click();
 
-    cy.get('#element46').type(applicantCity).blur();
-    cy.get('#element48').type(applicantZipCode).blur();
-
-    cy
-      .get('#form-section-9 > .form-section-buttons > .form-submit-button')
-      .click();
-    cy.get('.required-text').should('be.visible');
-
-    cy.get('#element44').type(applicantStreetAddress).blur();
-    cy.get('#element46').clear().blur();
-
-    cy
-      .get('#form-section-9 > .form-section-buttons > .form-submit-button')
-      .click();
-    cy.get('.required-text').should('be.visible');
-
-    cy.get('#element46').type(applicantCity).blur();
-    cy.get('#element48').clear().blur();
-
-    cy
-      .get('#form-section-9 > .form-section-buttons > .form-submit-button')
-      .click();
-    cy.get('.required-text').should('be.visible');
+    cy.get('.form-submit-button').click();
   });
 
-  it("does not agree to the rules and sees an error", function() {
+  it("sees a required error for street address", function() {
+    cy
+      .get('#form-element-wrapper_44 > :nth-child(1) > [rcd=""] > .required-text')
+      .should('be.visible');
+  });
+
+  it("sees a required error for city", function() {
+    cy
+      .get('#form-element-wrapper_46 > :nth-child(1) > [rcd=""] > .required-text')
+      .should('be.visible');
+  });
+  
+  it("sees a required error for zip code", function() {
+    cy
+      .get('#form-element-wrapper_48 > :nth-child(1) > [rcd=""] > .required-text')
+      .should('be.visible');
+  });
+
+  it("fills in all required fields", function() {
+    cy
+      .get('[data-field-code="ApplicantStatus"]')
+      .contains('Apply for a new Blind Access CharlieCard')
+      .click();
+    cy.get('#element13').type(applicantBirthdate).blur();
+    cy.get('#element15').type(applicantFirstName).blur();
+    cy.get('#element16').type(applicantLastName).blur();
+    cy
+      .get('[data-field-code="MCBIDCardYesNo"]')
+      .contains('Yes')
+      .click();
+    cy
+      .get('#element148')
+      .attachFile('youth-pass-test-image.png');
+    cy.get('#form-element-wrapper_148 > :nth-child(1) > [rcd=""] > .newFileUploadArea > .k-widget > .k-upload-files > .k-file > .k-file-name-size-wrapper > .k-file-validation-message').should('exist');
+    cy
+      .get('#element25')
+      .attachFile('youth-pass-test-image.png');
+    cy.get('#form-element-wrapper_25 > :nth-child(1) > [rcd=""] > .newFileUploadArea > .k-widget > .k-upload-files > .k-file > .k-file-name-size-wrapper > .k-file-validation-message').should('exist');
+    cy
+      .get('#element30')
+      .attachFile('youth-pass-test-image.png');
+    cy.get('#form-element-wrapper_30 > :nth-child(1) > [rcd=""] > .newFileUploadArea > .k-widget > .k-upload-files > .k-file > .k-file-name-size-wrapper > .k-file-validation-message').should('exist');
+    cy.get('#element44').type(applicantStreetAddress).blur();
+    cy.get('#element46').type(applicantCity).blur();
     cy.get('#element48').type(applicantZipCode).blur();
     cy
-      .get('#form-section-9 > .form-section-buttons > .form-section-next')
+      .get('[data-field-code="RulesAndConditionsCheckbox"]')
+      .contains('I agree')
       .click();
-    cy
-      .get('#form-section-10 > .form-section-buttons > .form-section-next')
-      .click();
+  });
 
-    cy
-      .get('#form-section-11 > .form-section-buttons > .form-submit-button')
-      .click();
-
-    cy.get('.required-text').should('be.visible');
+  it("does not see any required field errors", function() {
+    cy.get('.required-text').should('not.be.visible');
   });
 });
