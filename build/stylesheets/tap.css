@@ -36,7 +36,7 @@ figcaption {
   p,
 li,
 figcaption {
-    font-size: 0.85rem !important;
+    font-size: 0.875rem !important;
   }
 }
 h1,
@@ -97,7 +97,7 @@ h4 {
 }
 
 /* Hide calendar */
-.datetimepicker.datetimepicker-dropdown-bottom-right.dropdown-menu {
+.datetimepicker {
   display: none !important;
 }
 
@@ -115,7 +115,7 @@ h4 {
 
 @media (max-width: 799px) {
   .form-label {
-    font-size: 0.85rem !important;
+    font-size: 0.875rem !important;
   }
 }
 /* Bold all labels except Boolean checkbox */
@@ -138,7 +138,7 @@ h4 {
 
 @media (max-width: 799px) {
   .sub-heading {
-    font-size: 0.85rem !important;
+    font-size: 0.875rem !important;
   }
 }
 /* Form field error message styling */
@@ -157,7 +157,7 @@ h4 {
 .requiredLabelEmail,
 .regexErrorLabel,
 .datePickerFormatError {
-    font-size: 0.85rem !important;
+    font-size: 0.875rem !important;
   }
 }
 /* Position form field error messages */
@@ -221,7 +221,7 @@ input[type=text].textfield:focus {
 .k-file-name,
 .k-file-size,
 .k-file-validation-message {
-    font-size: 0.85rem !important;
+    font-size: 0.875rem !important;
   }
 }
 /* Make upload light gray color darker */
@@ -251,7 +251,7 @@ input[type=text].textfield:focus {
 
 @media (max-width: 799px) {
   .k-file-invalid .k-file-validation-message {
-    font-size: 0.85rem !important;
+    font-size: 0.875rem !important;
   }
 }
 /* Make upload "invalid files" error message darker */
@@ -263,7 +263,7 @@ input[type=text].textfield:focus {
 
 @media (max-width: 799px) {
   .validation-text.fileUploadErrorLabel.truncateWithEllipsis {
-    font-size: 0.85rem !important;
+    font-size: 0.875rem !important;
   }
 }
 /* Modal error support for small screens */
