@@ -188,17 +188,8 @@ describe('TAP successful new submission - without an email address', () => {
   it("selects to receive the card via the mail", function() {
     cy
       .get('[data-field-code="CardDeliveryPreference"]')
-      .contains('Mail to my address')
+      .contains('Pick up')
       .click();
-  });
-
-  it("enters a home address", function() {
-    const applicantStreetAddress = `${faker.datatype.number()} ${faker.address.streetName()} ${faker.address.streetSuffix()}`;
-    const applicantCity = faker.address.city();
-
-    cy.get('#element44').type(applicantStreetAddress).blur();
-    cy.get('#element46').type(applicantCity).blur();
-    cy.get('#element48').type(applicantZipCode).blur();
   });
 
   it("skips the demographic section and agrees to the rules", function() {
