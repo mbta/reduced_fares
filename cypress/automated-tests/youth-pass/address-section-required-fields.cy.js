@@ -1,4 +1,5 @@
 import { getRandomApplicantAge } from '../../common/birthdate-constants';
+import { ifExists } from '../../common/if-exists';
 
 describe('Youth Pass Address Section Required Fields', () => {
     const faker = require('faker');
@@ -28,6 +29,9 @@ describe('Youth Pass Address Section Required Fields', () => {
         cy.get('#form-section-3 > .form-section-buttons > .form-section-next').click();
         
         cy.get('#element116_Apply').click().blur();
+        ifExists('#form-element-wrapper_260', () => {
+            cy.get('#element260_Current').click().blur();
+        });
         cy.get('#element11').type(applicantFirstName).blur();
         cy.get('#element13').type(applicantLastName).blur();
         cy.get('#form-section-5 > .form-section-buttons > .form-section-next').click();
