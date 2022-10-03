@@ -53,14 +53,6 @@ describe('blind required fields', () => {
       .should('be.visible');
   });
 
-
-  it("sees a required error for photo ID", function() {
-    cy
-      .get('#form-element-wrapper_25 > :nth-child(1) > [rcd=""] > .required-text')
-      .should('be.visible');
-  });
-
-
   it("sees a required error for headshot", function() {
     cy
       .get('#form-element-wrapper_30 > :nth-child(1) > [rcd=""] > .required-text')
