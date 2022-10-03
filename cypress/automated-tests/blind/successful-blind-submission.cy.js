@@ -53,12 +53,12 @@ describe('blind successful new submission - with an email address', () => {
     cy.get('.k-text-success').should('exist');
   });
 
-  it("uploads a photo ID", function() {
-    cy
-      .get('#element25')
-      .attachFile('youth-pass-test-image.png');
-    cy.get('.k-text-success').should('exist');
-  });
+  // it("uploads a photo ID", function() {
+  //   cy
+  //     .get('#element25')
+  //     .attachFile('youth-pass-test-image.png');
+  //   cy.get('.k-text-success').should('exist');
+  // });
 
   it("uploads a headshot", function() {
     cy
