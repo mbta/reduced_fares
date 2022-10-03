@@ -1,4 +1,5 @@
 import { getRandomApplicantAge } from '../../common/birthdate-constants';
+import { ifExists } from '../../common/if-exists';
 
 describe('Youth Pass Personal and Contact Info Section Required Fields', () => {
     const faker = require('faker');
@@ -38,10 +39,6 @@ describe('Youth Pass Personal and Contact Info Section Required Fields', () => {
         cy.get('#form-element-wrapper_116').within(() => {
             cy.get('div.required-text').should('not.be.visible');
         });
-        // TODO: Remove lines 42-44 when program year choice field is removed from SimpliGov
-        cy.get('#form-element-wrapper_260').within(() => {
-            cy.get('div.required-text').should('be.visible');
-        });
         cy.get('#form-element-wrapper_11').within(() => {
             cy.get('div.required-text').should('be.visible');
         });
@@ -52,15 +49,18 @@ describe('Youth Pass Personal and Contact Info Section Required Fields', () => {
     
     it('does not fill last name and sees required field errors', () => {              
         const applicantFirstName = faker.name.firstName();
-        // TODO: Remove line 56 when program year choice field is removed from SimpliGov
-        cy.get('#element260_Current').click().blur();
+        ifExists('#form-element-wrapper_260', () => {
+            cy.get('#form-element-wrapper_260').within(() => {
+                cy.get('div.required-text').should('be.visible');
+            });
+            cy.get('#element260_Current').click().blur();
+            cy.get('#form-element-wrapper_260').within(() => {
+                cy.get('div.required-text').should('not.be.visible');
+            });
+        });
         cy.get('#element11').type(applicantFirstName).blur();
         cy.get('#form-section-5 > .form-section-buttons > .form-submit-button').click();
         cy.get('#form-element-wrapper_11').within(() => {
-            cy.get('div.required-text').should('not.be.visible');
-        });
-        // TODO: Remove lines 63-65 when program year choice field is removed from SimpliGov
-        cy.get('#form-element-wrapper_260').within(() => {
             cy.get('div.required-text').should('not.be.visible');
         });
         cy.get('#form-element-wrapper_13').within(() => {

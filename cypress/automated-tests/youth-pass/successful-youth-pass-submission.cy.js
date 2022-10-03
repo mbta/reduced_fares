@@ -1,4 +1,5 @@
 import { getRandomApplicantAge } from '../../common/birthdate-constants';
+import { ifExists } from '../../common/if-exists';
 
 describe('Youth Pass Successful Submission', () => {
     const faker = require('faker');
@@ -25,8 +26,9 @@ describe('Youth Pass Successful Submission', () => {
         const applicantLastName = faker.name.lastName();
 
         cy.get('#element116_Apply').click().blur();
-        // TODO: Remove line 29 when program year choice field is removed from SimpliGov
-        cy.get('#element260_Current').click().blur();
+        ifExists('#form-element-wrapper_260', () => {
+            cy.get('#element260_Current').click().blur();
+        });
         cy.get('#element11').type(applicantFirstName).blur();
         cy.get('#element13').type(applicantLastName).blur();
         cy.get('#form-section-5 > .form-section-buttons > .form-section-next').click();
