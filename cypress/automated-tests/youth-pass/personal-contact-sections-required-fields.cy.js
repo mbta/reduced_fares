@@ -1,5 +1,5 @@
 import { getRandomApplicantAge } from '../../common/birthdate-constants';
-import { ifExists } from '../../common/if-exists';
+import { ifProgramYearFieldExists } from '../../common/if-exists';
 
 describe('Youth Pass Personal and Contact Info Section Required Fields', () => {
     const faker = require('faker');
@@ -49,7 +49,7 @@ describe('Youth Pass Personal and Contact Info Section Required Fields', () => {
     
     it('does not fill last name and sees required field errors', () => {              
         const applicantFirstName = faker.name.firstName();
-        ifExists('#form-element-wrapper_260', () => {
+        ifProgramYearFieldExists(() => {
             cy.get('#form-element-wrapper_260').within(() => {
                 cy.get('div.required-text').should('be.visible');
             });
