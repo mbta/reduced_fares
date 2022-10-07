@@ -1,5 +1,5 @@
 import { getRandomApplicantAge } from '../../common/birthdate-constants';
-import { ifProgramYearFieldExists } from '../../common/if-exists';
+import { ifProgramYearFieldExists } from '../../common/if-program-year-field-exists';
 
 describe('Youth Pass Address Section Required Fields', () => {
     const faker = require('faker');
