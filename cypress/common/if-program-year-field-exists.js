@@ -16,10 +16,6 @@ export function ifProgramYearFieldExists(callback) {
   */
    function multipleProgramYears() {
       const todaysDate = new Date();
-      if (todaysDate.getMonth() + 1 == 10 && todaysDate.getDate() <= 14) {
-          return true;
-      } else {
-          return false;
-      }
+      return todaysDate.getMonth() + 1 == 10 && todaysDate.getDate() <= 14
   };
 }
