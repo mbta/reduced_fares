@@ -1,5 +1,5 @@
 import { getRandomApplicantAge } from '../../common/birthdate-constants';
-import { ifExists } from '../../common/if-exists';
+import { ifProgramYearFieldExists } from '../../common/if-program-year-field-exists';
 
 describe('Youth Pass Successful Submission', () => {
     const faker = require('faker');
@@ -26,7 +26,7 @@ describe('Youth Pass Successful Submission', () => {
         const applicantLastName = faker.name.lastName();
 
         cy.get('#element116_Apply').click().blur();
-        ifExists('#form-element-wrapper_260', () => {
+        ifProgramYearFieldExists(() => {
             cy.get('#element260_Current').click().blur();
         });
         cy.get('#element11').type(applicantFirstName).blur();
