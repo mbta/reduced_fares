@@ -132,6 +132,7 @@ h4 {
 .label-drop-down,
 .label-file-upload,
 .label-radio-button,
+.label-text-area,
 .label-text-box {
   font-weight: 700 !important;
 }
@@ -183,12 +184,18 @@ h4 {
   color: $error-text !important;
 }
 
+/* Make large text field border radius consistent with other fields */
+textarea {
+  border-radius: 3px !important;
+}
+
 /* Focus for all text fields */
-input[type="text"]:focus {
+input[type="text"]:focus,
+textarea:focus {
   border: 2px solid $brand-primary !important;
 }
 
-/* Remove shadow on all text fields */
+/* Remove shadow on all text fields except the large text field */
 input[type="text"].textfield:focus {
   box-shadow: none !important;
 }
@@ -239,7 +246,8 @@ input[type="text"].textfield:focus {
 .k-icon.k-i-check,
 .k-file-group.k-icon,
 .k-dropzone .k-upload-status,
-.k-file-name {
+.k-file-name,
+.k-file-size {
   color: $gray !important;
 }
 
