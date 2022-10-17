@@ -1,0 +1,100 @@
+@use "common" as *;
+
+/* Remove padding on every custom HTML SimpliGov form field */
+.static-html-wrapper,
+.workflowContent .form-static-html {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin: 0 !important;
+}
+
+/* Support header and logo after removing extra padding */
+.mbta-logo {
+  margin-top: 15px !important;
+}
+
+#formHeaderDiv {
+  margin: 0 !important;
+}
+
+.mbta-logo.thank-you-page {
+  margin-bottom: 0 !important;
+}
+
+/* Remove SimpliGov default header padding */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  padding-bottom: 0 !important;
+}
+
+/* Add zeroheight header spacing */
+h1 {
+  line-height: 3.1875rem !important;
+  margin-top: 2.6875rem !important;
+  margin-bottom: 0.9375rem !important;
+}
+
+@media (max-width: 799px) {
+  h1 {
+    line-height: 2.2313rem !important;
+    margin-top: 1.8813rem !important;
+    margin-bottom: 0.6563rem !important;
+  }
+}
+
+h2 {
+  line-height: 2.2313rem !important;
+  margin-top: 1.8813rem !important;
+  margin-bottom: 0.6563rem !important;
+}
+
+@media (max-width: 799px) {
+  h2 {
+    line-height: 1.8129rem !important;
+    margin-top: 1.5285rem !important;
+    margin-bottom: 0.5332rem !important;
+  }
+}
+
+h3 {
+  line-height: 1.6734rem !important;
+  margin-top: 1.4109rem !important;
+  margin-bottom: 0.4922rem !important;
+}
+
+@media (max-width: 799px) {
+  h3 {
+    line-height: 1.465rem !important;
+    margin-top: 1.235rem !important;
+    margin-bottom: 0.4308rem !important;
+  }
+}
+
+h4 {
+  line-height: 1.4344rem !important;
+  margin-top: 1.2094rem !important;
+  margin-bottom: 0.4219rem !important;
+}
+
+@media (max-width: 799px) {
+  h4 {
+    line-height: 1.2551rem !important;
+    margin-top: 1.0582rem !important;
+    margin-bottom: 0.3692rem !important;
+  }
+}
+
+/* Increase space between list items for accessibility */
+li {
+  line-height: 1.5 !important;
+}
+
+/* Hide birthdate error field */
+#form-element-wrapper_186 {
+  visibility: hidden;
+  height: 0;
+  margin: -0.625rem 0;
+}
