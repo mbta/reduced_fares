@@ -1,8 +1,8 @@
+import { faker } from '@faker-js/faker';
 import { getRandomApplicantAge } from '../../common/birthdate-constants';
 import { ifProgramYearFieldExists } from '../../common/if-program-year-field-exists';
 
 describe('Youth Pass Address Section Required Fields', () => {
-    const faker = require('faker');
     
     // this test follows the by mail flow
     it('proceeds through an application', () => {

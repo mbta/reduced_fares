@@ -1,6 +1,6 @@
 import { getRandomApplicantAge } from '../../common/birthdate-constants';
 
-const faker = require('faker');
+import { faker } from '@faker-js/faker';
 
 const applicantBirthdate = getRandomApplicantAge().applicantBirthdate65to90;
 const applicantFirstName = faker.name.firstName();

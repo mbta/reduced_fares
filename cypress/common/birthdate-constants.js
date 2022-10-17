@@ -1,8 +1,10 @@
 /**
  * Return a range of Youth Pass applicant ages (12-17, 18-25, too old, too young) for automation testing
 */
+
+import { faker } from '@faker-js/faker';
+
 export function getRandomApplicantAge() {
-    const faker = require('faker');
     const todaysDate = new Date();
     const baselineYear = getBaselineYear();
     const twelveYearsAgo = baselineYear - 12;

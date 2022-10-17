@@ -1,8 +1,8 @@
+import { faker } from '@faker-js/faker';
 import { getRandomApplicantAge } from '../../common/birthdate-constants';
 import { ifProgramYearFieldExists } from '../../common/if-program-year-field-exists';
 
 describe('Youth Pass Personal and Contact Info Section Required Fields', () => {
-    const faker = require('faker');
     
     it('proceeds through an application', () => {
         const applicantZipCode = '02114';

@@ -20,9 +20,9 @@
     "url": "git+https://github.com/mbta/reduced_fares.git"
   },
   "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
     "cypress": "^10.0.0",
     "cypress-file-upload": "^5.0.8",
-    "faker": "^5.5.3",
     "prettier": "^2.5.1",
     "sass": "^1.49.9",
     "stylelint": "^14.3.0",
