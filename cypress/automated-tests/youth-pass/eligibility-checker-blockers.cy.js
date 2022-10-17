@@ -1,7 +1,6 @@
 import { getRandomApplicantAge } from '../../common/birthdate-constants';
 
 describe('Eligibility Checker Blockers', () => {
-    const faker = require('faker');
     const youthPassUrl = Cypress.env('youth_pass_url');
     const eligibleZipCode = '02114'; 
 

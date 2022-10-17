@@ -1,8 +1,8 @@
+import { faker } from '@faker-js/faker';
 import { getRandomApplicantAge } from '../../common/birthdate-constants';
 import { ifProgramYearFieldExists } from '../../common/if-program-year-field-exists';
 
 describe('Youth Pass Successful Submission', () => {
-    const faker = require('faker');
     const applicantZipCode = '99999';
 
     // this test follows the in-person later flow

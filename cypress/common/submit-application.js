@@ -7,7 +7,7 @@ import { getRandomApplicantAge } from './birthdate-constants';
  * @param {string} [lastName=faker.name.lastName()] applicant last name, defaults to faker name if not passed
 */
 export function submitApplication(zipCode, firstName, lastName) {
-    const faker = require('faker');
+    import { faker } from '@faker-js/faker';
     const youthPassUrl = Cypress.env('youth_pass_url');
     const applicantZipCode = zipCode;
     const applicantBirthdate = getRandomApplicantAge().applicantBirthdate18to25;

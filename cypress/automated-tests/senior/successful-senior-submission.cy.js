@@ -1,6 +1,6 @@
 import { getRandomApplicantAge } from '../../common/birthdate-constants';
 
-const faker = require('faker');
+import { faker } from '@faker-js/faker';
 const applicantZipCode = '99999';
 
 describe('senior successful new submission - with an email address', () => {

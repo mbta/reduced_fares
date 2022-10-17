@@ -1,7 +1,7 @@
+import { faker } from '@faker-js/faker';
 import { getRandomApplicantAge } from '../../common/birthdate-constants';
 
 describe('Youth Pass File Uploads', () => {
-    const faker = require('faker');
     
     // this test follows the in-person false flow
     it('proceeds through an application', () => {
