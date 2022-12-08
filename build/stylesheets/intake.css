@@ -191,16 +191,8 @@ input[type=text].textfield:focus {
 }
 
 /* Dropdown focus and shadow */
-.select2-container--bootstrap.select2-container--open .select2-selection {
-  border: 2px solid #165c96 !important;
-  box-shadow: none !important;
-}
-
-.select2-container--bootstrap .select2-selection:focus {
-  border: 2px solid #165c96 !important;
-  box-shadow: none !important;
-}
-
+.select2-container--bootstrap.select2-container--open .select2-selection,
+.select2-container--bootstrap .select2-selection:focus,
 .select2-container--bootstrap .select2-dropdown {
   border: 2px solid #165c96 !important;
   box-shadow: none !important;
@@ -279,13 +271,40 @@ input[type=text].textfield:focus {
   min-width: 250px !important;
 }
 
-/* Reduce size of upload area on small screens */
+/* Reduce size of file upload area */
+.k-upload-files {
+  width: 350px !important;
+  max-width: 100% !important;
+}
+
 @media (max-width: 400px) {
-  .formFieldWrapper .k-upload,
-.form-element-wrapper .k-upload {
+  .k-upload-files {
     width: auto !important;
   }
 }
+/* Increase size of file drag and drop file target area */
+.k-widget {
+  width: 100% !important;
+}
+
+/* Make drag and drop file upload area hover text darker */
+.k-dropzone-hint {
+  color: #0b2f4c !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  font-family: "Inter UI", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 1rem !important;
+  margin-bottom: 2rem !important;
+  width: 100% !important;
+  text-align: center !important;
+}
+
+/* Add border to drag and drop file upload target area */
+.k-dropzone-active {
+  border: 0.15rem dashed #1c1e23 !important;
+  padding-bottom: 2rem !important;
+}
+
 /* Reduce image size on small sceens */
 img {
   max-width: 100% !important;
@@ -522,6 +541,11 @@ button.close:active:hover {
 .info-alert-item__top-text-container {
   flex: 1 1 auto;
   padding: 1rem;
+}
+
+.error-alert-item__top-text-container p:last-child,
+.info-alert-item__top-text-container p:last-child {
+  margin-bottom: 0 !important;
 }
 
 .error-alert-item__icon,

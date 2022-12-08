@@ -19,6 +19,11 @@
   padding: 1rem;
 }
 
+.error-alert-item__top-text-container p:last-child,
+.info-alert-item__top-text-container p:last-child {
+  margin-bottom: 0 !important;
+}
+
 .error-alert-item__icon,
 .info-alert-item__icon {
   align-content: center;
