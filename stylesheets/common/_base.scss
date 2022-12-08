@@ -201,16 +201,8 @@ input[type="text"].textfield:focus {
 }
 
 /* Dropdown focus and shadow */
-.select2-container--bootstrap.select2-container--open .select2-selection {
-  border: 2px solid $brand-primary !important;
-  box-shadow: none !important;
-}
-
-.select2-container--bootstrap .select2-selection:focus {
-  border: 2px solid $brand-primary !important;
-  box-shadow: none !important;
-}
-
+.select2-container--bootstrap.select2-container--open .select2-selection,
+.select2-container--bootstrap .select2-selection:focus,
 .select2-container--bootstrap .select2-dropdown {
   border: 2px solid $brand-primary !important;
   box-shadow: none !important;
@@ -251,11 +243,6 @@ input[type="text"].textfield:focus {
   color: $gray !important;
 }
 
-/* Make upload light gray border darker */
-.k-upload-files {
-  border-color: $gray !important;
-}
-
 /* Make upload success message darker */
 .k-file-success .k-file-validation-message {
   color: $brand-success !important;
@@ -292,12 +279,46 @@ input[type="text"].textfield:focus {
   min-width: 250px !important;
 }
 
-/* Reduce size of upload area on small screens */
+/* Reduce size of file upload area and darken border */
+.k-upload-files {
+  width: 350px !important;
+  max-width: 100% !important;
+  border-color: $gray !important;
+}
+
 @media (max-width: 400px) {
-  .formFieldWrapper .k-upload,
-  .form-element-wrapper .k-upload {
+  .k-upload-files {
     width: auto !important;
   }
+}
+
+/* Increase size of drag and drop file upload target area */
+.k-widget {
+  width: 100% !important;
+}
+
+/* Make drag and drop file upload area hover text darker */
+.k-dropzone-hint {
+  color: $brand-primary-darkest !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  font-family: "Inter UI", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 1rem !important;
+  margin-bottom: 2rem !important;
+  width: 100% !important;
+  text-align: center !important;
+}
+
+@media (max-width: 799px) {
+  .k-dropzone-hint {
+    font-size: 0.875rem !important;
+  }
+}
+
+/* Add border to drag and drop file upload target area */
+.k-dropzone-active {
+  border: 0.15rem dashed $gray-dark !important;
+  padding-bottom: 2rem !important;
 }
 
 /* Reduce image size on small sceens */
