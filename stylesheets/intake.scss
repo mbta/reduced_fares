@@ -98,3 +98,54 @@ li {
   height: 0;
   margin: -0.625rem 0;
 }
+
+/* Remove right border, set shadow and dimensions */
+div#thank-you-text,
+div#workflow-background-wrapper:not(.embed) {
+  width: 900px !important;
+  max-width: 100% !important;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%) !important;
+  border-right: none !important;
+}
+
+/* Turn off title, header/footer, info, summary/attachments/communications sections */
+.page-top,
+.page-head,
+.page-footer,
+.infoSection,
+.workflowRightTab {
+  display: none !important;
+}
+
+/* Center application, set background color, set min-height to reduce scrolling, adjust padding */
+#workflow-wrapper {
+  background-color: $gray-background !important;
+  padding: 50px 0 0 !important;
+  min-height: 100px !important;
+  justify-content: center !important;
+}
+
+/* Reduce space after Submit button */
+#formPartialDiv {
+  margin-bottom: 0 !important;
+}
+
+/* Remove bottom padding */
+div.page-wrap {
+  padding-bottom: 0 !important;
+}
+
+/* Center Thank You page, set page color and form max width */
+body div.page-content {
+  background-color: $gray-background !important;
+  margin: 0 auto !important;
+  max-width: 900px !important;
+}
+
+/* Set Thank You page dimensions */
+div#thank-you-text {
+  min-height: 200px;
+  max-width: 880px !important;
+  margin-top: 50px !important;
+  padding: 10px;
+}
