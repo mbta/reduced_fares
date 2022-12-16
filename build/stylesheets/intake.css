@@ -232,11 +232,6 @@ input[type=text].textfield:focus {
   color: #494f5c !important;
 }
 
-/* Make upload light gray border darker */
-.k-upload-files {
-  border-color: #494f5c !important;
-}
-
 /* Make upload success message darker */
 .k-file-success .k-file-validation-message {
   color: #145a06 !important;
@@ -271,10 +266,11 @@ input[type=text].textfield:focus {
   min-width: 250px !important;
 }
 
-/* Reduce size of file upload area */
+/* Reduce size of file upload area and darken border */
 .k-upload-files {
   width: 350px !important;
   max-width: 100% !important;
+  border-color: #494f5c !important;
 }
 
 @media (max-width: 400px) {
@@ -282,7 +278,7 @@ input[type=text].textfield:focus {
     width: auto !important;
   }
 }
-/* Increase size of file drag and drop file target area */
+/* Increase size of drag and drop file upload target area */
 .k-widget {
   width: 100% !important;
 }
@@ -299,6 +295,11 @@ input[type=text].textfield:focus {
   text-align: center !important;
 }
 
+@media (max-width: 799px) {
+  .k-dropzone-hint {
+    font-size: 0.875rem !important;
+  }
+}
 /* Add border to drag and drop file upload target area */
 .k-dropzone-active {
   border: 0.15rem dashed #1c1e23 !important;
@@ -764,6 +765,57 @@ li {
   visibility: hidden;
   height: 0;
   margin: -0.625rem 0;
+}
+
+/* Remove right border, set shadow and dimensions */
+div#thank-you-text,
+div#workflow-background-wrapper:not(.embed) {
+  width: 900px !important;
+  max-width: 100% !important;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23) !important;
+  border-right: none !important;
+}
+
+/* Turn off title, header/footer, info, summary/attachments/communications sections */
+.page-top,
+.page-head,
+.page-footer,
+.infoSection,
+.workflowRightTab {
+  display: none !important;
+}
+
+/* Center application, set background color, set min-height to reduce scrolling, adjust padding */
+#workflow-wrapper {
+  background-color: #f2f3f5 !important;
+  padding: 50px 0 0 !important;
+  min-height: 100px !important;
+  justify-content: center !important;
+}
+
+/* Reduce space after Submit button */
+#formPartialDiv {
+  margin-bottom: 0 !important;
+}
+
+/* Remove bottom padding */
+div.page-wrap {
+  padding-bottom: 0 !important;
+}
+
+/* Center Thank You page, set page color and form max width */
+body div.page-content {
+  background-color: #f2f3f5 !important;
+  margin: 0 auto !important;
+  max-width: 900px !important;
+}
+
+/* Set Thank You page dimensions */
+div#thank-you-text {
+  min-height: 200px;
+  max-width: 880px !important;
+  margin-top: 50px !important;
+  padding: 10px;
 }
 
 /*# sourceMappingURL=intake.css.map */
