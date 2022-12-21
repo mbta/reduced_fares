@@ -8,6 +8,7 @@ export function getRandomApplicantAge() {
     const todaysDate = new Date();
     const baselineYear = getBaselineYear();
     const twelveYearsAgo = baselineYear - 12;
+    const thirteenYearsAgo = baselineYear - 13;
     const eighteenYearsAgo = baselineYear - 18;
     const twentySixYearsAgo = baselineYear - 26;
     const fiftyYearsAgo = baselineYear - 50;
@@ -24,6 +25,8 @@ export function getRandomApplicantAge() {
 
     const applicantBirthdateTooYoung = formatDate(randomDateTooYoung);
     const applicantBirthdateTooOld = formatDate(randomDateTooOld);
+    const applicantBirthday12 = `11/01/${twelveYearsAgo}`;
+    const applicantBirthday13 = `11/01/${thirteenYearsAgo}`;
     const applicantBirthdate12to17 = formatDate(randomDate12to17);
     const applicantBirthdate18to25 = formatDate(randomDate18to25);
     const applicantBirthday64 = `11/01/${sixtyFourYearsAgo}`;
@@ -55,6 +58,8 @@ export function getRandomApplicantAge() {
     return {
         applicantBirthdateTooYoung,
         applicantBirthdateTooOld,
+        applicantBirthday12,
+        applicantBirthday13,
         applicantBirthdate12to17,
         applicantBirthdate18to25,
         applicantBirthday64,
