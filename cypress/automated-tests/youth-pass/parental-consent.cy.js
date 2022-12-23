@@ -14,8 +14,8 @@ describe('youth pass parental consent flow', () => {
   });
 
   it("shows the parental consent fields only when under 13", function() {
-    const applicantBirthdate13 = getRandomApplicantAge().        applicantBirthday13;
-    const applicantBirthdate12 = getRandomApplicantAge().        applicantBirthday12;
+    const applicantBirthdate13 = getRandomApplicantAge().applicantBirthday13;
+    const applicantBirthdate12 = getRandomApplicantAge().applicantBirthday12;
     
     cy.get('#element15').type(applicantBirthdate13).blur();
     cy.get('#form-element-wrapper_321 > .form-static-html > h2').should('not.be.visible');
