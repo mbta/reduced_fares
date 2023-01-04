@@ -1,5 +1,20 @@
 body,
 html {
+  font-size: 16px;
+}
+
+/* Make exit workflow text on one line */
+#exit-workflow {
+  width: auto !important;
+}
+
+/* Update padding on exit workflow button */
+.exit-workflow-text {
+  padding: 5px !important;
+}
+
+body,
+html {
   background-color: #f2f3f5 !important;
   min-width: 300px !important;
 }
@@ -678,21 +693,6 @@ button.close:active:hover {
 
 .denied {
   color: #b3000f;
-}
-
-body,
-html {
-  font-size: 16px;
-}
-
-/* Make exit workflow text on one line */
-#exit-workflow {
-  width: auto !important;
-}
-
-/* Update padding on exit workflow button */
-.exit-workflow-text {
-  padding: 5px !important;
 }
 
 /*# sourceMappingURL=blind.css.map */
