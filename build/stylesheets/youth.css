@@ -1,6 +1,20 @@
 body,
 html {
   font-size: 16px;
+}
+
+/* Make exit workflow text on one line */
+#exit-workflow {
+  width: auto !important;
+}
+
+/* Update padding on exit workflow button */
+.exit-workflow-text {
+  padding: 5px !important;
+}
+
+body,
+html {
   background-color: #f2f3f5 !important;
   min-width: 300px !important;
 }
@@ -329,7 +343,8 @@ input,
 .form-section-next,
 .form-section-prev,
 #divWorkflowContent .buttonPopup.blue,
-.buttonPopup.blue.big {
+.buttonPopup.blue.big,
+#noBtn.buttonPopup.big {
   font-family: "Inter UI", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-weight: 500 !important;
   text-align: center !important;
@@ -359,7 +374,8 @@ input,
 }
 
 /* Secondary button colors */
-.form-section-prev {
+.form-section-prev,
+#noBtn.buttonPopup.big {
   color: #165c96 !important;
   background-color: #fff !important;
   border-color: #165c96 !important;
@@ -389,7 +405,10 @@ input,
 /* Secondary button active, focus, and hover */
 .form-section-prev:active,
 .form-section-prev:focus,
-.form-section-prev:hover {
+.form-section-prev:hover,
+#noBtn.buttonPopup.big:active,
+#noBtn.buttonPopup.big:focus,
+#noBtn.buttonPopup.big:hover {
   color: #0b2f4c !important;
   background-color: #cee0f4 !important;
   border-color: #0e3b61 !important;
@@ -405,7 +424,9 @@ input,
 .buttonPopup.blue.big:focus,
 .buttonPopup.blue.big:active:focus,
 .form-section-prev:focus,
-.form-section-prev:active:focus {
+.form-section-prev:active:focus,
+#noBtn.buttonPopup.big:focus,
+#noBtn.buttonPopup.big:active:focus {
   outline: thin dotted !important;
   outline: 5px auto -webkit-focus-ring-color !important;
   outline-offset: -2px !important;
@@ -435,7 +456,9 @@ input,
 
 /* Secondary button active focus and hover effects */
 .form-section-prev:active:focus,
-.form-section-prev:active:hover {
+.form-section-prev:active:hover,
+#noBtn.buttonPopup.big:active:focus,
+#noBtn.buttonPopup.big:active:hover {
   background-color: #cee0f4;
   border-color: #061827;
   outline: none !important;
@@ -672,23 +695,7 @@ button.close:active:hover {
   color: #b3000f;
 }
 
-/* Remove extra padding */
-.page-content div#workflow-background-wrapper {
-  padding: 0 !important;
-  border: none !important;
-}
-
-/* Hide error fields and values */
-/* HomeZipError field */
-#element108,
-#element180,
-#element183,
-#element184 {
-  display: none;
-  padding: 10px !important;
-}
-
-/* HomeZipError field */
+/* Hide zip code, birthday, enrollment, and school error fields */
 #form-element-wrapper_108,
 #form-element-wrapper_180,
 #form-element-wrapper_183,

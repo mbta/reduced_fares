@@ -1,0 +1,211 @@
+@use "colors" as *;
+
+/* Button size and font */
+.form-submit-button,
+.form-section-next,
+.form-section-prev,
+#divWorkflowContent .buttonPopup.blue,
+.buttonPopup.blue.big,
+#noBtn.buttonPopup.big {
+  font-family: "Inter UI", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-weight: 500 !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  vertical-align: middle !important;
+  cursor: pointer !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  padding: 0.6rem 1.6rem !important;
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+  border: 1px solid transparent !important;
+  -webkit-border-radius: 0.25rem !important;
+  border-radius: 0.25rem !important;
+}
+
+/* Primary button colors */
+.form-submit-button,
+.form-section-next,
+#divWorkflowContent .buttonPopup.blue,
+.buttonPopup.blue.big {
+  color: $white !important;
+  background-color: $brand-primary !important;
+  border-color: $brand-primary !important;
+}
+
+/* Secondary button colors */
+.form-section-prev,
+#noBtn.buttonPopup.big {
+  color: $brand-primary !important;
+  background-color: $white !important;
+  border-color: $brand-primary !important;
+}
+
+/* Primary button active, focus, and hover */
+.form-submit-button:active,
+.form-submit-button:focus,
+.form-submit-button:hover,
+.form-section-next:active,
+.form-section-next:focus,
+.form-section-next:hover,
+#divWorkflowContent .buttonPopup.blue:active,
+#divWorkflowContent .buttonPopup.blue:focus,
+#divWorkflowContent .buttonPopup.blue:hover,
+.buttonPopup.blue.big:active,
+.buttonPopup.blue.big:focus,
+.buttonPopup.blue.big:hover,
+.form-section-prev:active,
+.form-section-prev:focus,
+.form-section-prev:hover {
+  color: $white !important;
+  background-color: #0f416a !important;
+  border-color: #0e3b61 !important;
+}
+
+/* Secondary button active, focus, and hover */
+.form-section-prev:active,
+.form-section-prev:focus,
+.form-section-prev:hover,
+#noBtn.buttonPopup.big:active,
+#noBtn.buttonPopup.big:focus,
+#noBtn.buttonPopup.big:hover {
+  color: $brand-primary-darkest !important;
+  background-color: $brand-primary-lightest !important;
+  border-color: #0e3b61 !important;
+}
+
+/* Button focus effects */
+.form-submit-button:focus,
+.form-submit-button:active:focus,
+.form-section-next:focus,
+.form-section-next:active:focus,
+#divWorkflowContent .buttonPopup.blue:focus,
+#divWorkflowContent .buttonPopup.blue:active:focus,
+.buttonPopup.blue.big:focus,
+.buttonPopup.blue.big:active:focus,
+.form-section-prev:focus,
+.form-section-prev:active:focus,
+#noBtn.buttonPopup.big:focus,
+#noBtn.buttonPopup.big:active:focus {
+  outline: thin dotted !important;
+  outline: 5px auto -webkit-focus-ring-color !important;
+  outline-offset: -2px !important;
+}
+
+/* Primary button active focus and hover effects */
+.form-submit-button:active:focus,
+.form-submit-button:active:hover,
+.form-section-next:active:focus,
+.form-section-next:active:hover,
+#divWorkflowContent .buttonPopup.blue:active:focus,
+#divWorkflowContent .buttonPopup.blue:active:hover,
+.buttonPopup.blue.big:active:focus,
+.buttonPopup.blue.big:active:hover {
+  color: $white !important;
+  background-color: #0b2e4a !important;
+  border-color: #061827 !important;
+  outline: none !important;
+}
+
+/* Back and next button placement */
+.form-section-buttons {
+  text-align: left !important;
+  margin-left: 10px !important;
+  margin-top: 24px !important;
+}
+
+/* Secondary button active focus and hover effects */
+.form-section-prev:active:focus,
+.form-section-prev:active:hover,
+#noBtn.buttonPopup.big:active:focus,
+#noBtn.buttonPopup.big:active:hover {
+  background-color: $brand-primary-lightest;
+  border-color: #061827;
+  outline: none !important;
+}
+
+/* Set k-button opacity */
+.k-upload-files .k-upload-status,
+.k-button.k-flat,
+button.close {
+  opacity: 1 !important;
+}
+
+/* Remove default dark hover effect */
+.k-button.k-state-hover::before,
+.k-button:hover::before {
+  opacity: 0 !important;
+}
+
+/* Remove ease transition */
+.k-button.k-flat {
+  transition: none !important;
+}
+
+/* k-button */
+.k-button.k-button-icon {
+  text-align: center !important;
+  white-space: wrap !important;
+  vertical-align: middle !important;
+  cursor: pointer !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  font-size: 14px !important;
+  color: $brand-primary !important;
+  background-color: $white !important;
+}
+
+/* Modal close button */
+button.close {
+  text-align: center !important;
+  white-space: wrap !important;
+  vertical-align: middle !important;
+  cursor: pointer !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  color: $brand-primary !important;
+  background-color: $white !important;
+  text-shadow: none !important;
+  padding: 0 0.451em !important;
+  line-height: 1.5 !important;
+  -webkit-border-radius: 50% !important;
+  border-radius: 50% !important;
+  font-size: 1.5rem !important;
+}
+
+/* k-button and close button active, focus, and hover */
+.k-button.k-button-icon:active,
+.k-button.k-button-icon:focus,
+.k-button.k-button-icon:hover,
+button.close:active,
+button.close:focus,
+button.close:hover {
+  color: #0e3b61 !important;
+  background-color: $brand-primary-lightest !important;
+}
+
+/* k-button and close button focus settings */
+.k-button.k-button-icon:focus,
+.k-button.k-button-icon:active:focus,
+button.close:focus,
+button.close:active:focus {
+  outline: thin dotted !important;
+  outline: 5px auto -webkit-focus-ring-color !important;
+  outline-offset: -2px !important;
+}
+
+/* k-button and close button active focus and hover effects */
+.k-button.k-button-icon:active:focus,
+.k-button.k-button-icon:active:hover,
+button.close:active:focus,
+button.close:active:hover {
+  color: #0e3b61 !important;
+  background-color: $brand-primary-lightest !important;
+  outline: none !important;
+}

@@ -1,32 +1,9 @@
-@use "common" as *;
+@use "partials/index-applicant" as *;
 
-/* Remove extra padding */
-.page-content div#workflow-background-wrapper {
-  padding: 0 !important;
-  border: none !important;
-}
-
-/* Hide error fields and values */
-
-/* HomeZipError field */
-#element108,
-/* BirthdayError field */
-#element180,
-/* EnrollmentEligibilityError field */
-#element183,
-/* SchoolEligibilityError field */
-#element184 {
-  display: none;
-  padding: 10px !important;
-}
-
-/* HomeZipError field */
+/* Hide zip code, birthday, enrollment, and school error fields */
 #form-element-wrapper_108,
-/* BirthdayError field */
 #form-element-wrapper_180,
-/* EnrollmentEligibilityError field */
 #form-element-wrapper_183,
-/* SchoolEligibilityError field */
 #form-element-wrapper_184 {
   visibility: hidden;
   height: 0;

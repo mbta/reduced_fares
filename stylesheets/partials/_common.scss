@@ -1,0 +1,16 @@
+// This partial is used for both admin and appplicants
+
+body,
+html {
+  font-size: 16px;
+}
+
+/* Make exit workflow text on one line */
+#exit-workflow {
+  width: auto !important;
+}
+
+/* Update padding on exit workflow button */
+.exit-workflow-text {
+  padding: 5px !important;
+}

@@ -1,11 +1,25 @@
-@use "colors" as *;
+body,
+html {
+  font-size: 16px;
+}
+
+/* Make exit workflow text on one line */
+#exit-workflow {
+  width: auto !important;
+}
+
+/* Update padding on exit workflow button */
+.exit-workflow-text {
+  padding: 5px !important;
+}
 
 /* Button size and font */
 .form-submit-button,
 .form-section-next,
 .form-section-prev,
 #divWorkflowContent .buttonPopup.blue,
-.buttonPopup.blue.big {
+.buttonPopup.blue.big,
+#noBtn.buttonPopup.big {
   font-family: "Inter UI", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-weight: 500 !important;
   text-align: center !important;
@@ -29,16 +43,17 @@
 .form-section-next,
 #divWorkflowContent .buttonPopup.blue,
 .buttonPopup.blue.big {
-  color: $white !important;
-  background-color: $brand-primary !important;
-  border-color: $brand-primary !important;
+  color: #fff !important;
+  background-color: #165c96 !important;
+  border-color: #165c96 !important;
 }
 
 /* Secondary button colors */
-.form-section-prev {
-  color: $brand-primary !important;
-  background-color: $white !important;
-  border-color: $brand-primary !important;
+.form-section-prev,
+#noBtn.buttonPopup.big {
+  color: #165c96 !important;
+  background-color: #fff !important;
+  border-color: #165c96 !important;
 }
 
 /* Primary button active, focus, and hover */
@@ -57,7 +72,7 @@
 .form-section-prev:active,
 .form-section-prev:focus,
 .form-section-prev:hover {
-  color: $white !important;
+  color: #fff !important;
   background-color: #0f416a !important;
   border-color: #0e3b61 !important;
 }
@@ -65,9 +80,12 @@
 /* Secondary button active, focus, and hover */
 .form-section-prev:active,
 .form-section-prev:focus,
-.form-section-prev:hover {
-  color: $brand-primary-darkest !important;
-  background-color: $brand-primary-lightest !important;
+.form-section-prev:hover,
+#noBtn.buttonPopup.big:active,
+#noBtn.buttonPopup.big:focus,
+#noBtn.buttonPopup.big:hover {
+  color: #0b2f4c !important;
+  background-color: #cee0f4 !important;
   border-color: #0e3b61 !important;
 }
 
@@ -81,7 +99,9 @@
 .buttonPopup.blue.big:focus,
 .buttonPopup.blue.big:active:focus,
 .form-section-prev:focus,
-.form-section-prev:active:focus {
+.form-section-prev:active:focus,
+#noBtn.buttonPopup.big:focus,
+#noBtn.buttonPopup.big:active:focus {
   outline: thin dotted !important;
   outline: 5px auto -webkit-focus-ring-color !important;
   outline-offset: -2px !important;
@@ -96,7 +116,7 @@
 #divWorkflowContent .buttonPopup.blue:active:hover,
 .buttonPopup.blue.big:active:focus,
 .buttonPopup.blue.big:active:hover {
-  color: $white !important;
+  color: #fff !important;
   background-color: #0b2e4a !important;
   border-color: #061827 !important;
   outline: none !important;
@@ -111,8 +131,10 @@
 
 /* Secondary button active focus and hover effects */
 .form-section-prev:active:focus,
-.form-section-prev:active:hover {
-  background-color: $brand-primary-lightest;
+.form-section-prev:active:hover,
+#noBtn.buttonPopup.big:active:focus,
+#noBtn.buttonPopup.big:active:hover {
+  background-color: #cee0f4;
   border-color: #061827;
   outline: none !important;
 }
@@ -146,8 +168,8 @@ button.close {
   -ms-user-select: none !important;
   user-select: none !important;
   font-size: 14px !important;
-  color: $brand-primary !important;
-  background-color: $white !important;
+  color: #165c96 !important;
+  background-color: #fff !important;
 }
 
 /* Modal close button */
@@ -160,8 +182,8 @@ button.close {
   -moz-user-select: none !important;
   -ms-user-select: none !important;
   user-select: none !important;
-  color: $brand-primary !important;
-  background-color: $white !important;
+  color: #165c96 !important;
+  background-color: #fff !important;
   text-shadow: none !important;
   padding: 0 0.451em !important;
   line-height: 1.5 !important;
@@ -178,7 +200,7 @@ button.close:active,
 button.close:focus,
 button.close:hover {
   color: #0e3b61 !important;
-  background-color: $brand-primary-lightest !important;
+  background-color: #cee0f4 !important;
 }
 
 /* k-button and close button focus settings */
@@ -197,6 +219,72 @@ button.close:active:focus {
 button.close:active:focus,
 button.close:active:hover {
   color: #0e3b61 !important;
-  background-color: $brand-primary-lightest !important;
+  background-color: #cee0f4 !important;
   outline: none !important;
 }
+
+/* Alert base */
+.error-alert-item,
+.info-alert-item {
+  overflow: hidden;
+  position: relative;
+}
+
+.error-alert-item__top,
+.info-alert-item__top {
+  display: flex;
+  padding-left: 3rem;
+}
+
+.error-alert-item__top-text-container,
+.info-alert-item__top-text-container {
+  flex: 1 1 auto;
+  padding: 1rem;
+}
+
+.error-alert-item__top-text-container p:last-child,
+.info-alert-item__top-text-container p:last-child {
+  margin-bottom: 0 !important;
+}
+
+.error-alert-item__icon,
+.info-alert-item__icon {
+  align-content: center;
+  left: 1.25rem;
+  pointer-events: none;
+  position: absolute;
+  top: 1.2rem;
+  height: 2rem;
+  width: 2rem;
+}
+
+.error-alert-item__effect,
+.info-alert-item__effect {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 0.375em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.275em;
+  color: inherit;
+}
+
+/* Error alert colors */
+.error-alert-item {
+  background-color: #f2dede;
+  border-left: 0.25rem solid #b3000f;
+}
+
+/* Info alert colors */
+.info-alert-item {
+  background-color: #e2ecf9;
+  border-left: 0.25rem solid #0b2f4c;
+}
+
+/* Hide error field */
+#form-element-wrapper_217 {
+  visibility: hidden;
+  height: 0;
+  margin: -20px 0;
+}
+
+/*# sourceMappingURL=admin-intake.css.map */
