@@ -1,0 +1,10 @@
+@use "common/admin.scss" as *;
+@use "common/buttons.scss" as *;
+@use "common/alerts.scss" as *;
+
+/* Hide error field */
+#form-element-wrapper_217 {
+  visibility: hidden;
+  height: 0;
+  margin: -20px 0;
+}
