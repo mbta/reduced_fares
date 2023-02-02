@@ -10,7 +10,6 @@ describe('youth pass parental consent flow', () => {
     cy.get('#form-section-0 > .form-section-buttons > .form-section-next').click();
     cy.get('#form-section-1 > .form-section-buttons > .form-section-next').click();
     cy.get('#element105').type(applicantZipCode).blur();
-    
   });
 
   it("shows the parental consent fields only when under 13", function() {
