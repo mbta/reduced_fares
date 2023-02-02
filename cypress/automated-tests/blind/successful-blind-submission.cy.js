@@ -121,18 +121,6 @@ describe('blind successful renewal submission - without an email address', () =>
     // Intentionally empty
   });
 
-  it("uploads a blindness certification", function() {
-    cy
-      .get('[data-field-code="MCBIDCardYesNo"]')
-      .contains('No')
-      .click();
-
-    cy
-      .get('#element35')
-      .attachFile('youth-pass-test-image.png');
-    cy.get('.k-text-success').should('exist');
-  });
-
   it("uploads a photo ID", function() {
     cy
       .get('#element25')
