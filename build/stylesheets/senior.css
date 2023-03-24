@@ -48,8 +48,8 @@ figcaption {
 
 @media (max-width: 799px) {
   p,
-  li,
-  figcaption {
+li,
+figcaption {
     font-size: 0.875rem !important;
   }
 }
@@ -169,9 +169,9 @@ h4 {
 
 @media (max-width: 799px) {
   .required-text,
-  .requiredLabelEmail,
-  .regexErrorLabel,
-  .datePickerFormatError {
+.requiredLabelEmail,
+.regexErrorLabel,
+.datePickerFormatError {
     font-size: 0.875rem !important;
   }
 }
@@ -230,10 +230,10 @@ input[type=text].textfield:focus {
 
 @media (max-width: 799px) {
   .k-dropzone .k-upload-status,
-  .k-file-information,
-  .k-file-name,
-  .k-file-size,
-  .k-file-validation-message {
+.k-file-information,
+.k-file-name,
+.k-file-size,
+.k-file-validation-message {
     font-size: 0.875rem !important;
   }
 }
