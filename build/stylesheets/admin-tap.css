@@ -282,7 +282,8 @@ button.close:active:hover {
 
 /* Hide error field */
 #form-element-wrapper_217,
-#form-element-wrapper_265 {
+#form-element-wrapper_265,
+#form-element-wrapper_271 {
   visibility: hidden;
   height: 0;
   margin: -20px 0;
