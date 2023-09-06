@@ -1,4 +1,4 @@
-@use "colors" as *;
+@use "variables" as *;
 
 /* Button size and font */
 .form-submit-button,
@@ -7,7 +7,7 @@
 #divWorkflowContent .buttonPopup.blue,
 .buttonPopup.blue.big,
 #noBtn.buttonPopup.big {
-  font-family: "Inter UI", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: $font-family !important;
   font-weight: 500 !important;
   text-align: center !important;
   white-space: nowrap !important;

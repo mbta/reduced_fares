@@ -13,6 +13,35 @@ html {
   padding: 5px !important;
 }
 
+/* Add Inter font */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://simpligov-prod.azureedge.net/prod/content/fonts/Inter-UI-Regular-ada67516bfcb321d3af9a10b5ac85969.woff2") format("woff2"), url("https://simpligov-prod.azureedge.net/prod/content/fonts/Inter-UI-Regular-3ca46ee35e2e0a102cb63a64629ff935.woff") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://simpligov-prod.azureedge.net/prod/content/fonts/Inter-UI-Italic-bc389a025ce24c8a922a75a14efb9849.woff2") format("woff2"), url("https://simpligov-prod.azureedge.net/prod/content/fonts/Inter-UI-Italic-8b0d16839ccd5eb17d2d2c57fc7b879c.woff") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("https://simpligov-prod.azureedge.net/prod/content/fonts/Inter-UI-Medium-a4b302b56c07e87c3428227270d313fa.woff2") format("woff2"), url("https://simpligov-prod.azureedge.net/prod/content/fonts/Inter-UI-Medium-86c6d121f1d396c123e9f2b0b18040a0.woff") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("https://simpligov-prod.azureedge.net/prod/content/fonts/Inter-UI-Bold-8506a8d02c2e819508bc53d65de6795a.woff2") format("woff2"), url("https://simpligov-prod.azureedge.net/prod/content/fonts/Inter-UI-Bold-0a1242bedd6453e33ea8bfb1a7fb2af4.woff") format("woff");
+}
 /* Button size and font */
 .form-submit-button,
 .form-section-next,
@@ -20,7 +49,7 @@ html {
 #divWorkflowContent .buttonPopup.blue,
 .buttonPopup.blue.big,
 #noBtn.buttonPopup.big {
-  font-family: "Inter UI", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-weight: 500 !important;
   text-align: center !important;
   white-space: nowrap !important;
