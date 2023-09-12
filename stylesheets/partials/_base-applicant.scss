@@ -1,4 +1,4 @@
-@use "colors" as *;
+@use "variables" as *;
 
 body,
 html {
@@ -28,7 +28,7 @@ a:focus {
 p,
 li,
 figcaption {
-  font-family: "Inter UI", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: $font-family !important;
   font-size: 1rem !important;
   color: $gray-dark !important;
 }
@@ -115,7 +115,7 @@ h4 {
 /* Form label */
 .form-label {
   color: $gray-dark !important;
-  font-family: "Inter UI", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: $font-family !important;
   font-size: 1rem !important;
 }
 
@@ -139,7 +139,7 @@ h4 {
 /* Help text */
 .sub-heading {
   color: $gray !important;
-  font-family: "Inter UI", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: $font-family !important;
   font-size: 1rem !important;
   line-height: 1.2 !important;
 }
@@ -156,7 +156,7 @@ h4 {
 .regexErrorLabel,
 .datePickerFormatError {
   font-style: normal !important;
-  font-family: "Inter UI", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: $font-family !important;
   font-size: 1rem !important;
   color: $error-text !important;
 }
@@ -218,7 +218,7 @@ input[type="text"].textfield:focus {
 .k-file-name,
 .k-file-size,
 .k-file-validation-message {
-  font-family: "Inter UI", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: $font-family !important;
   font-weight: 400;
   font-size: 1rem !important;
 }
@@ -249,7 +249,7 @@ input[type="text"].textfield:focus {
 
 /* Make upload error message darker */
 .k-file-invalid .k-file-validation-message {
-  font-family: "Inter UI", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: $font-family !important;
   font-size: 1rem !important;
   color: $error-text !important;
 }
@@ -262,7 +262,7 @@ input[type="text"].textfield:focus {
 
 /* Make upload "invalid files" error message darker */
 .validation-text.fileUploadErrorLabel.truncateWithEllipsis {
-  font-family: "Inter UI", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: $font-family !important;
   font-size: 1rem !important;
   color: $error-text !important;
 }
@@ -301,7 +301,7 @@ input[type="text"].textfield:focus {
   color: $brand-primary-darkest !important;
   font-style: normal !important;
   font-weight: 700 !important;
-  font-family: "Inter UI", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: $font-family !important;
   font-size: 1rem !important;
   margin-bottom: 2rem !important;
   width: 100% !important;
