@@ -1,106 +1,111 @@
 <!DOCTYPE html>
 <!-- Set language -->
 <html lang="pt">
+  <head>
+    <title>Atualização do aplicativo MBTA CharlieCard</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <style type="text/css">
+      body,
+      table,
+      td,
+      a {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
 
-<head>
-  <title>Atualização do aplicativo MBTA CharlieCard</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <style type="text/css">
-    body,
-    table,
-    td,
-    a {
-      -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
-    }
+      table,
+      td {
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+      }
 
-    table,
-    td {
-      mso-table-lspace: 0pt;
-      mso-table-rspace: 0pt;
-    }
+      img {
+        -ms-interpolation-mode: bicubic;
+      }
 
-    img {
-      -ms-interpolation-mode: bicubic;
-    }
+      img {
+        border: 0;
+        height: auto;
+        line-height: 100%;
+        outline: none;
+        text-decoration: none;
+      }
 
-    img {
-      border: 0;
-      height: auto;
-      line-height: 100%;
-      outline: none;
-      text-decoration: none;
-    }
+      table {
+        border-collapse: collapse !important;
+      }
 
-    table {
-      border-collapse: collapse !important;
-    }
+      body {
+        height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+      }
 
-    body {
-      height: 100% !important;
-      margin: 0 !important;
-      padding: 0 !important;
-      width: 100% !important;
-    }
+      a {
+        color: #165c96;
+        text-decoration: underline;
+      }
 
-    a {
-      color: #165c96;
-      text-decoration: underline;
-    }
-
-    h1 {
-      color: #202020;
-      font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
-      font-size: 26px;
-      font-style: normal;
-      font-weight: bold;
-      line-height: 125%;
-      letter-spacing: normal;
-      text-align: left;
-    }
-
-    @media only screen and (max-width: 480px) {
       h1 {
-        font-size: 22px !important;
-        line-height: 125% !important;
+        color: #202020;
+        font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: bold;
+        line-height: 125%;
+        letter-spacing: normal;
+        text-align: left;
       }
-    }
 
-    h2 {
-      color: #202020;
-      font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
-      font-size: 22px;
-      font-style: normal;
-      font-weight: bold;
-      line-height: 125%;
-      letter-spacing: normal;
-      text-align: left;
-      padding-top: 22px;
-    }
+      @media only screen and (max-width: 480px) {
+        h1 {
+          font-size: 22px !important;
+          line-height: 125% !important;
+        }
+      }
 
-    @media only screen and (max-width: 480px) {
       h2 {
-        font-size: 20px !important;
-        line-height: 125% !important;
+        color: #202020;
+        font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: bold;
+        line-height: 125%;
+        letter-spacing: normal;
+        text-align: left;
+        padding-top: 22px;
       }
-    }
-  </style>
-</head>
 
-<body style="
+      @media only screen and (max-width: 480px) {
+        h2 {
+          font-size: 20px !important;
+          line-height: 125% !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body
+    style="
       margin: 0 !important;
       padding: 0 !important;
       background-color: #fafafa;
-    ">
-  <!-- This ghost table to constrain the width in Outlook. The role attribute is set to presentation to prevent it from being read by screenreaders. -->
-  <!--[if (gte mso 9)|(IE)]>
+    "
+  >
+    <!-- This ghost table to constrain the width in Outlook. The role attribute is set to presentation to prevent it from being read by screenreaders. -->
+    <!--[if (gte mso 9)|(IE)]>
     <table cellspacing="0" cellpadding="0" border="0" width="600" align="center" role="presentation"><tr><td>
     <![endif]-->
-  <!-- The role and aria-label attributes are added to wrap the email content as an article for screen readers. Some of them will read out the aria-label as the title of the document, so use something like "An email from Your Brand Name" to make it recognizable. -->
-  <!-- Default styling of text is applied to the wrapper div. Be sure to use text that is large enough and has a high contrast with the background color for people with visual impairments. -->
-  <div role="article" aria-label="Um e-mail da MBTA" lang="pt" style="
+    <!-- The role and aria-label attributes are added to wrap the email content as an article for screen readers. Some of them will read out the aria-label as the title of the document, so use something like "An email from Your Brand Name" to make it recognizable. -->
+    <!-- Default styling of text is applied to the wrapper div. Be sure to use text that is large enough and has a high contrast with the background color for people with visual impairments. -->
+    <div
+      role="article"
+      aria-label="Um e-mail da MBTA"
+      lang="pt"
+      style="
         background-color: #fafafa !important;
         color: #2b2b2b;
         font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
@@ -110,75 +115,114 @@
         margin: 0 auto;
         max-width: 600px;
         padding: 40px 20px 40px 20px;
-      ">
-    <!-- Logo section and header -->
-    <header style="padding-bottom: 16px">
-      <center>
-        <img src="https://mbta.prod.simpligov.com/prod/portal/file/51d7628117ce4c0c9cb0000188390b62.png?t=1633355953036"
-          alt="logo MBTA" width="225" />
-      </center>
-    </header>
+      "
+    >
+      <!-- Logo section and header -->
+      <header style="padding-bottom: 16px">
+        <center>
+          <img
+            src="https://mbta.prod.simpligov.com/prod/portal/file/51d7628117ce4c0c9cb0000188390b62.png?t=1633355953036"
+            alt="logo MBTA"
+            width="225"
+          />
+        </center>
+      </header>
 
-    <!-- Main content -->
-    <main>
-      <!-- This div is purely presentational, providing a container for the message. -->
-      <div style="background-color: #fff; border-radius: 4px; padding: 24px 24px">
-        <!-- This ghost table is used solely for padding in Word-based Outlook clients. -->
-        <!--[if (gte mso 9)|(IE)]>
+      <!-- Main content -->
+      <main>
+        <!-- This div is purely presentational, providing a container for the message. -->
+        <div
+          style="background-color: #fff; border-radius: 4px; padding: 24px 24px"
+        >
+          <!-- This ghost table is used solely for padding in Word-based Outlook clients. -->
+          <!--[if (gte mso 9)|(IE)]>
                 <table cellspacing="0" cellpadding="0" border="0" width="600" align="center" role="presentation"><tr><td style="background-color: #fff;font-family: 'Avenir Next', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; padding: 24px 48px 24px 48px;">
                 <![endif]-->
 
-        <!-- Body copy -->
-        <h1>Seu cartão não pôde ser entregue</h1>
+          <!-- Body copy -->
+          <h1>Seu cartão não pôde ser entregue</h1>
 
-        <p>Seu <span class="formElementOnEditor" contenteditable="false" data-row-name="element276-hiddenTitle">Reduced Fare In Person Application: Long Program Name<em><small>(no title)</small></em></span> CharlieCard não pôde ser entregue no seguinte endereço de correspondência:</p>
+          <p>
+            Seu
+            <span class="formElementOnEditor" contenteditable="false" data-row-name="element276-hiddenTitle">Reduced Fare In Person Application: Long Program Name<em><small>(no title)</small></em></span>
+            CharlieCard não pôde ser entregue no seguinte endereço de
+            correspondência:
+          </p>
 
-        <p style="margin-bottom: 0;"><span class="formElementOnEditor" contenteditable="false" data-row-name="element44-hiddenTitle">Card Delivery Preference: Street address (required)<em><small>(no title)</small></em></span></p>
-        <p style="margin: 0;"><span class="formElementOnEditor" contenteditable="false" data-row-name="element45-hiddenTitle">Card Delivery Preference: Apartment, suite, building<em><small>(no title)</small></em></span></p>
-        <p style="margin-top: 0;"><span class="formElementOnEditor" contenteditable="false" data-row-name="element46-hiddenTitle">Card Delivery Preference: City<em><small>(no title)</small></em></span>, <span class="formElementOnEditor" contenteditable="false" data-row-name="element47-hiddenTitle">Card Delivery Preference: State or US territory<em><small>(no title)</small></em></span> <span class="formElementOnEditor" contenteditable="false" data-row-name="element48-hiddenTitle">Card Delivery Preference: Zip code (required)<em><small>(no title)</small></em></span></p>
+          <p style="margin-bottom: 0">
+            <span class="formElementOnEditor" contenteditable="false" data-row-name="element44-hiddenTitle">Card Delivery Preference: Street address (required)<em><small>(no title)</small></em></span>
+          </p>
+          <p style="margin: 0">
+            <span class="formElementOnEditor" contenteditable="false" data-row-name="element45-hiddenTitle">Card Delivery Preference: Apartment, suite, building<em><small>(no title)</small></em></span>
+          </p>
+          <p style="margin-top: 0">
+            <span class="formElementOnEditor" contenteditable="false" data-row-name="element46-hiddenTitle">Card Delivery Preference: City<em><small>(no title)</small></em></span>,
+            <span class="formElementOnEditor" contenteditable="false" data-row-name="element47-hiddenTitle">Card Delivery Preference: State or US territory<em><small>(no title)</small></em></span>
+            <span class="formElementOnEditor" contenteditable="false" data-row-name="element48-hiddenTitle">Card Delivery Preference: Zip code (required)<em><small>(no title)</small></em></span>
+          </p>
 
-        <p>Seu cartão está disponível para retirada na CharlieCard Store, localizada na Downtown Crossing Station, no saguão subterrâneo entre as linhas Vermelha e Laranja:</p>
+		  <p>
+		  <span class="formElementOnEditor" contenteditable="false" data-row-name="element333-hiddenTitle">Generated Content: CharlieCard Address Line 1<em><small>(no title)</small></em></span>
+		  </p>
 
-        <p>7 Chauncy St<br>
-          Boston, MA 02111</p>
+		  <p style="margin-bottom: 0;"><span class="formElementOnEditor" contenteditable="false" data-row-name="element334-hiddenTitle" >Generated Content: CharlieCard Address Line 2<em><small>(no title)</small></em></span></p>
 
-        <p>Para acessar a CharlieCard Store fora da estação, use o elevador acessível dentro do edifício na 101 Arch Street.</p>
+		  <p style="margin-top: 0;"><span class="formElementOnEditor" contenteditable="false" data-row-name="element335-hiddenTitle" >Generated Content: CharlieCard Address Line 3<em><small>(no title)</small></em></span></p>
 
-        <p><a href="https://www.mbta.com/fares/charliecard-store">Horário de funcionamento da CharlieCard Store</a></p>
+		  <p>
+		  <span class="formElementOnEditor" contenteditable="false" data-row-name="element336-hiddenTitle">Generated Content: CharlieCard Address Line 4<em><small>(no title)</small></em></span>
+		  </p>
 
-        <p>Não é necessário agendar para pegar o cartão.</p>
+          <p>
+            <a href="https://www.mbta.com/fares/charliecard-store"
+              >Horário de funcionamento da CharlieCard Store</a
+            >
+          </p>
 
-        <h2>Dúvidas?</h2>
+          <p>Não é necessário agendar para pegar o cartão.</p>
 
-        <p>Contate o <a href="https://www.mbta.com/customer-support">Atendimento ao cliente usando o formulário on-line</a> ou ligue para os números abaixo.</p>
+          <h2>Dúvidas?</h2>
 
-        <p>
-          Segunda a sexta: Das 6h30 às 20h00<br />
-          Sábado a domingo: Das 8h00 às 16h00
-        </p>
-        
-        <p>
-          <strong>Hotline principal: </strong><a href="tel:617-222-3200">617-222-3200</a><br />
-          Gratuito: <a href="tel:800-392-6100">800-392-6100</a><br />
-          TTY: <a href="tel:617-222-5146">617-222-5146</a>
-        </p>
+          <p>
+            Contate o
+            <a href="https://www.mbta.com/customer-support"
+              >Atendimento ao cliente usando o formulário on-line</a
+            >
+            ou ligue para os números abaixo.
+          </p>
 
-        <!--[if (gte mso 9)|(IE)]>
+          <p>
+            Segunda a sexta: Das 6h30 às 20h00<br />
+            Sábado a domingo: Das 8h00 às 16h00
+          </p>
+
+          <p>
+            <strong>Hotline principal: </strong
+            ><a href="tel:617-222-3200">617-222-3200</a><br />
+            Gratuito: <a href="tel:800-392-6100">800-392-6100</a><br />
+            TTY: <a href="tel:617-222-5146">617-222-5146</a>
+          </p>
+
+          <!--[if (gte mso 9)|(IE)]>
                 </td></tr></table>
                 <![endif]-->
-      </div>
-    </main>
+        </div>
+      </main>
 
-    <!-- Footer -->
-    <footer>
-      <p style="margin-top: 24px">
-        <a href="https://www.mbta.com/policies/privacy-policy#4.4" target="_blank" style="color: #165c96">Política de privacidade</a>
-      </p>
-    </footer>
-  </div>
-  <!--[if (gte mso 9)|(IE)]>
+      <!-- Footer -->
+      <footer>
+        <p style="margin-top: 24px">
+          <a
+            href="https://www.mbta.com/policies/privacy-policy#4.4"
+            target="_blank"
+            style="color: #165c96"
+            >Política de privacidade</a
+          >
+        </p>
+      </footer>
+    </div>
+    <!--[if (gte mso 9)|(IE)]>
     </td></tr></table>
     <![endif]-->
-</body>
-
+  </body>
 </html>
