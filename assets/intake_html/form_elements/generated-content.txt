@@ -1,0 +1,36 @@
+<!-- GENERATED CONTENT | CHARLIECARD ADDRESS LINE 1 | FORM ELEMENT 333 -->
+CASE
+  WHEN (@FORMelement5 = 'English') THEN 'Your card is currently available for pick up at the Charlie Service Center (formerly the CharlieCard Store) at its new location:'
+  WHEN (@FORMelement5 = 'Spanish') THEN 'Su tarjeta ya está disponible para recogerla en el Centro de Servicio Charlie (anteriormente Tienda CharlieCard) en su nueva ubicación:'
+  WHEN (@FORMelement5 = 'Portuguese') THEN 'No momento, o cartão está disponível para retirada no Charlie Service Center (antigo CharlieCard Store) no novo local:'
+  WHEN (@FORMelement5 = 'Chinese Simplified') THEN '你现在可以在查理服务中心（原查理卡出售店）的新地址领取你的卡：'
+  WHEN (@FORMelement5 = '中文繁體') THEN '你現在可以在查理服務中心（原查理卡出售店）的新地址領取你的卡：'
+END
+
+<!-- GENERATED CONTENT | CHARLIECARD ADDRESS LINE 2 | FORM ELEMENT 334 -->
+CASE
+  WHEN Not IsDefault(@FORMelement5) THEN '296 Washington St'
+END
+
+<!-- GENERATED CONTENT | CHARLIECARD ADDRESS LINE 3 | FORM ELEMENT 335 -->
+CASE
+  WHEN Not IsDefault(@FORMelement5) THEN 'Boston, MA 02108'
+END
+
+<!-- GENERATED CONTENT | CHARLIECARD ADDRESS LINE 4 | FORM ELEMENT 336 -->
+CASE
+  WHEN (@FORMelement5 = 'English') THEN 'The building is fully accessible and is convenient to all subway lines.'
+  WHEN (@FORMelement5 = 'Spanish') THEN 'El edificio es completamente accesible y conveniente desde todas las líneas de metro.'
+  WHEN (@FORMelement5 = 'Portuguese') THEN 'O edifício é inteiramente acessível e conveniente para todas as linhas de metrô.'
+  WHEN (@FORMelement5 = 'Chinese Simplified') THEN '该地点交通便利，可方便地乘坐所有地铁线路抵达。'
+  WHEN (@FORMelement5 = '中文繁體') THEN '該地點交通便利，可乘坐所有地鐵線路方便地抵達。'
+END
+
+<!-- GENERATED CONTENT | CHARLIECARD ADDRESS LINE 5 | FORM ELEMENT 337 -->
+CASE
+  WHEN (@FORMelement5 = 'English') THEN 'The Charlie Service Center (formerly the CharlieCard Store) has been relocated to: '
+  WHEN (@FORMelement5 = 'Spanish') THEN 'El Centro de Servicio Charlie (anteriormente Tienda CharlieCard) se ha reubicado a la siguiente dirección: '
+  WHEN (@FORMelement5 = 'Portuguese') THEN 'O Charlie Service Center (antigo CharlieCard Store) foi transferido para: '
+  WHEN (@FORMelement5 = 'Chinese Simplified') THEN '查理服务中心（原查理卡出售店）已迁至：'
+  WHEN (@FORMelement5 = '中文繁體') THEN '查理服務中心（原查理卡出售店）已遷至：'
+END
