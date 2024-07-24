@@ -1,0 +1,27 @@
+<!-- GENERATED CONTENT | CHARLIECARD ADDRESS LINE 1 | FORM ELEMENT 200 -->
+CASE
+  WHEN (@FORMelement3 = 'English') THEN 'Your card is currently available for pick up at the Charlie Service Center (formerly the CharlieCard Store) at its new location:'
+  WHEN (@FORMelement3 = 'Español') THEN 'Su tarjeta ya está disponible para recogerla en el Centro de Servicio Charlie (anteriormente Tienda CharlieCard) en su nueva ubicación:'
+  WHEN (@FORMelement3 = 'Português') THEN 'No momento, o cartão está disponível para retirada no Charlie Service Center (antigo CharlieCard Store) no novo local:'
+  WHEN (@FORMelement3 = '中文简体') THEN '你现在可以在查理服务中心（原查理卡出售店）的新地址领取你的卡：'
+  WHEN (@FORMelement3 = '中文繁體') THEN '你現在可以在查理服務中心（原查理卡出售店）的新地址領取你的卡：'
+END
+
+<!-- GENERATED CONTENT | CHARLIECARD ADDRESS LINE 2 | FORM ELEMENT 197 -->
+CASE
+  WHEN Not IsDefault(@FORMelement3) THEN '294 Washington St'
+END
+
+<!-- GENERATED CONTENT | CHARLIECARD ADDRESS LINE 3 | FORM ELEMENT 198 -->
+CASE
+  WHEN Not IsDefault(@FORMelement3) THEN 'Boston, MA 02108'
+END
+
+<!-- GENERATED CONTENT | CHARLIECARD ADDRESS LINE 4 | FORM ELEMENT 199 -->
+CASE
+  WHEN (@FORMelement3 = 'English') THEN 'The building is fully accessible and is convenient to all subway lines.'
+  WHEN (@FORMelement3 = 'Español') THEN 'El edificio es completamente accesible y conveniente desde todas las líneas de metro.'
+  WHEN (@FORMelement3 = 'Português') THEN 'O edifício é inteiramente acessível e conveniente para todas as linhas de metrô.'
+  WHEN (@FORMelement3 = '中文简体') THEN '该地点交通便利，可方便地乘坐所有地铁线路抵达。'
+  WHEN (@FORMelement3 = '中文繁體') THEN '該地點交通便利，可乘坐所有地鐵線路方便地抵達。'
+END
