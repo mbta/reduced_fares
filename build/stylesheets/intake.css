@@ -15,48 +15,32 @@ html {
 
 /* Add Inter font */
 @font-face {
-  font-family: "Inter";
+  font-family: Inter;
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src:
-    url("https://simpligov-prod.azureedge.net/prod/content/fonts/Inter-UI-Regular-ada67516bfcb321d3af9a10b5ac85969.woff2")
-      format("woff2"),
-    url("https://simpligov-prod.azureedge.net/prod/content/fonts/Inter-UI-Regular-3ca46ee35e2e0a102cb63a64629ff935.woff")
-      format("woff");
+  src: url("https://simpligov-prod.azureedge.net/prod/content/fonts/Inter-UI-Regular-ada67516bfcb321d3af9a10b5ac85969.woff2") format("woff2"), url("https://simpligov-prod.azureedge.net/prod/content/fonts/Inter-UI-Regular-3ca46ee35e2e0a102cb63a64629ff935.woff") format("woff");
 }
 @font-face {
-  font-family: "Inter";
+  font-family: Inter;
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src:
-    url("https://simpligov-prod.azureedge.net/prod/content/fonts/Inter-UI-Italic-bc389a025ce24c8a922a75a14efb9849.woff2")
-      format("woff2"),
-    url("https://simpligov-prod.azureedge.net/prod/content/fonts/Inter-UI-Italic-8b0d16839ccd5eb17d2d2c57fc7b879c.woff")
-      format("woff");
+  src: url("https://simpligov-prod.azureedge.net/prod/content/fonts/Inter-UI-Italic-bc389a025ce24c8a922a75a14efb9849.woff2") format("woff2"), url("https://simpligov-prod.azureedge.net/prod/content/fonts/Inter-UI-Italic-8b0d16839ccd5eb17d2d2c57fc7b879c.woff") format("woff");
 }
 @font-face {
-  font-family: "Inter";
+  font-family: Inter;
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src:
-    url("https://simpligov-prod.azureedge.net/prod/content/fonts/Inter-UI-Medium-a4b302b56c07e87c3428227270d313fa.woff2")
-      format("woff2"),
-    url("https://simpligov-prod.azureedge.net/prod/content/fonts/Inter-UI-Medium-86c6d121f1d396c123e9f2b0b18040a0.woff")
-      format("woff");
+  src: url("https://simpligov-prod.azureedge.net/prod/content/fonts/Inter-UI-Medium-a4b302b56c07e87c3428227270d313fa.woff2") format("woff2"), url("https://simpligov-prod.azureedge.net/prod/content/fonts/Inter-UI-Medium-86c6d121f1d396c123e9f2b0b18040a0.woff") format("woff");
 }
 @font-face {
-  font-family: "Inter";
+  font-family: Inter;
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src:
-    url("https://simpligov-prod.azureedge.net/prod/content/fonts/Inter-UI-Bold-8506a8d02c2e819508bc53d65de6795a.woff2")
-      format("woff2"),
-    url("https://simpligov-prod.azureedge.net/prod/content/fonts/Inter-UI-Bold-0a1242bedd6453e33ea8bfb1a7fb2af4.woff")
-      format("woff");
+  src: url("https://simpligov-prod.azureedge.net/prod/content/fonts/Inter-UI-Bold-8506a8d02c2e819508bc53d65de6795a.woff2") format("woff2"), url("https://simpligov-prod.azureedge.net/prod/content/fonts/Inter-UI-Bold-0a1242bedd6453e33ea8bfb1a7fb2af4.woff") format("woff");
 }
 body,
 html {
@@ -86,7 +70,7 @@ a:focus {
 p,
 li,
 figcaption {
-  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: "Inter", "Helvetica Neue", helvetica, arial, sans-serif !important;
   font-size: 1rem !important;
   color: #1c1e23 !important;
 }
@@ -168,7 +152,7 @@ h4 {
 /* Form label */
 .form-label {
   color: #1c1e23 !important;
-  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: "Inter", "Helvetica Neue", helvetica, arial, sans-serif !important;
   font-size: 1rem !important;
 }
 
@@ -191,7 +175,7 @@ h4 {
 /* Help text */
 .sub-heading {
   color: #494f5c !important;
-  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: "Inter", "Helvetica Neue", helvetica, arial, sans-serif !important;
   font-size: 1rem !important;
   line-height: 1.2 !important;
 }
@@ -207,7 +191,7 @@ h4 {
 .regexErrorLabel,
 .datePickerFormatError {
   font-style: normal !important;
-  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: "Inter", "Helvetica Neue", helvetica, arial, sans-serif !important;
   font-size: 1rem !important;
   color: #b3000f !important;
 }
@@ -228,7 +212,7 @@ h4 {
 }
 
 /* Color for field required asterisks */
-.form-label-required span[role="presentation"],
+.form-label-required span[role=presentation],
 .form-label-required span[style="color: red;"] {
   color: #b3000f !important;
 }
@@ -239,13 +223,13 @@ textarea {
 }
 
 /* Focus for all text fields */
-input[type="text"]:focus,
+input[type=text]:focus,
 textarea:focus {
   border: 2px solid #165c96 !important;
 }
 
 /* Remove shadow on all text fields except the large text field */
-input[type="text"].textfield:focus {
+input[type=text].textfield:focus {
   box-shadow: none !important;
 }
 
@@ -268,7 +252,7 @@ input[type="text"].textfield:focus {
 .k-file-name,
 .k-file-size,
 .k-file-validation-message {
-  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: "Inter", "Helvetica Neue", helvetica, arial, sans-serif !important;
   font-weight: 400;
   font-size: 1rem !important;
 }
@@ -298,7 +282,7 @@ input[type="text"].textfield:focus {
 
 /* Make upload error message darker */
 .k-file-invalid .k-file-validation-message {
-  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: "Inter", "Helvetica Neue", helvetica, arial, sans-serif !important;
   font-size: 1rem !important;
   color: #b3000f !important;
 }
@@ -310,7 +294,7 @@ input[type="text"].textfield:focus {
 }
 /* Make upload "invalid files" error message darker */
 .validation-text.fileUploadErrorLabel.truncateWithEllipsis {
-  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: "Inter", "Helvetica Neue", helvetica, arial, sans-serif !important;
   font-size: 1rem !important;
   color: #b3000f !important;
 }
@@ -347,7 +331,7 @@ input[type="text"].textfield:focus {
   color: #0b2f4c !important;
   font-style: normal !important;
   font-weight: 700 !important;
-  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: "Inter", "Helvetica Neue", helvetica, arial, sans-serif !important;
   font-size: 1rem !important;
   margin-bottom: 2rem !important;
   width: 100% !important;
@@ -390,7 +374,7 @@ input,
 #divWorkflowContent .buttonPopup.blue,
 .buttonPopup.blue.big,
 #noBtn.buttonPopup.big {
-  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: "Inter", "Helvetica Neue", helvetica, arial, sans-serif !important;
   font-weight: 500 !important;
   text-align: center !important;
   white-space: nowrap !important;
@@ -840,9 +824,7 @@ div#thank-you-text,
 div#workflow-background-wrapper:not(.embed) {
   width: 900px !important;
   max-width: 100% !important;
-  box-shadow:
-    0 3px 6px rgba(0, 0, 0, 0.16),
-    0 3px 6px rgba(0, 0, 0, 0.23) !important;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23) !important;
   border-right: none !important;
 }
 
