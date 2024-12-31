@@ -199,22 +199,4 @@ describe('senior successful renewal submission - without an email address', () =
       .get('#form-section-7 > .form-section-buttons > .form-section-next')
       .click();
   });
-
-  // Disable submission
-  //it("skips the demographic section and agrees to the rules", function() {
-  //  cy
-  //    .get('#form-section-8 > .form-section-buttons > .form-section-next')
-  //    .click();
-  //  cy
-  //    .get('[data-field-code="RulesAndConditionsCheckbox"]')
-  //    .contains('I agree')
-  //    .click();
-  //  cy
-  //    .get('#form-section-9 > .form-section-buttons > .form-submit-button')
-  //    .click();
-  //
-  //  cy
-  //    .get('#thank-you-text', { timeout: 15000 })
-  //    .should('contain', 'Application Submitted');
-  //});
 });

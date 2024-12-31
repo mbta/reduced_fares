@@ -191,22 +191,4 @@ describe('TAP successful new submission - without an email address', () => {
       .contains('Pick up')
       .click();
   });
-
-  // Disable submission
-  //it("skips the demographic section and agrees to the rules", function() {
-  //  cy
-  //    .get('[data-field-code="RulesAndConditionsCheckbox"]')
-  //    .contains('I agree')
-  //    .click();
-  //  cy
-  //    .get('[data-field-code="DisabilityReleaseCheckbox"]')
-  //    .contains('I authorize')
-  //    .click();
-  //
-  //  cy.get('.form-submit-button').click();
-  //
-  //  cy
-  //    .get('#thank-you-text', { timeout: 15000 })
-  //    .should('contain', 'Application Submitted');
-  //});
 });
