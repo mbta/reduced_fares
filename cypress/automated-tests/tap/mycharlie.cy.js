@@ -1,8 +1,8 @@
 describe("TAP", () => {
   it("is now on MyCharlie", () => {
-    const youthPassUrl = Cypress.env("tap_url");
+    const tapUrl = Cypress.env("tap_url");
 
-    cy.visit(youthPassUrl);
+    cy.visit(tapUrl);
 
     cy.title().should("eq", "MyCharlie CTA");
     cy.contains("h1", "Apply for TAP on MyCharlie").should(
